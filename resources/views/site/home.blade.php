@@ -1,6 +1,6 @@
 @php
-    $title = "Premium Web, App & Software Development Company | RS Orange Tech";
-    $description = "RS Orange Tech is a premium web development and mobile app development agency offering Custom Web Development, Laravel Solutions, UI/UX Design, and AI Automation services.";
+    $title = "Web Development, AI & Ecommerce Solutions Company in Noida | RS Orange Tech";
+    $description = "RS Orange Tech provides web development, mobile apps, ecommerce, AI automation and custom software solutions for businesses in India and worldwide.";
     $keywords = "web development company, mobile app development, Laravel development, custom software development, UI/UX design, SEO services, ecommerce development, AI automation";
 @endphp
 @extends('site.layout')
@@ -92,8 +92,8 @@
 <section class="premium-hero">
     <div class="premium-hero-copy">
         <p class="eyebrow">Premium Web, App & AI Development Agency</p>
-        <h1>Build a Faster, Smarter <span class="highlight-orange">Digital</span> Business</h1>
-        <p>We design and develop conversion-focused websites, powerful web applications, mobile apps and AI solutions that help businesses grow with confidence.</p>
+        <h1>Web Development, AI & <span class="highlight-orange">Custom Software</span> Solutions <br class="hidden md:block">for Growing Businesses</h1>
+        <p>RS Orange Tech is a premium web development and software solutions company based in Noida, India, specializing in custom websites, ecommerce development, mobile apps, AI automation, and robust business software.</p>
         <div class="actions">
             <a class="button primary hero-button" href="{{ route('quote') }}">Start a Project <span aria-hidden="true">-&gt;</span></a>
             <a class="button premium-ghost hero-button" href="{{ route('portfolio') }}">View Our Work <span aria-hidden="true">-&gt;</span></a>

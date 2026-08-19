@@ -100,7 +100,7 @@ Route::get('/our-approach/', fn () => view('site.our-approach', [
     'description' => 'We believe great technology is built through human thinking with modern machines as supporting tools. Discover our 80/20 development philosophy.'
 ]))->name('our-approach');
 
-Route::get('/services/', [PublicContentController::class, 'services'])->name('services');
+Route::get('/services/', [\App\Http\Controllers\PublicContentController::class, 'services'])->name('services');
 
 Route::get('/our-technologies/', [PublicContentController::class, 'technologies'])->name('technologies');
 
@@ -109,7 +109,10 @@ Route::get('/blog/{slug}/', [PublicContentController::class, 'post'])->name('blo
 Route::get('/wordpress-content/', [WordPressContentController::class, 'index'])->name('wordpress.index');
 Route::get('/wordpress-content/{slug}/', [WordPressContentController::class, 'show'])->name('wordpress.show');
 
-Route::get('/contact-us/', fn () => view('site.contact'))->name('contact');
+Route::get('/contact-us/', fn () => view('site.contact', [
+    'title' => 'Contact Our Development Team | RS Orange Tech',
+    'description' => 'Get in touch with RS Orange Tech. Reach out for web development, app creation, or AI automation inquiries in Noida and Delhi NCR.'
+]))->name('contact');
 Route::post('/contact-us/', function (Request $request) {
     $validated = $request->validate([
         'name' => ['required', 'string', 'max:120'],
