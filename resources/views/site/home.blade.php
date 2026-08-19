@@ -92,7 +92,7 @@
 <section class="premium-hero">
     <div class="premium-hero-copy">
         <p class="eyebrow">Premium Web, App & AI Development Agency</p>
-        <h1>Web Development, AI & <span class="highlight-orange">Custom Software</span> Solutions <br class="hidden md:block">for Growing Businesses</h1>
+        <h1>Web Development, AI & <span class="highlight-orange">Custom Software</span> Solutions<br>for Growing Businesses</h1>
         <p>RS Orange Tech is a premium web development and software solutions company based in Noida, India, specializing in custom websites, ecommerce development, mobile apps, AI automation, and robust business software.</p>
         <div class="actions">
             <a class="button primary hero-button" href="{{ route('quote') }}">Start a Project <span aria-hidden="true">-&gt;</span></a>

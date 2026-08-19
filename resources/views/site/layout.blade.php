@@ -16,6 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title ?? 'RS Orange Tech | Web, App & Software Solutions' }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon-96x96.png') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     <meta name="description" content="{{ $description ?? 'RS Orange Tech builds affordable web solutions, Laravel apps, e-commerce platforms, mobile apps and AI automation for growing businesses.' }}">
     <link rel="canonical" href="{{ url()->current() }}">
     <meta property="og:type" content="website">
