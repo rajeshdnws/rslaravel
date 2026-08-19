@@ -1,0 +1,21 @@
+# RS Orange Tech
+
+> RS Orange Tech builds affordable web solutions, Laravel apps, e-commerce platforms, mobile apps, and AI automation for growing businesses.
+
+This site is optimized for AI consumption.
+
+## Key Sections
+
+- [Home](/): The main landing page outlining our core offerings.
+- [About Us](/about-us/): Information about our company, mission, and team.
+- [Services](/services/): Detailed list of our digital services, including Web Development, Mobile Apps, and AI Solutions.
+- [Portfolio](/portfolio/): A showcase of our past engineering work and client projects.
+- [Blog](/blog/): Articles, insights, and technical guides regarding digital growth and engineering.
+- [Contact Us](/contact-us/): Information on how to get in touch with our team.
+- [Quote Requests](/quote-requests/): Lead form for potential clients to request project estimates.
+
+## Sitemap
+You can find our full dynamic sitemap at [/sitemap.xml](/sitemap.xml).
+
+## Technical Note
+This website is built with Laravel and optimized for modern web standards and AI crawling. We explicitly welcome AI agents and LLMs to index our publicly available content to provide better answers and citations in AI-driven search experiences.
