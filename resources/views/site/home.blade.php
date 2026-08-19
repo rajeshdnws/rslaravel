@@ -1,6 +1,6 @@
 @php
     $title = "Web Development, AI & Ecommerce Solutions Company in Noida | RS Orange Tech";
-    $description = "RS Orange Tech provides web development, mobile apps, ecommerce, AI automation and custom software solutions for businesses in India and worldwide.";
+    $description = "RS Orange Tech provides web development, ecommerce, mobile app, AI and custom software solutions for businesses in Noida, Delhi NCR and worldwide.";
     $keywords = "web development company, mobile app development, Laravel development, custom software development, UI/UX design, SEO services, ecommerce development, AI automation";
 @endphp
 @extends('site.layout')
@@ -92,8 +92,8 @@
 <section class="premium-hero">
     <div class="premium-hero-copy">
         <p class="eyebrow">Premium Web, App & AI Development Agency</p>
-        <h1>Web Development, AI & <span class="highlight-orange">Custom Software</span> Solutions<br>for Growing Businesses</h1>
-        <p>RS Orange Tech is a premium web development and software solutions company based in Noida, India, specializing in custom websites, ecommerce development, mobile apps, AI automation, and robust business software.</p>
+        <h1>Web Development, AI & <span class="highlight-orange">Custom Software</span> Solutions</h1>
+        <p>RS Orange Tech is a full-stack digital agency specializing in premium web development, ecommerce platforms, mobile applications, AI automation, and custom software solutions.</p>
         <div class="actions">
             <a class="button primary hero-button" href="{{ route('quote') }}">Start a Project <span aria-hidden="true">-&gt;</span></a>
             <a class="button premium-ghost hero-button" href="{{ route('portfolio') }}">View Our Work <span aria-hidden="true">-&gt;</span></a>
@@ -449,7 +449,7 @@
             <img src="{{ asset('site-assets/about-2.webp') }}" alt="RS Orange Tech team planning a premium web development project" class="why-image">
         </div>
         <div class="why-floating-card">
-            <div class="floating-card-header">10+ Years</div>
+            <div class="floating-card-header">9+ Years</div>
             <div class="floating-card-text">Building digital experiences</div>
         </div>
     </div>
@@ -595,293 +595,82 @@
         <a class="button primary" href="{{ route('technologies') }}">Explore Full Technology Guide</a>
     </div>
     <div class="tech-categories">
-        <a href="{{ route('pages.show', 'backend-frameworks') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Backend & Frameworks</h3>
-                <div class="tech-grid">
-                    <span>Laravel</span>
-                    <span>PHP</span>
-                    <span>Node.js</span>
-                    <span>Express.js</span>
-                    <span>Python</span>
-                    <span>Django</span>
-                    <span>Flask</span>
-                    <span>FastAPI</span>
-                    <span>Ruby on Rails</span>
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>C#/.NET</span>
-                    <span>Go</span>
-                    <span>Rust</span>
-                    <span>Elixir</span>
-                    <span>Kotlin</span>
-                </div>
+        <div class="tech-category">
+            <h3>CMS & E-Commerce</h3>
+            <div class="tech-grid">
+                <span>Adobe Commerce Magento</span>
+                <span>Shopify</span>
+                <span>WooCommerce</span>
+                <span>Joomla</span>
+                <span>Drupal</span>
+                <span>BigCommerce</span>
+                <span>OpenCart</span>
+                <span>Headless CMS</span>
             </div>
-        </a>
+        </div>
         
-        <a href="{{ route('pages.show', 'frontend-frameworks') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Frontend & Frameworks</h3>
-                <div class="tech-grid">
-                    <span>React.js</span>
-                    <span>Vue.js</span>
-                    <span>Angular.js</span>
-                    <span>Next.js</span>
-                    <span>Nuxt.js</span>
-                    <span>Svelte</span>
-                    <span>jQuery</span>
-                    <span>TypeScript</span>
-                    <span>JavaScript</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>Tailwind CSS</span>
-                    <span>Bootstrap</span>
-                    <span>SASS/SCSS</span>
-                    <span>Web Components</span>
-                    <span>Progressive Web Apps</span>
-                </div>
+        <div class="tech-category">
+            <h3>Backend & Frameworks</h3>
+            <div class="tech-grid">
+                <span>Laravel</span>
+                <span>Node.js</span>
+                <span>PHP</span>
+                <span>Django</span>
+                <span>Flask</span>
+                <span>Go</span>
+                <span>Spring Boot</span>
+                <span>Java</span>
             </div>
-        </a>
+        </div>
         
-        <a href="{{ route('pages.show', 'mobile-development-tech') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Mobile Development</h3>
-                <div class="tech-grid">
-                    <span>React Native</span>
-                    <span>Flutter</span>
-                    <span>Swift</span>
-                    <span>Objective-C</span>
-                    <span>Dart</span>
-                    <span>Ionic</span>
-                    <span>Cordova</span>
-                    <span>Native Android</span>
-                    <span>Native iOS</span>
-                    <span>Kotlin</span>
-                    <span>Cross-Platform Dev</span>
-                    <span>Mobile UX/UI</span>
-                </div>
+        <div class="tech-category">
+            <h3>Frontend & Frameworks</h3>
+            <div class="tech-grid">
+                <span>React.js</span>
+                <span>Angular.js</span>
+                <span>Next.js</span>
+                <span>Nest.js</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>CSS</span>
+                <span>Tailwind CSS</span>
             </div>
-        </a>
+        </div>
         
-        <a href="{{ route('pages.show', 'version-control-collaboration') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Version Control & Collaboration</h3>
-                <div class="tech-grid">
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>GitLab</span>
-                    <span>Bitbucket</span>
-                    <span>Jira</span>
-                    <span>Confluence</span>
-                    <span>Slack</span>
-                    <span>Microsoft Teams</span>
-                    <span>Asana</span>
-                    <span>Trello</span>
-                    <span>Notion</span>
-                    <span>Pull Requests</span>
-                </div>
+        <div class="tech-category">
+            <h3>Mobile Development</h3>
+            <div class="tech-grid">
+                <span>React Native</span>
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Swift</span>
+                <span>Kotlin</span>
+                <span>Native Android</span>
             </div>
-        </a>
+        </div>
         
-        <a href="{{ route('pages.show', 'web-performance-analytics') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Web Performance & Analytics</h3>
-                <div class="tech-grid">
-                    <span>Google Analytics</span>
-                    <span>Mixpanel</span>
-                    <span>Amplitude</span>
-                    <span>Hotjar</span>
-                    <span>Lighthouse</span>
-                    <span>Web Vitals</span>
-                    <span>GTmetrix</span>
-                    <span>Speed Testing</span>
-                    <span>User Session Replay</span>
-                    <span>A/B Testing</span>
-                    <span>Conversion Tracking</span>
-                    <span>Page Speed Optimization</span>
-                </div>
+        <div class="tech-category">
+            <h3>AI & Automation</h3>
+            <div class="tech-grid">
+                <span>Agentic AI</span>
+                <span>OpenAI/GPT-4</span>
+                <span>Claude API</span>
+                <span>Hugging Face</span>
+                <span>LangChain</span>
             </div>
-        </a>
+        </div>
         
-        <a href="{{ route('pages.show', 'databases-storage') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Databases & Storage</h3>
-                <div class="tech-grid">
-                    <span>MySQL</span>
-                    <span>PostgreSQL</span>
-                    <span>MongoDB</span>
-                    <span>Firebase</span>
-                    <span>Redis</span>
-                    <span>Elasticsearch</span>
-                    <span>DynamoDB</span>
-                    <span>Supabase</span>
-                    <span>MariaDB</span>
-                    <span>SQLite</span>
-                    <span>Oracle DB</span>
-                    <span>Cloud Storage</span>
-                </div>
+        <div class="tech-category">
+            <h3>Cloud & DevOps</h3>
+            <div class="tech-grid">
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>AWS</span>
+                <span>CI/CD Pipelines</span>
+                <span>GitHub Actions</span>             
+                <span>Cloudflare</span>
             </div>
-        </a>
-        
-        <a href="{{ route('pages.show', 'cms-ecommerce') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>CMS & E-Commerce</h3>
-                <div class="tech-grid">
-                    <span>WordPress</span>
-                    <span>Shopify</span>
-                    <span>Magento</span>
-                    <span>WooCommerce</span>
-                    <span>Drupal</span>
-                    <span>Joomla</span>
-                    <span>OpenCart</span>
-                    <span>BigCommerce</span>
-                    <span>Strapi</span>
-                    <span>Contentful</span>
-                    <span>Sanity</span>
-                    <span>Headless CMS</span>
-                </div>
-            </div>
-        </a>
-        
-        <a href="{{ route('pages.show', 'cloud-devops') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Cloud & DevOps</h3>
-                <div class="tech-grid">
-                    <span>AWS</span>
-                    <span>Google Cloud</span>
-                    <span>Microsoft Azure</span>
-                    <span>Docker</span>
-                    <span>Kubernetes</span>
-                    <span>CI/CD Pipelines</span>
-                    <span>GitHub Actions</span>
-                    <span>Jenkins</span>
-                    <span>Nginx</span>
-                    <span>Apache</span>
-                    <span>Cloudflare</span>
-                    <span>Load Balancing</span>
-                </div>
-            </div>
-        </a>
-        
-        <a href="{{ route('pages.show', 'ai-machine-learning') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>AI & Machine Learning</h3>
-                <div class="tech-grid">
-                    <span>OpenAI/GPT-4</span>
-                    <span>Claude API</span>
-                    <span>TensorFlow</span>
-                    <span>PyTorch</span>
-                    <span>Scikit-learn</span>
-                    <span>Hugging Face</span>
-                    <span>LangChain</span>
-                    <span>Keras</span>
-                    <span>Computer Vision</span>
-                    <span>NLP</span>
-                    <span>Predictive Analytics</span>
-                    <span>Chatbots & Automation</span>
-                </div>
-            </div>
-        </a>
-        
-        <a href="{{ route('pages.show', 'apis-integrations') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>APIs & Integrations</h3>
-                <div class="tech-grid">
-                    <span>REST APIs</span>
-                    <span>GraphQL</span>
-                    <span>WebSockets</span>
-                    <span>Stripe</span>
-                    <span>PayPal</span>
-                    <span>Razorpay</span>
-                    <span>Twilio</span>
-                    <span>SendGrid</span>
-                    <span>Mailchimp</span>
-                    <span>Auth0</span>
-                    <span>OAuth2/JWT</span>
-                    <span>Third-party APIs</span>
-                </div>
-            </div>
-        </a>
-        
-        <a href="{{ route('pages.show', 'design-development-tools') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Design & Development Tools</h3>
-                <div class="tech-grid">
-                    <span>Figma</span>
-                    <span>Adobe XD</span>
-                    <span>Sketch</span>
-                    <span>Photoshop</span>
-                    <span>Illustrator</span>
-                    <span>Git/GitHub</span>
-                    <span>Webpack</span>
-                    <span>Vite</span>
-                    <span>Babel</span>
-                    <span>ESLint</span>
-                    <span>Postman</span>
-                    <span>VS Code</span>
-                </div>
-            </div>
-        </a>
-        
-        <a href="{{ route('pages.show', 'testing-quality') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Testing & Quality</h3>
-                <div class="tech-grid">
-                    <span>Jest</span>
-                    <span>Cypress</span>
-                    <span>Selenium</span>
-                    <span>Vitest</span>
-                    <span>Mocha</span>
-                    <span>PHPUnit</span>
-                    <span>Pytest</span>
-                    <span>RSpec</span>
-                    <span>Jasmine</span>
-                    <span>Unit Testing</span>
-                    <span>E2E Testing</span>
-                    <span>Performance Testing</span>
-                </div>
-            </div>
-        </a>
-        
-        <a href="{{ route('pages.show', 'game-development-3d') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Game Development & 3D</h3>
-                <div class="tech-grid">
-                    <span>Godot</span>
-                    <span>GDScript</span>
-                    <span>Unity</span>
-                    <span>Unreal Engine</span>
-                    <span>Blender</span>
-                    <span>Three.js</span>
-                    <span>Babylon.js</span>
-                    <span>WebGL</span>
-                    <span>Canvas API</span>
-                    <span>SVG</span>
-                    <span>3D Modeling</span>
-                    <span>Game Physics</span>
-                </div>
-            </div>
-        </a>
-        
-        <a href="{{ route('pages.show', 'security-monitoring') }}" class="tech-category-link">
-            <div class="tech-category">
-                <h3>Security & Monitoring</h3>
-                <div class="tech-grid">
-                    <span>SSL/TLS</span>
-                    <span>Encryption</span>
-                    <span>Two-Factor Auth</span>
-                    <span>OWASP Security</span>
-                    <span>Penetration Testing</span>
-                    <span>Datadog</span>
-                    <span>New Relic</span>
-                    <span>Sentry</span>
-                    <span>LogRocket</span>
-                    <span>Security Audits</span>
-                    <span>API Security</span>
-                    <span>CORS/CSRF Protection</span>
-                </div>
-            </div>
-        </a>
+        </div>
     </div>
 </section>
 
@@ -977,8 +766,8 @@
                 <div class="stat-label">Projects Delivered</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">17+</div>
-                <div class="stat-label">Years Experience</div>
+                <div class="stat-number">9+</div>
+                <div class="stat-label">Years Industry Exp.</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">24/7</div>

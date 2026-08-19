@@ -2,15 +2,12 @@
 
 return [
     'services' => [
-        ['title' => 'E-Commerce Website Development', 'body' => 'Fast, secure online stores built for conversion across Shopify, WooCommerce, Magento and custom commerce stacks.'],
-        ['title' => 'Custom Website & Web Application Development', 'body' => 'Scalable business websites, SaaS tools and portals tailored to your workflows instead of boxed templates.'],
-        ['title' => 'Content Management Systems', 'body' => 'Easy-to-manage CMS platforms for pages, blog posts, images, SEO metadata and publishing workflows.'],
-        ['title' => 'Blog & Content Website Design', 'body' => 'Performance-focused content experiences that keep articles readable, searchable and simple to maintain.'],
-        ['title' => 'Mobile App Development', 'body' => 'Android and cross-platform apps with thoughtful UI, reliable performance and room to grow.'],
-        ['title' => 'AI & Automation Solutions', 'body' => 'Chatbots, recommendations, predictive analytics and workflow automation for smarter operations.'],
-        ['title' => 'UI/UX Design & Branding', 'body' => 'Clean product experiences, prototypes, visual identity and usability improvements.'],
-        ['title' => 'Maintenance & Support', 'body' => 'Security monitoring, updates, bug fixes, backups and ongoing performance improvements.'],
-        ['title' => 'Digital Strategy & Consulting', 'body' => 'Research, planning and technical guidance to help you choose the right digital direction.'],
+        ['title' => 'Web Development', 'body' => 'Custom websites and web applications built for performance, scalability and business growth.'],
+        ['title' => 'Ecommerce Development', 'body' => 'Magento, Shopify and custom ecommerce solutions with payment, shipping and third-party integrations.'],
+        ['title' => 'Magento 2 Development & Customization', 'body' => 'We build, customize and optimize Magento 2 and Adobe Commerce stores with custom modules, extensions, integrations, performance optimization and scalable ecommerce solutions.'],
+        ['title' => 'Mobile App Development', 'body' => 'Android and iOS applications designed for performance and great user experience.'],
+        ['title' => 'AI Development & Automation', 'body' => 'AI-powered applications, automation workflows, chatbots and intelligent business solutions.'],
+        ['title' => 'Custom Software Development', 'body' => 'Business applications, APIs, dashboards and custom platforms tailored to your requirements.'],
     ],
 
     'technologies' => [
