@@ -35,6 +35,18 @@
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/site.css') }}">
     @stack('head')
+    
+    @if (config('services.google.analytics_id'))
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{ config('services.google.analytics_id') }}');
+        </script>
+    @endif
 </head>
 <body>
     <header class="topbar">
