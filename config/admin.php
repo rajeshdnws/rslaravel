@@ -36,7 +36,7 @@ return [
             'fields' => [
                 ['name' => 'title', 'label' => 'Title', 'type' => 'text', 'required' => true],
                 ['name' => 'slug', 'label' => 'Slug', 'type' => 'text', 'required' => true],
-                ['name' => 'template', 'label' => 'Template', 'type' => 'select', 'options' => ['landing', 'content', 'services', 'technology', 'contact', 'legal', 'privacy-policy']],
+                ['name' => 'template', 'label' => 'Template', 'type' => 'select', 'options' => ['landing', 'content', 'services', 'technology', 'contact', 'legal', 'privacy-policy', 'portfolio-detail']],
                 ['name' => 'status', 'label' => 'Status', 'type' => 'select', 'options' => ['published', 'draft', 'archived']],
                 ['name' => 'excerpt', 'label' => 'Excerpt', 'type' => 'textarea'],
                 ['name' => 'content', 'label' => 'Content', 'type' => 'textarea'],

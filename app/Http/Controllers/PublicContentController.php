@@ -72,6 +72,20 @@ class PublicContentController extends Controller
         ]);
     }
 
+    public function portfolioShow(string $slug)
+    {
+        $project = PortfolioProject::query()
+            ->where('slug', trim($slug, '/'))
+            ->where('status', 'published')
+            ->firstOrFail();
+
+        return view('site.portfolio-detail', [
+            'project' => $project,
+            'title' => $project->title . ' | Portfolio | RS Orange Tech',
+            'description' => $this->excerpt($project->excerpt ?: $project->description),
+        ]);
+    }
+
     public function services()
     {
         $page = Page::query()

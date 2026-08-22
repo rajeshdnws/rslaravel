@@ -153,6 +153,7 @@ Route::get('/terms-conditions/', [PublicContentController::class, 'page'])->defa
 
 Route::get('/plugins/', [PublicContentController::class, 'page'])->defaults('slug', 'plugins')->name('plugins');
 Route::get('/portfolio/', [PublicContentController::class, 'portfolio'])->name('portfolio');
+Route::get('/portfolio/{slug}/', [PublicContentController::class, 'portfolioShow'])->name('portfolio.show');
 Route::redirect('/gallery-plugin/', '/plugins/', 301);
 Route::redirect('/ai-website-fixer/', '/plugins/', 301);
 

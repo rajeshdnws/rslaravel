@@ -718,10 +718,8 @@
         </div>
         <button class="live-portfolio-nav live-portfolio-next" type="button" aria-label="Next project" data-portfolio-next>&rsaquo;</button>
     </div>
-    <div class="live-portfolio-dots" aria-hidden="true">
-        @foreach ($projects as $project)
-            <span class="{{ $loop->first ? 'active' : '' }}"></span>
-        @endforeach
+    <div style="text-align: center; margin-top: 40px;">
+        <a class="button premium-ghost" href="{{ route('portfolio') }}">View All Portfolio <span aria-hidden="true">-&gt;</span></a>
     </div>
 </section>
 

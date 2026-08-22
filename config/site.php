@@ -225,6 +225,14 @@ return [
 
     'projects' => [
         [
+            'title' => 'Jyoti Pilot Official Website',
+            'category' => 'Web Development',
+            'image' => 'design.png',
+            'body' => 'A dynamic personal branding and political portfolio website for Jyoti Pilot.',
+            'tech' => ['Laravel', 'Livewire', 'Tailwind CSS'],
+            'url' => '/jyotipilot/',
+        ],
+        [
             'title' => 'Desi Run Rush',
             'category' => 'Game Landing Page',
             'image' => 'desi-run-rush.png',
