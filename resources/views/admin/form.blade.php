@@ -29,7 +29,7 @@
 
             <label class="{{ in_array($type, ['textarea'], true) ? 'full' : '' }}">
                 {{ $field['label'] }}
-                @if ($type === 'textarea' && $name === 'content')
+                @if ($type === 'textarea' && in_array($name, ['content', 'description']))
                     <div class="content-editor" data-editor>
                         <div class="editor-toolbar" aria-label="Content editor toolbar">
                             <button type="button" data-command="formatBlock" data-value="H2">H2</button>

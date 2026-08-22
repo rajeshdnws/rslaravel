@@ -382,9 +382,9 @@
             'title' => $project->title,
             'category' => $project->category ?? 'Web Development',
             'subtitle' => $project->excerpt ?: 'A premium digital experience built for performance.',
-            'client' => 'Client Project',
+            'client' => $project->client,
             'date' => $project->created_at ? $project->created_at->format('F Y') : date('F Y'),
-            'role' => 'Full-Stack Development',
+            'role' => $project->role,
             'link' => $project->url,
             'tech' => $project->tech_stack ? array_map('trim', explode(',', $project->tech_stack)) : ['Laravel', 'Tailwind CSS'],
             'image' => $project->image ?: 'banner1.webp',
@@ -396,20 +396,38 @@
     }
     // Use the dynamic $page object from the CMS if available
     elseif (isset($page) && !isset($project)) {
-        $project = (object)[
-            'title' => $page->title,
-            'category' => 'Web Development',
-            'subtitle' => $page->excerpt ?: 'A complete digital transformation project focused on performance and user experience.',
-            'client' => $page->title === 'Jyoti Pilot Official Website' ? 'Jyoti Pilot' : 'Global Client',
-            'date' => $page->created_at ? $page->created_at->format('F Y') : date('F Y'),
-            'role' => 'Full-Stack Development, UI/UX',
-            'link' => $page->title === 'Jyoti Pilot Official Website' ? 'https://jyotipilot.com' : 'https://example.com',
-            'tech' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL'],
-            'image' => 'banner1.webp',
-            'overview' => $page->content ?: 'Our client needed a modern, scalable solution that could handle high traffic volumes and provide a seamless experience across all devices.',
-            'challenge' => 'The main challenge was creating a highly accessible platform that loads instantly, even on slower mobile networks, while maintaining a premium aesthetic.',
-            'solution' => 'We chose Laravel for its robust backend capabilities and implemented a clean, responsive frontend. Aggressive caching and optimized asset delivery ensured lightning-fast load times.',
-        ];
+        $realProject = \App\Models\PortfolioProject::where('slug', trim($page->slug, '/'))->first();
+        if ($realProject) {
+            $project = (object)[
+                'title' => $realProject->title,
+                'category' => $realProject->category ?? 'Web Development',
+                'subtitle' => $realProject->excerpt ?: $page->excerpt,
+                'client' => $realProject->client,
+                'date' => $realProject->created_at ? $realProject->created_at->format('F Y') : date('F Y'),
+                'role' => $realProject->role,
+                'link' => $realProject->url,
+                'tech' => $realProject->tech_stack ? array_map('trim', explode(',', $realProject->tech_stack)) : ['Laravel', 'Tailwind CSS'],
+                'image' => $realProject->image ?: 'banner1.webp',
+                'overview' => $realProject->description ?: $page->content,
+                'challenge' => null,
+                'solution' => null,
+            ];
+        } else {
+            $project = (object)[
+                'title' => $page->title,
+                'category' => 'Web Development',
+                'subtitle' => $page->excerpt ?: 'A complete digital transformation project focused on performance and user experience.',
+                'client' => null,
+                'date' => $page->created_at ? $page->created_at->format('F Y') : date('F Y'),
+                'role' => null,
+                'link' => null,
+                'tech' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL'],
+                'image' => 'banner1.webp',
+                'overview' => $page->content ?: 'Our client needed a modern, scalable solution that could handle high traffic volumes and provide a seamless experience across all devices.',
+                'challenge' => null,
+                'solution' => null,
+            ];
+        }
     } elseif (!isset($project)) {
         // Fallback Dummy Data
         $project = (object)[
@@ -438,28 +456,30 @@
 </section>
 
 <div class="project-meta-bar">
+    @if(!empty($project->client))
     <div class="meta-item">
         <span class="meta-label">Client</span>
         <span class="meta-value">{{ $project->client }}</span>
     </div>
+    @endif
     <div class="meta-item">
         <span class="meta-label">Date</span>
         <span class="meta-value">{{ $project->date }}</span>
     </div>
+    @if(!empty($project->role))
     <div class="meta-item">
         <span class="meta-label">Role</span>
         <span class="meta-value">{{ $project->role }}</span>
     </div>
+    @endif
+    @if(!empty($project->link))
     <div class="meta-item">
         <span class="meta-label">Live Link</span>
         <span class="meta-value">
-            @if(isset($project->link))
-                <a href="{{ $project->link }}" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-            @else
-                N/A
-            @endif
+            <a href="{{ $project->link }}" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
         </span>
     </div>
+    @endif
 </div>
 
 <div class="project-content-wrapper">
@@ -473,7 +493,9 @@
         <div class="content-main">
             <div class="content-block">
                 <h2>Project Overview</h2>
-                <p>{!! nl2br(e($project->overview)) !!}</p>
+                <div class="project-overview-content">
+                    {!! $project->overview !!}
+                </div>
             </div>
             
             @if(!empty($project->challenge))
@@ -489,27 +511,7 @@
                 <p>{!! nl2br(e($project->solution)) !!}</p>
             </div>
             @endif
-
-            <div class="project-gallery">
-                <div class="gallery-item full-width">
-                    <img src="{{ asset('site-assets/design.png') }}" alt="Gallery Image 1" onerror="this.src='https://placehold.co/1200x600/f8fafc/cbd5e1?text=Project+Showcase'">
-                    <div class="gallery-overlay">
-                        <span>Homepage Interface</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="{{ asset('site-assets/banner1.webp') }}" alt="Gallery Image 2" onerror="this.src='https://placehold.co/600x600/f8fafc/cbd5e1?text=Detail'">
-                    <div class="gallery-overlay">
-                        <span>Mobile Responsiveness</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="{{ asset('site-assets/banner1.webp') }}" alt="Gallery Image 3" onerror="this.src='https://placehold.co/600x600/f8fafc/cbd5e1?text=Detail'">
-                    <div class="gallery-overlay">
-                        <span>Dashboard Analytics</span>
-                    </div>
-                </div>
-            </div>
+            <!-- Removed Hardcoded Gallery Section -->
         </div>
 
         <div class="content-sidebar">

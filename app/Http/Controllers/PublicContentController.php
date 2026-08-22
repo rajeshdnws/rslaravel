@@ -82,7 +82,7 @@ class PublicContentController extends Controller
         return view('site.portfolio-detail', [
             'project' => $project,
             'title' => $project->title . ' | Portfolio | RS Orange Tech',
-            'description' => $this->excerpt($project->excerpt ?: $project->description),
+            'description' => \Illuminate\Support\Str::limit(strip_tags((string) ($project->excerpt ?: $project->description)), 160),
         ]);
     }
 

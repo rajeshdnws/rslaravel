@@ -74,6 +74,8 @@ return [
             'fields' => [
                 ['name' => 'title', 'label' => 'Title', 'type' => 'text', 'required' => true],
                 ['name' => 'slug', 'label' => 'Slug', 'type' => 'text', 'required' => true],
+                ['name' => 'client', 'label' => 'Client', 'type' => 'text'],
+                ['name' => 'role', 'label' => 'Role', 'type' => 'text'],
                 ['name' => 'category', 'label' => 'Category', 'type' => 'text'],
                 ['name' => 'image', 'label' => 'Project Image', 'type' => 'file'],
                 ['name' => 'excerpt', 'label' => 'Excerpt', 'type' => 'textarea'],

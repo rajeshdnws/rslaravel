@@ -689,7 +689,8 @@
                 $projectTitle = is_object($project) ? ($project->title ?? 'Project') : ($project['title'] ?? 'Project');
                 $projectCategory = is_object($project) ? ($project->category ?? 'Case Study') : ($project['category'] ?? 'Case Study');
                 $projectBody = is_object($project) ? ($project->description ?? $project->excerpt ?? 'Project details coming soon.') : ($project['body'] ?? ($project['excerpt'] ?? 'Project details coming soon.'));
-                $projectUrl = is_object($project) ? ($project->url ?? route('portfolio')) : ($project['url'] ?? route('portfolio'));
+                $projectSlug = is_object($project) && isset($project->slug) ? $project->slug : \Illuminate\Support\Str::slug($projectTitle);
+                $projectUrl = route('portfolio.show', ['slug' => $projectSlug]);
                 $projectTech = is_object($project) ? (explode(',', $project->tech_stack ?? '') ?: []) : ($project['tech'] ?? []);
             @endphp
             <article class="live-portfolio-card">

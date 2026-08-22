@@ -337,7 +337,8 @@
     <div class="premium-portfolio-grid">
         @forelse ($projects as $project)
             @php
-                $projectUrl = $project->url ?? '#';
+                $projectSlug = is_object($project) && isset($project->slug) ? $project->slug : \Illuminate\Support\Str::slug($project->title ?? 'project');
+                $projectUrl = route('portfolio.show', ['slug' => $projectSlug]);
                 $projectImage = $project->image ?? 'design.png';
                 $projectBody = $project->description ?? $project->excerpt ?? 'Project details coming soon.';
                 $projectTech = $project->tech_stack ? explode(',', $project->tech_stack) : [];
