@@ -501,7 +501,7 @@
         <img src="{{ asset('site-assets/' . ($project->image ?? 'banner1.webp')) }}" alt="{{ $project->title }}">
     </div>
 
-    <div class="content-grid {{ ($project->slug ?? '') === 'jyotipilot' ? 'one-column' : '' }}">
+    <div class="content-grid one-column">
         <div class="content-main">
             <div class="content-block">
                 <h2>Project Overview</h2>

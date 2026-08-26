@@ -134,23 +134,23 @@ class PortfolioProjectManagementTest extends TestCase
         $response->assertDontSee('Portfolio section description');
     }
 
-    public function test_jyotipilot_portfolio_view_has_one_column_layout(): void
+    public function test_portfolio_detail_views_have_one_column_layout(): void
     {
         $project = PortfolioProject::create([
-            'title' => 'Jyoti Pilot Official Website',
-            'slug' => 'jyotipilot',
+            'title' => 'Some Portfolio Website',
+            'slug' => 'some-portfolio',
             'category' => 'Web Development',
             'image' => 'design.png',
-            'excerpt' => 'Political portfolio website.',
-            'description' => 'A dynamic personal branding and political portfolio website for Jyoti Pilot.',
-            'tech_stack' => 'Laravel, Livewire, Tailwind CSS',
-            'url' => '/jyotipilot/',
+            'excerpt' => 'Short excerpt.',
+            'description' => 'A description of the portfolio project.',
+            'tech_stack' => 'Laravel, Vue.js',
+            'url' => '/some-portfolio/',
             'featured' => true,
             'status' => 'published',
             'sort_order' => 1,
         ]);
 
-        $response = $this->get('/portfolio/jyotipilot/');
+        $response = $this->get('/portfolio/some-portfolio/');
         $response->assertOk();
         $response->assertSee('content-grid one-column');
     }
