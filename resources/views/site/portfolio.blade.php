@@ -340,7 +340,7 @@
                 $projectSlug = is_object($project) && isset($project->slug) ? $project->slug : \Illuminate\Support\Str::slug($project->title ?? 'project');
                 $projectUrl = route('portfolio.show', ['slug' => $projectSlug]);
                 $projectImage = $project->image ?? 'design.png';
-                $projectBody = $project->description ?? $project->excerpt ?? 'Project details coming soon.';
+                $projectBody = (is_object($project) ? ($project->excerpt ?? '') : ($project['excerpt'] ?? '')) ?: 'Project details coming soon.';
                 $projectTech = $project->tech_stack ? explode(',', $project->tech_stack) : [];
                 if (empty($projectTech) && isset($project->tech) && is_array($project->tech)) {
                     $projectTech = $project->tech;

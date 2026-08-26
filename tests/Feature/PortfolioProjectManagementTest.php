@@ -228,4 +228,26 @@ class PortfolioProjectManagementTest extends TestCase
         $response->assertSee(route('portfolio.show', 'sitemap-canonical-project'));
         $response->assertDontSee(url('sitemap-canonical-project'));
     }
+
+    public function test_portfolio_list_shows_only_excerpt(): void
+    {
+        $project = PortfolioProject::create([
+            'title' => 'List Excerpt Project',
+            'slug' => 'list-excerpt-project',
+            'category' => 'Web Development',
+            'image' => 'design.png',
+            'excerpt' => 'Only List Excerpt Should Be Shown',
+            'description' => 'Full Long Description That Should Not Be Shown On List Page',
+            'tech_stack' => 'Laravel',
+            'url' => '/portfolio/',
+            'featured' => false,
+            'status' => 'published',
+            'sort_order' => 1,
+        ]);
+
+        $response = $this->get('/portfolio/');
+        $response->assertOk();
+        $response->assertSee('Only List Excerpt Should Be Shown');
+        $response->assertDontSee('Full Long Description That Should Not Be Shown On List Page');
+    }
 }
