@@ -688,7 +688,7 @@
                 $projectImage = is_object($project) ? ($project->image ?? 'design.png') : ($project['image'] ?? 'design.png');
                 $projectTitle = is_object($project) ? ($project->title ?? 'Project') : ($project['title'] ?? 'Project');
                 $projectCategory = is_object($project) ? ($project->category ?? 'Case Study') : ($project['category'] ?? 'Case Study');
-                $projectBody = is_object($project) ? ($project->description ?? $project->excerpt ?? 'Project details coming soon.') : ($project['body'] ?? ($project['excerpt'] ?? 'Project details coming soon.'));
+                $projectBody = is_object($project) ? ($project->excerpt ?? ($project->body ?? 'Project details coming soon.')) : ($project['excerpt'] ?? ($project['body'] ?? 'Project details coming soon.'));
                 $projectSlug = is_object($project) && isset($project->slug) ? $project->slug : \Illuminate\Support\Str::slug($projectTitle);
                 $projectUrl = route('portfolio.show', ['slug' => $projectSlug]);
                 $projectTech = is_object($project) ? (explode(',', $project->tech_stack ?? '') ?: []) : ($project['tech'] ?? []);

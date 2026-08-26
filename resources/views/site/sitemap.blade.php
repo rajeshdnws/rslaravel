@@ -55,7 +55,13 @@
     <!-- Dynamic Pages -->
     @foreach($pages as $page)
     <url>
-        <loc>{{ url(trim($page->slug, '/')) }}</loc>
+        <loc>
+            @if ($page->template === 'portfolio-detail')
+                {{ route('portfolio.show', trim($page->slug, '/')) }}
+            @else
+                {{ url(trim($page->slug, '/')) }}
+            @endif
+        </loc>
         <lastmod>{{ $page->updated_at->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

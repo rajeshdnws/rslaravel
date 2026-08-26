@@ -166,6 +166,11 @@
         gap: 60px;
     }
 
+    .content-grid.one-column {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
     .content-block h2 {
         font-size: 36px;
         font-weight: 800;
@@ -378,17 +383,21 @@
 @php
     // If $project is passed from PublicContentController::portfolioShow (PortfolioProject model)
     if (isset($project) && $project instanceof \App\Models\PortfolioProject) {
+        if (!isset($page)) {
+            $page = \App\Models\Page::where('slug', '/'.trim($project->slug, '/').'/')->where('status', 'published')->first();
+        }
         $mappedProject = (object)[
+            'slug' => $project->slug,
             'title' => $project->title,
             'category' => $project->category ?? 'Web Development',
-            'subtitle' => $project->excerpt ?: 'A premium digital experience built for performance.',
+            'subtitle' => $page?->excerpt ?: ($project->excerpt ?: 'A premium digital experience built for performance.'),
             'client' => $project->client,
             'date' => $project->created_at ? $project->created_at->format('F Y') : date('F Y'),
             'role' => $project->role,
             'link' => $project->url,
             'tech' => $project->tech_stack ? array_map('trim', explode(',', $project->tech_stack)) : ['Laravel', 'Tailwind CSS'],
             'image' => $project->image ?: 'banner1.webp',
-            'overview' => $project->description ?: 'Detailed project overview coming soon.',
+            'overview' => $page?->content ?: ($project->description ?: 'Detailed project overview coming soon.'),
             'challenge' => null,
             'solution' => null,
         ];
@@ -399,21 +408,23 @@
         $realProject = \App\Models\PortfolioProject::where('slug', trim($page->slug, '/'))->first();
         if ($realProject) {
             $project = (object)[
+                'slug' => $realProject->slug,
                 'title' => $realProject->title,
                 'category' => $realProject->category ?? 'Web Development',
-                'subtitle' => $realProject->excerpt ?: $page->excerpt,
+                'subtitle' => $page->excerpt ?: ($realProject->excerpt ?: 'A premium digital experience built for performance.'),
                 'client' => $realProject->client,
                 'date' => $realProject->created_at ? $realProject->created_at->format('F Y') : date('F Y'),
                 'role' => $realProject->role,
                 'link' => $realProject->url,
                 'tech' => $realProject->tech_stack ? array_map('trim', explode(',', $realProject->tech_stack)) : ['Laravel', 'Tailwind CSS'],
                 'image' => $realProject->image ?: 'banner1.webp',
-                'overview' => $realProject->description ?: $page->content,
+                'overview' => $page->content ?: ($realProject->description ?: 'Detailed project overview coming soon.'),
                 'challenge' => null,
                 'solution' => null,
             ];
         } else {
             $project = (object)[
+                'slug' => trim($page->slug, '/'),
                 'title' => $page->title,
                 'category' => 'Web Development',
                 'subtitle' => $page->excerpt ?: 'A complete digital transformation project focused on performance and user experience.',
@@ -431,6 +442,7 @@
     } elseif (!isset($project)) {
         // Fallback Dummy Data
         $project = (object)[
+            'slug' => 'e-commerce-replatforming',
             'title' => 'E-Commerce Replatforming',
             'category' => 'Web Development',
             'subtitle' => 'A complete overhaul of a legacy e-commerce system.',
@@ -489,7 +501,7 @@
         <img src="{{ asset('site-assets/' . ($project->image ?? 'banner1.webp')) }}" alt="{{ $project->title }}">
     </div>
 
-    <div class="content-grid">
+    <div class="content-grid {{ ($project->slug ?? '') === 'jyotipilot' ? 'one-column' : '' }}">
         <div class="content-main">
             <div class="content-block">
                 <h2>Project Overview</h2>

@@ -79,10 +79,21 @@ class PublicContentController extends Controller
             ->where('status', 'published')
             ->firstOrFail();
 
+        $page = Page::query()
+            ->where('slug', '/'.trim($slug, '/').'/')
+            ->where('status', 'published')
+            ->first();
+
+        $metaDescription = $page?->meta_description 
+            ?: ($page?->excerpt 
+                ?: ($page?->content 
+                    ?: ($project->excerpt ?: $project->description)));
+
         return view('site.portfolio-detail', [
             'project' => $project,
+            'page' => $page,
             'title' => $project->title . ' | Portfolio | RS Orange Tech',
-            'description' => \Illuminate\Support\Str::limit(strip_tags((string) ($project->excerpt ?: $project->description)), 160),
+            'description' => \Illuminate\Support\Str::limit(strip_tags((string) $metaDescription), 160),
         ]);
     }
 
@@ -137,6 +148,10 @@ class PublicContentController extends Controller
             ->where('slug', $this->pageSlug($path))
             ->where('status', 'published')
             ->firstOrFail();
+
+        if (!empty($page->template) && $page->template === 'portfolio-detail') {
+            return redirect()->route('portfolio.show', ['slug' => trim($page->slug, '/')], 301);
+        }
 
         $viewName = 'site.content-page';
         

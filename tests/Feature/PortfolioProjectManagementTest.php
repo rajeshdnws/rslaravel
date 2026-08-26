@@ -99,4 +99,133 @@ class PortfolioProjectManagementTest extends TestCase
             ->assertSee('Custom Laravel Development')
             ->assertSee(route('pages.show', 'custom-laravel-development'));
     }
+
+    public function test_single_portfolio_view_description_comes_from_pages_section(): void
+    {
+        $project = PortfolioProject::create([
+            'title' => 'Portfolio Page Detail Test',
+            'slug' => 'portfolio-detail-test',
+            'category' => 'Web Development',
+            'image' => 'design.png',
+            'excerpt' => 'Portfolio section excerpt',
+            'description' => 'Portfolio section description',
+            'tech_stack' => 'Laravel',
+            'url' => '/portfolio/',
+            'featured' => false,
+            'status' => 'published',
+            'sort_order' => 1,
+        ]);
+
+        $page = Page::where('slug', '/portfolio-detail-test/')->first();
+        $this->assertNotNull($page);
+        $page->update([
+            'excerpt' => 'Pages section excerpt',
+            'content' => 'Pages section content/description',
+            'meta_description' => 'Pages section meta description',
+        ]);
+
+        $response = $this->get('/portfolio/portfolio-detail-test/');
+        $response->assertOk();
+
+        $response->assertSee('Pages section excerpt');
+        $response->assertSee('Pages section content/description');
+        $response->assertSee('Pages section meta description');
+        $response->assertDontSee('Portfolio section excerpt');
+        $response->assertDontSee('Portfolio section description');
+    }
+
+    public function test_jyotipilot_portfolio_view_has_one_column_layout(): void
+    {
+        $project = PortfolioProject::create([
+            'title' => 'Jyoti Pilot Official Website',
+            'slug' => 'jyotipilot',
+            'category' => 'Web Development',
+            'image' => 'design.png',
+            'excerpt' => 'Political portfolio website.',
+            'description' => 'A dynamic personal branding and political portfolio website for Jyoti Pilot.',
+            'tech_stack' => 'Laravel, Livewire, Tailwind CSS',
+            'url' => '/jyotipilot/',
+            'featured' => true,
+            'status' => 'published',
+            'sort_order' => 1,
+        ]);
+
+        $response = $this->get('/portfolio/jyotipilot/');
+        $response->assertOk();
+        $response->assertSee('content-grid one-column');
+    }
+
+    public function test_homepage_portfolio_section_shows_only_excerpt(): void
+    {
+        $project = PortfolioProject::create([
+            'title' => 'Home Excerpt Project',
+            'slug' => 'home-excerpt-project',
+            'category' => 'Web Development',
+            'image' => 'design.png',
+            'excerpt' => 'Only Home Excerpt Should Be Shown',
+            'description' => 'Full Long Description That Should Not Be Shown On Home',
+            'tech_stack' => 'Laravel',
+            'url' => '/portfolio/',
+            'featured' => true,
+            'status' => 'published',
+            'sort_order' => 1,
+        ]);
+
+        Page::create([
+            'title' => 'Some Service Page',
+            'slug' => '/some-service-page/',
+            'template' => 'services',
+            'status' => 'published',
+            'excerpt' => 'Service excerpt',
+            'content' => 'Service content',
+        ]);
+
+        $response = $this->get('/');
+        $response->assertOk();
+        $response->assertSee('Only Home Excerpt Should Be Shown');
+        $response->assertDontSee('Full Long Description That Should Not Be Shown On Home');
+    }
+
+    public function test_portfolio_page_accessed_via_generic_route_redirects_to_portfolio_detail_route(): void
+    {
+        $project = PortfolioProject::create([
+            'title' => 'Redirect Test Project',
+            'slug' => 'redirect-test-project',
+            'category' => 'Web Development',
+            'image' => 'design.png',
+            'excerpt' => 'Redirect Test Excerpt',
+            'description' => 'Redirect Test Description',
+            'tech_stack' => 'Laravel',
+            'url' => '/redirect-test-project/',
+            'featured' => false,
+            'status' => 'published',
+            'sort_order' => 1,
+        ]);
+
+        $response = $this->get('/redirect-test-project/');
+        $response->assertRedirect(route('portfolio.show', 'redirect-test-project'));
+        $response->assertStatus(301);
+    }
+
+    public function test_sitemap_includes_correct_canonical_portfolio_detail_routes(): void
+    {
+        $project = PortfolioProject::create([
+            'title' => 'Sitemap Canonical Project',
+            'slug' => 'sitemap-canonical-project',
+            'category' => 'Web Development',
+            'image' => 'design.png',
+            'excerpt' => 'Sitemap Canonical Excerpt',
+            'description' => 'Sitemap Canonical Description',
+            'tech_stack' => 'Laravel',
+            'url' => '/sitemap-canonical-project/',
+            'featured' => false,
+            'status' => 'published',
+            'sort_order' => 1,
+        ]);
+
+        $response = $this->get('/sitemap.xml');
+        $response->assertOk();
+        $response->assertSee(route('portfolio.show', 'sitemap-canonical-project'));
+        $response->assertDontSee(url('sitemap-canonical-project'));
+    }
 }
