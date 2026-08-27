@@ -61,7 +61,7 @@
                     <a href="#">f</a>
                     <a href="#">x</a>
                     <a href="#">ig</a>
-                    <a href="#">in</a>
+                    <a href="https://www.linkedin.com/company/rsorangetech" target="_blank" rel="noopener noreferrer">in</a>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
                 <a href="#">f</a>
                 <a href="#">x</a>
                 <a href="#">ig</a>
-                <a href="#">in</a>
+                <a href="https://www.linkedin.com/company/rsorangetech" target="_blank" rel="noopener noreferrer">in</a>
             </div>
         </div>
         <div class="footer-address">

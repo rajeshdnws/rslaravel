@@ -5,7 +5,7 @@
 <td class="content-cell" align="center">
 <div class="footer-socials" style="margin-bottom: 15px;">
 <a href="#" style="color: #ea580c; text-decoration: none; font-weight: bold; margin: 0 8px;">Twitter</a> &bull; 
-<a href="#" style="color: #ea580c; text-decoration: none; font-weight: bold; margin: 0 8px;">LinkedIn</a> &bull; 
+<a href="https://www.linkedin.com/company/rsorangetech" target="_blank" rel="noopener noreferrer" style="color: #ea580c; text-decoration: none; font-weight: bold; margin: 0 8px;">LinkedIn</a> &bull; 
 <a href="#" style="color: #ea580c; text-decoration: none; font-weight: bold; margin: 0 8px;">Facebook</a>
 </div>
 {{ Illuminate\Mail\Markdown::parse($slot) }}
