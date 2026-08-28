@@ -272,6 +272,9 @@
             
             <form action="{{ route('contact.submit') }}" method="POST">
                 @csrf
+                <div style="display: none;" aria-hidden="true">
+                    <input type="text" name="my_custom_country_verify" autocomplete="off" tabindex="-1">
+                </div>
                 <div class="form-group">
                     <label for="name">Full Name <span style="color: #ef4444;">*</span></label>
                     <input type="text" id="name" name="name" required placeholder="John Doe" value="{{ old('name') }}">

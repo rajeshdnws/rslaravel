@@ -114,6 +114,22 @@ Route::get('/contact-us/', fn () => view('site.contact', [
     'description' => 'Get in touch with RS Orange Tech. Reach out for web development, app creation, or AI automation inquiries in Noida and Delhi NCR.'
 ]))->name('contact');
 Route::post('/contact-us/', function (Request $request) {
+    if ($request->filled('my_custom_country_verify')) {
+        return back()->with('status', 'Thanks. Your message has been sent successfully.');
+    }
+
+    $name = (string) $request->input('name');
+    $subject = (string) $request->input('subject');
+    $message = (string) $request->input('message');
+
+    if (
+        str_contains($name, 'MichaeleresY') || 
+        stripos($subject, 'Jackpot') !== false || 
+        stripos($message, 'Jackpot') !== false
+    ) {
+        return back()->with('status', 'Thanks. Your message has been sent successfully.');
+    }
+
     $validated = $request->validate([
         'name' => ['required', 'string', 'max:120'],
         'email' => ['required', 'email', 'max:160'],
@@ -139,7 +155,7 @@ Route::post('/contact-us/', function (Request $request) {
     });
 
     return back()->with('status', 'Thanks. Your message has been sent successfully.');
-})->name('contact.submit');
+})->middleware('throttle:3,10')->name('contact.submit');
 
 Route::get('/quote-requests/', fn () => view('site.quote', [
     'services' => config('site.services'),
@@ -158,6 +174,20 @@ Route::redirect('/gallery-plugin/', '/plugins/', 301);
 Route::redirect('/ai-website-fixer/', '/plugins/', 301);
 
 Route::post('/quote-requests/', function (Request $request) {
+    if ($request->filled('my_custom_country_verify')) {
+        return back()->with('status', 'Thanks. Your quote request has been received.');
+    }
+
+    $name = (string) $request->input('name');
+    $message = (string) $request->input('message');
+
+    if (
+        str_contains($name, 'MichaeleresY') || 
+        stripos($message, 'Jackpot') !== false
+    ) {
+        return back()->with('status', 'Thanks. Your quote request has been received.');
+    }
+
     $validated = $request->validate([
         'name' => ['required', 'string', 'max:120'],
         'email' => ['required', 'email', 'max:160'],
@@ -200,7 +230,7 @@ Route::post('/quote-requests/', function (Request $request) {
     session()->flash('lead', $validated);
 
     return back()->with('status', 'Thanks. Your quote request has been received.');
-})->name('quote.submit');
+})->middleware('throttle:3,10')->name('quote.submit');
 
 Route::post('/newsletter/', function (Request $request) {
     $request->validate(['email' => ['required', 'email', 'max:160']]);

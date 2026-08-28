@@ -1,5 +1,8 @@
 <form class="premium-quote-form" method="post" action="{{ route('quote.submit') }}" enctype="multipart/form-data">
     @csrf
+    <div style="display: none;" aria-hidden="true">
+        <input type="text" name="my_custom_country_verify" autocomplete="off" tabindex="-1">
+    </div>
     
     @if (session('status'))
         <div class="form-success" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: #059669; padding: 16px 20px; border-radius: 12px; margin-bottom: 24px; font-weight: 500;">
