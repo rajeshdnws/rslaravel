@@ -6770,7 +6770,7 @@ input, textarea {
 .core-card-num {
     font-size: 48px;
     font-weight: 800;
-    color: rgba(249, 115, 22, 0.15);
+    color: var(--orange);
     line-height: 1;
     margin-bottom: 20px;
 }
