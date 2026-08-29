@@ -77,12 +77,11 @@
         </button>
         <div class="navlinks" id="site-navlinks">
             <a href="{{ route('home') }}">Home</a>
-            <a href="{{ route('about') }}">About Us</a>
-            <a href="{{ route('our-approach') }}">Our Approach</a>
-            <a href="{{ route('quote') }}">Quote Requests</a>
-            <a href="{{ route('technologies') }}">Our Technologies</a>
             <a href="{{ route('services') }}">Services</a>
+            <a href="/agency-partners">For Agencies</a>
             <a href="{{ route('portfolio') }}">Portfolio</a>
+            <a href="{{ route('technologies') }}">Technologies</a>
+            <a href="{{ route('about') }}">About Us</a>
             <a href="{{ route('contact') }}">Contact Us</a>
             <div class="nav-dropdown">
                 <a class="dropdown-toggle" href="{{ route('plugins') }}" aria-haspopup="true" aria-expanded="false">Plugins</a>

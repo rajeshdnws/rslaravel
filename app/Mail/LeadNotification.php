@@ -30,7 +30,13 @@ class LeadNotification extends Mailable
      */
     public function envelope(): Envelope
     {
-        $subject = $this->lead->type === 'quote' ? 'New Quote Request: ' : 'New Contact Inquiry: ';
+        if ($this->lead->type === 'quote') {
+            $subject = 'New Quote Request: ';
+        } elseif ($this->lead->type === 'agency') {
+            $subject = 'New Agency Partnership Inquiry: ';
+        } else {
+            $subject = 'New Contact Inquiry: ';
+        }
         $subject .= $this->lead->name;
         
         return new Envelope(

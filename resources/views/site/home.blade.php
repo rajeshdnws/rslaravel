@@ -1,7 +1,7 @@
 @php
-    $title = "Web Development, AI & Ecommerce Solutions Company in Noida | RS Orange Tech";
-    $description = "RS Orange Tech provides web development, ecommerce, mobile app, AI and custom software solutions for businesses in Noida, Delhi NCR and worldwide.";
-    $keywords = "web development company, mobile app development, Laravel development, custom software development, UI/UX design, SEO services, ecommerce development, AI automation";
+    $title = "Web & Software Development Company | RS Orange Tech";
+    $description = "RS Orange Tech provides web, mobile, e-commerce, AI and custom software development for businesses and digital agencies. Partner with our experienced development team.";
+    $keywords = "web development company, software development company, custom software development, web application development, mobile app development, e-commerce development, AI development, white-label development, agency development partner, dedicated development team";
 @endphp
 @extends('site.layout')
 
@@ -19,7 +19,7 @@
             'url' => route('home'),
             'logo' => asset('rslogo.png'),
             'image' => asset('site-assets/banner1.webp'),
-            'description' => 'Premium web development and mobile app development agency offering Custom Web Development, Laravel Solutions, UI/UX Design, and AI Automation services.',
+            'description' => 'Premium on-demand technology and development partner for businesses, startups, and digital agencies.',
             'email' => 'info@rsorangetech.com',
             'telephone' => '+91 73035 36474',
             'priceRange' => '$$',
@@ -50,7 +50,7 @@
             '@id' => route('home') . '#website',
             'url' => route('home'),
             'name' => 'RS Orange Tech',
-            'description' => 'Premium Web, App & Software Development Company',
+            'description' => 'Your On-Demand Technology Partner',
             'publisher' => [
                 '@type' => 'Organization',
                 'name' => 'RS Orange Tech',
@@ -89,40 +89,41 @@
 @endpush
 
 @section('content')
+<!-- Hero Section -->
 <section class="premium-hero">
     <div class="premium-hero-copy">
-        <p class="eyebrow">Premium Web, App & AI Development Agency</p>
-        <h1>Web Development, AI & <span class="highlight-orange">Custom Software</span> Solutions</h1>
-        <p>RS Orange Tech is a full-stack digital agency specializing in premium web development, ecommerce platforms, mobile applications, AI automation, and custom software solutions.</p>
+        <p class="eyebrow">Your On-Demand Technology Partner</p>
+        <h1>Your On-Demand Technology Partner</h1>
+        <p class="hero-subheadline">Web, Mobile, E-commerce, AI & Custom Software Development for Businesses and Digital Agencies.</p>
+        <p class="hero-subtext">Need more development capacity? We work as your extended engineering team — white-label, flexible, and built around your workflow.</p>
         <div class="actions">
             <a class="button primary hero-button" href="{{ route('quote') }}">Start a Project <span aria-hidden="true">-&gt;</span></a>
-            <a class="button premium-ghost hero-button" href="{{ route('portfolio') }}">View Our Work <span aria-hidden="true">-&gt;</span></a>
+            <a class="button premium-ghost hero-button" href="/agency-partners">Partner With Us <span aria-hidden="true">-&gt;</span></a>
         </div>
         <div class="hero-features" aria-label="Company capabilities">
             <div class="hero-feature-item">
-                <div class="feature-icon">🚀</div>
-                <strong>Modern Solutions</strong>
-                <span>Built for Growth</span>
+                <div class="feature-icon">⚙️</div>
+                <strong>Multi-Stack</strong>
+                <span>Tailored Tech Stack</span>
             </div>
             <div class="hero-feature-item">
-                <div class="feature-icon">🔒</div>
-                <strong>Secure & Scalable</strong>
-                <span>Future ready</span>
+                <div class="feature-icon">🛡️</div>
+                <strong>White-Label</strong>
+                <span>Quiet Collaboration</span>
             </div>
             <div class="hero-feature-item">
                 <div class="feature-icon">⚡</div>
-                <strong>On-Time Delivery</strong>
-                <span>We Promise</span>
+                <strong>Flexible Scale</strong>
+                <span>On-Demand Resource</span>
             </div>
             <div class="hero-feature-item">
                 <div class="feature-icon">💬</div>
-                <strong>24/7 Support</strong>
-                <span>We're Here</span>
+                <strong>Direct Support</strong>
+                <span>Technical Oversight</span>
             </div>
         </div>
     </div>
     <div class="premium-hero-panel" aria-label="RS Orange Tech capabilities">
-        <!-- Device Mockup Container -->
         <div class="hero-device-mockup">
             <div class="hero-orbit" aria-hidden="true"></div>
             <div class="hero-dotted hero-dotted-top" aria-hidden="true"></div>
@@ -131,53 +132,52 @@
             <div class="hero-cube hero-cube-two" aria-hidden="true"></div>
             <div class="hero-sphere" aria-hidden="true"></div>
             <div class="hero-paper-plane" aria-hidden="true"></div>
-            <!-- Floating Cards Around Device -->
+            
             <div class="floating-card floating-card-1">
                 <div class="card-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path></svg>
                 </div>
-                <span class="card-label">AI Automation</span>
-                <p>Smart solutions to automate and scale your business.</p>
+                <span class="card-label">Custom Software</span>
+                <p>Tailored systems built for your exact business workflows.</p>
             </div>
 
             <div class="floating-card floating-card-2">
                 <div class="card-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                 </div>
-                <span class="card-label">Web Development</span>
-                <p>Fast, secure and high-performing websites.</p>
+                <span class="card-label">Extended Team</span>
+                <p>Scale capacity dynamically behind your agency brand.</p>
             </div>
 
             <div class="floating-card floating-card-3">
                 <div class="card-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
                 </div>
-                <span class="card-label">Mobile Apps</span>
-                <p>Engaging apps for Android and iOS platforms.</p>
+                <span class="card-label">Mobile & Web</span>
+                <p>Native apps and high-performance frontend interfaces.</p>
             </div>
 
             <div class="floating-card floating-card-4">
                 <div class="card-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                 </div>
-                <span class="card-label">E-Commerce</span>
-                <p>Conversion-focused stores that sell more.</p>
+                <span class="card-label">Enterprise Commerce</span>
+                <p>Magento, Shopify, WooCommerce & headless stacks.</p>
             </div>
 
-            <!-- Central Device Screen -->
             <div class="device-screen">
                 <div class="screen-content">
-                    <div class="screen-header">Driving Digital Success for Leading Brands</div>
-                    <div class="screen-text">Premium development services that help businesses grow</div>
-                    <div class="screen-button">Get Started</div>
+                    <div class="screen-header">You Bring the Project. We Build the Tech.</div>
+                    <div class="screen-text">Reliable, white-label engineering partner for agency workflows.</div>
+                    <div class="screen-button">Start a Project</div>
                 </div>
             </div>
             <div class="hero-phone" aria-hidden="true">
                 <div class="phone-notch"></div>
                 <div class="phone-brand">RS</div>
-                <h3>Empowering Business with Technology</h3>
-                <p>Mobile-first experiences built to convert.</p>
-                <span>Get Started</span>
+                <h3>Extended Development Capacity</h3>
+                <p>Professional engineering built around your workflow.</p>
+                <span>Partner With Us</span>
                 <div class="phone-tabs">
                     <i></i><i></i><i></i><i></i>
                 </div>
@@ -186,250 +186,186 @@
     </div>
 </section>
 
-<section class="brand-strip" aria-label="Primary services">
-    <a href="{{ route('pages.show', 'ecommerce-development') }}"><span>E-Commerce Development</span></a>
-    <a href="{{ route('pages.show', 'laravel-development') }}"><span>Laravel Applications</span></a>
-    <a href="{{ route('pages.show', 'mobile-app-development') }}"><span>Mobile Apps</span></a>
-    <a href="{{ route('pages.show', 'ai-automation') }}"><span>AI Automation</span></a>
-</section>
-
-<section class="what-we-do-section" id="what-we-do">
-    <div class="what-we-do-shell">
-        <div class="what-copy">
-            <p class="eyebrow">What We Do</p>
-            <h2>Digital products that look <span>premium</span> and work hard behind the scenes.</h2>
-            <p>RS Orange Tech helps founders, SMEs and established teams turn business ideas into reliable digital systems. Every build is planned for SEO, speed, security, responsive design and easy day-to-day management.</p>
-            <p>From a first business website to a custom web application, we focus on clear user journeys, clean code, measurable performance and long-term maintainability.</p>
-            <div class="what-actions">
-                <a class="button primary" href="{{ route('quote') }}">Get a Free Quote <span aria-hidden="true">→</span></a>
-                <a class="what-text-link" href="{{ route('our-approach') }}">Discover Our Approach <span aria-hidden="true">→</span></a>
-                <a class="what-text-link" href="{{ route('services') }}">Explore Services <span aria-hidden="true">→</span></a>
-            </div>
-
+<!-- Trust / Credibility Section -->
+<section class="trust-bar-section">
+    <div class="trust-bar-container">
+        <div class="trust-bar-intro">
+            <h3>Built for Projects of Every Scale</h3>
+            <p>From focused website builds to complex software platforms, our team adapts to the project's requirements, technology stack, and delivery model.</p>
         </div>
-
-        <!-- Feature Cards Right Panel -->
-        <div class="what-features-right-panel">
-            
-            <!-- Top Grid (4 cards) -->
-            <div class="what-features-top-grid">
-                <div class="what-feature-card-tall what-feature-1">
-                    <div class="feature-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                    </div>
-                    <h3>E-Commerce Development</h3>
-                    <p>High-performance online stores that convert visitors into loyal customers.</p>
-                    <span class="feature-badge feature-badge-1">01</span>
-                </div>
-                
-                <div class="what-feature-card-tall what-feature-2">
-                    <div class="feature-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </div>
-                    <h3>Laravel Applications</h3>
-                    <p>Robust, scalable and secure web applications built with Laravel.</p>
-                    <span class="feature-badge feature-badge-2">02</span>
-                </div>
-                
-                <div class="what-feature-card-tall what-feature-3">
-                    <div class="feature-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-                    </div>
-                    <h3>Mobile Apps</h3>
-                    <p>Feature-rich mobile apps for iOS and Android platforms.</p>
-                    <span class="feature-badge feature-badge-3">03</span>
-                </div>
-                
-                <div class="what-feature-card-tall what-feature-4">
-                    <div class="feature-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg>
-                    </div>
-                    <h3>AI Automation</h3>
-                    <p>AI-powered automation that saves time and boosts efficiency.</p>
-                    <span class="feature-badge feature-badge-4">04</span>
-                </div>
+        <div class="trust-bar-stats">
+            <div class="trust-stat-item">
+                <div class="stat-num">500+</div>
+                <div class="stat-lbl">Projects Delivered</div>
             </div>
-            
-            <!-- Middle Grid (6 cards) -->
-            <div class="what-features-middle-grid">
-                <div class="what-feature-card-wide what-feature-5">
-                    <div class="feature-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                    </div>
-                    <div class="feature-card-content">
-                        <h3>Custom Web Development</h3>
-                        <p>Tailored websites and web applications built to fit your unique business needs.</p>
-                    </div>
-                </div>
-
-                <div class="what-feature-card-wide what-feature-6">
-                    <div class="feature-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
-                    </div>
-                    <div class="feature-card-content">
-                        <h3>UI/UX Design</h3>
-                        <p>Modern, intuitive designs and conversion-focused designs that enhance user experience.</p>
-                    </div>
-                </div>
-
-                <div class="what-feature-card-wide what-feature-7">
-                    <div class="feature-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <div class="feature-card-content">
-                        <h3>CMS Development</h3>
-                        <p>Easy-to-manage CMS solutions like WordPress for complete content control.</p>
-                    </div>
-                </div>
-
-                <div class="what-feature-card-wide what-feature-8">
-                    <div class="feature-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                    </div>
-                    <div class="feature-card-content">
-                        <h3>SEO & Digital Growth</h3>
-                        <p>SEO-friendly structure and digital strategies to help you rank higher and grow faster.</p>
-                    </div>
-                </div>
-
-                <div class="what-feature-card-wide what-feature-9">
-                    <div class="feature-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                    </div>
-                    <div class="feature-card-content">
-                        <h3>Website Maintenance</h3>
-                        <p>Ongoing support, updates and monitoring to keep your website fast and secure.</p>
-                    </div>
-                </div>
-
-                <div class="what-feature-card-wide what-feature-10">
-                    <div class="feature-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
-                    </div>
-                    <div class="feature-card-content">
-                        <h3>Hosting & Deployment</h3>
-                        <p>Reliable hosting and seamless deployment for maximum uptime and performance.</p>
-                    </div>
-                </div>
+            <div class="trust-stat-item">
+                <div class="stat-num">200+</div>
+                <div class="stat-lbl">Clients Worldwide</div>
             </div>
-
-            <!-- Bottom Tech Strip -->
-            <div class="what-technologies-strip">
-                <h3>Technologies We Use</h3>
-                <div class="tech-strip-icons">
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel" width="32" height="32" />
-                        <span>Laravel</span>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue.js" width="32" height="32" />
-                        <span>Vue.js</span>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" width="32" height="32" />
-                        <span>React</span>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" width="32" height="32" />
-                        <span>Next.js</span>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" width="32" height="32" />
-                        <span>Tailwind CSS</span>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" width="32" height="32" />
-                        <span>Node.js</span>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="32" height="32" />
-                        <span>MySQL</span>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" width="32" height="32" />
-                        <span>AWS</span>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" width="32" height="32" />
-                        <span>Docker</span>
-                    </div>
-                </div>
+            <div class="trust-stat-item">
+                <div class="stat-num">9+</div>
+                <div class="stat-lbl">Years Industry Exp.</div>
             </div>
-            
         </div>
     </div>
 </section>
 
-<section class="home-services-section">
-    <div class="home-services-container">
-        <!-- Premium Header -->
-        <div class="home-services-header">
-            <p class="eyebrow">OUR SERVICES</p>
-            <h2>Solutions That Drive Your Business Forward</h2>
-            <p class="services-subtitle">Powerful, scalable and result-driven services to help your business grow in the digital era.</p>
+<!-- Agency Partnership Section -->
+<section class="agency-partnership-section">
+    <div class="agency-partnership-container">
+        <div class="partnership-head">
+            <p class="eyebrow">WHITE-LABEL SOLUTIONS</p>
+            <h2>Your Clients. Your Brand. Our Development Team.</h2>
+            <p class="partnership-sub">Scale your agency without expanding your in-house engineering team. RS Orange Tech works behind the scenes as your white-label development partner.</p>
+        </div>
+        
+        <div class="partnership-grid">
+            <div class="partnership-col you-handle-col">
+                <div class="col-header">
+                    <span class="col-icon">👥</span>
+                    <h3>You Handle</h3>
+                </div>
+                <ul class="col-list">
+                    <li><span>✓</span> Client relationships & account management</li>
+                    <li><span>✓</span> Sales, proposals & pitches</li>
+                    <li><span>✓</span> Strategy & discovery sessions</li>
+                    <li><span>✓</span> Branding & creative guidelines</li>
+                    <li><span>✓</span> UI/UX designs & assets</li>
+                    <li><span>✓</span> Project management & deliverables</li>
+                </ul>
+            </div>
+            
+            <div class="partnership-col we-handle-col">
+                <div class="col-header">
+                    <span class="col-icon">💻</span>
+                    <h3>We Handle</h3>
+                </div>
+                <ul class="col-list">
+                    <li><span>✓</span> Frontend development (React, Next.js, HTML/CSS)</li>
+                    <li><span>✓</span> Backend development (PHP, Laravel, Node.js)</li>
+                    <li><span>✓</span> Custom APIs & headless development</li>
+                    <li><span>✓</span> Database design & queries (MySQL, Postgres)</li>
+                    <li><span>✓</span> Third-party system integrations</li>
+                    <li><span>✓</span> E-commerce builds (Shopify, Magento, WooCommerce)</li>
+                    <li><span>✓</span> AI integrations & smart workflows</li>
+                    <li><span>✓</span> Quality assurance & cross-device testing</li>
+                    <li><span>✓</span> Server setup, deployment & maintenance</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Services Grid -->
+        <div class="partnership-action">
+            <a class="button primary" href="/agency-partners">Become a Development Partner <span aria-hidden="true">→</span></a>
+            <p class="action-note">NDA and white-label collaboration available.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="home-services-section">
+    <div class="home-services-container">
+        <div class="home-services-header">
+            <p class="eyebrow">SERVICES</p>
+            <h2>Technology Services That Scale With Your Needs</h2>
+            <p class="services-subtitle">From simple templates to custom enterprise builds, we support agencies and businesses with reliable engineering.</p>
+        </div>
+
         <div class="home-services-grid">
-            @foreach ($services as $service)
+            @php
+                $definedServices = [
+                    [
+                        'title' => 'Web Development',
+                        'desc' => 'Business websites, web applications, portals and custom platforms.',
+                        'slug' => 'web-development'
+                    ],
+                    [
+                        'title' => 'E-commerce',
+                        'desc' => 'WooCommerce, Shopify, Magento/Adobe Commerce and custom commerce solutions.',
+                        'slug' => 'ecommerce-development'
+                    ],
+                    [
+                        'title' => 'Custom Software',
+                        'desc' => 'Business applications, SaaS platforms, dashboards, portals and workflow systems.',
+                        'slug' => 'custom-software-development'
+                    ],
+                    [
+                        'title' => 'Mobile App Development',
+                        'desc' => 'Cross-platform and native mobile applications.',
+                        'slug' => 'mobile-app-development'
+                    ],
+                    [
+                        'title' => 'AI Development',
+                        'desc' => 'AI integrations, AI-powered applications, automation, chatbots and intelligent workflows.',
+                        'slug' => 'ai-automation'
+                    ],
+                    [
+                        'title' => 'API & System Integration',
+                        'desc' => 'Payment gateways, third-party APIs, CRM, ERP, communication platforms and custom integrations.',
+                        'slug' => 'api-integration'
+                    ],
+                    [
+                        'title' => 'UI/UX & Frontend',
+                        'desc' => 'Modern responsive interfaces and frontend development.',
+                        'slug' => 'ui-ux-design'
+                    ],
+                    [
+                        'title' => 'Maintenance & Support',
+                        'desc' => 'Bug fixing, optimization, upgrades, monitoring and ongoing development.',
+                        'slug' => 'website-maintenance'
+                    ]
+                ];
+            @endphp
+            @foreach ($definedServices as $index => $item)
                 @php
-                    $serviceTitle = is_object($service) ? ($service->title ?? 'Service') : ($service['title'] ?? 'Service');
-                    $serviceBody = is_object($service)
-                        ? ($service->excerpt ?: $service->content ?: 'Learn more about this service.')
-                        : ($service['body'] ?? 'Learn more about this service.');
-                    $serviceSlug = is_object($service) ? trim((string) ($service->slug ?? ''), '/') : null;
-                    $serviceLink = $serviceSlug ? route('pages.show', $serviceSlug) : route('services');
-                    $serviceNumber = str_pad($loop->iteration, 2, '0', STR_PAD_LEFT);
+                    $serviceNumber = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                    // Match with database slug where possible
+                    $dbService = $services->first(function($s) use ($item) {
+                        $sTitle = is_object($s) ? $s->title : ($s['title'] ?? '');
+                        $sSlug = is_object($s) ? $s->slug : ($s['slug'] ?? '');
+                        return stripos($sTitle, $item['title']) !== false || stripos($sSlug, $item['slug']) !== false;
+                    });
+                    $serviceLink = $dbService 
+                        ? (is_object($dbService) ? route('pages.show', trim($dbService->slug, '/')) : route('services'))
+                        : route('services');
                 @endphp
                 <article class="home-service-card" data-service-number="{{ $serviceNumber }}">
                     <div class="service-card-badge">{{ $serviceNumber }}</div>
                     
                     <div class="service-card-icon">
                         <svg class="service-icon-svg" viewBox="0 0 48 48" fill="none">
-                            @switch($loop->iteration)
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
+                            @switch($index)
+                                @case(0)
+                                    <path d="M16 18h16v12H16V18zm0 16h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    @break
                                 @case(1)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M20 18h8v8h-8v-8M20 28h8v4h-8v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M14 16h6l4 16h10l3-10H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     @break
                                 @case(2)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M18 22v-2c0-1 1-2 2-2h8c1 0 2 1 2 2v2M18 22h12m-10 0v6c0 1 1 2 2 2h4c1 0 2-1 2-2v-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M18 16h12m-12 6h12M18 28h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                                     @break
                                 @case(3)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M22 18h4v12h-4v-12M18 28h12M24 18c-3 0-6 3-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <rect x="18" y="14" width="12" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="24" cy="30" r="1" fill="currentColor"/>
                                     @break
                                 @case(4)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M18 20h12v8H18v-8M20 18v-2h8v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M24 16v16M16 24h16M20 20l8 8m-8 0l8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                                     @break
                                 @case(5)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M20 30h8v-1.5c0-1 1-2 2-2h-12c1 0 2 1 2 2V30M22 18c-1 0-2 1-2 2s1 2 2 2 2-1 2-2-1-2-2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M16 20h8v8h-8v-8zm16 0h-4v8h4v-8zm-8 4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                                     @break
                                 @case(6)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M22 20h4v10h-4v-10M18 28h12M24 18l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 18h16v8H16v-8zm8 8v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                                     @break
                                 @case(7)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M18 28h12M24 20c1.5 0 2.5 1 2.5 2.5s-1 2.5-2.5 2.5-2.5-1-2.5-2.5 1-2.5 2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                    @break
-                                @case(8)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M20 20h8c1 0 2 1 2 2v6c0 1-1 2-2 2h-8c-1 0-2-1-2-2v-6c0-1 1-2 2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                    @break
-                                @case(9)
-                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                    <path d="M18 22h12v6H18v-6M24 18l2 2-2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M24 14v8m0 8v2M16 24h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                                     @break
                             @endswitch
                         </svg>
                     </div>
                     
-                    <h3 class="service-card-title">{{ $serviceTitle }}</h3>
-                    
-                    <p class="service-card-description">{{ \Illuminate\Support\Str::limit(strip_tags($serviceBody), 140) }}</p>
+                    <h3 class="service-card-title">{{ $item['title'] }}</h3>
+                    <p class="service-card-description">{{ $item['desc'] }}</p>
                     
                     <a href="{{ $serviceLink }}" class="service-card-link">
                         Learn more
@@ -441,83 +377,235 @@
     </div>
 </section>
 
-<section class="premium-why-section">
-    <!-- Left: Image with floating stat card -->
-    <div class="why-media-container">
-        <div class="why-image-wrapper">
-            <div class="why-bg-element"></div>
-            <img src="{{ asset('site-assets/about-2.webp') }}" alt="RS Orange Tech team planning a premium web development project" class="why-image">
-        </div>
-        <div class="why-floating-card">
-            <div class="floating-card-header">9+ Years</div>
-            <div class="floating-card-text">Building digital experiences</div>
-        </div>
+<!-- Technology Positioning Grid -->
+<section class="tech-home premium-tech">
+    <div class="tech-section-head">
+        <p class="eyebrow">COMPATIBILITY</p>
+        <h2>We Work With Your Technology Stack</h2>
+        <p>You don't need to change your technology to work with us. Our engineering team can adapt to your existing stack or recommend the right technology for a new project.</p>
+        <a class="button primary" href="{{ route('technologies') }}">Explore Full Technology Guide</a>
     </div>
-
-    <!-- Right: Content and features -->
-    <div class="why-content-container">
-        <div class="why-header">
-            <p class="eyebrow">Why RS Orange Tech</p>
-            <h2>One focused team. <span class="highlight-orange">Built around your growth.</span></h2>
-            <p class="why-description">We combine strategy, design and engineering to build digital products that attract customers, convert leads and support long-term business growth.</p>
-        </div>
-
-        <!-- Feature rows -->
-        <div class="why-features">
-            <div class="why-feature-row">
-                <div class="feature-number">01</div>
-                <div class="feature-content">
-                    <h3 class="feature-title">Discovery-led planning</h3>
-                    <p class="feature-description">Clear goals, user journeys, SEO targets and technical requirements before development begins.</p>
-                </div>
-            </div>
-
-            <div class="why-feature-row">
-                <div class="feature-number">02</div>
-                <div class="feature-content">
-                    <h3 class="feature-title">Performance-first engineering</h3>
-                    <p class="feature-description">Fast, responsive and scalable experiences built with clean architecture and modern technology.</p>
-                </div>
-            </div>
-
-            <div class="why-feature-row">
-                <div class="feature-number">03</div>
-                <div class="feature-content">
-                    <h3 class="feature-title">Long-term partnership</h3>
-                    <p class="feature-description">Ongoing maintenance, security, optimization and improvements after launch.</p>
-                </div>
+    <div class="tech-categories">
+        <div class="tech-category">
+            <h3>Frontend</h3>
+            <div class="tech-grid">
+                <span>React</span>
+                <span>Next.js</span>
+                <span>Angular</span>
+                <span>Vue</span>
+                <span>JavaScript</span>
+                <span>Tailwind CSS</span>
             </div>
         </div>
-
-        <!-- Tech indicators -->
-        <div class="why-tech-indicators">
-            <span class="tech-label">Built For</span>
-            <div class="tech-pills">
-                <span class="tech-pill">Web</span>
-                <span class="tech-pill">E-commerce</span>
-                <span class="tech-pill">Laravel</span>
-                <span class="tech-pill">WordPress</span>
-                <span class="tech-pill">Mobile</span>
-                <span class="tech-pill">Cloud</span>
+        
+        <div class="tech-category">
+            <h3>Backend</h3>
+            <div class="tech-grid">
+                <span>PHP</span>
+                <span>Laravel</span>
+                <span>Node.js</span>
+                <span>Python</span>
+                <span>Java</span>
+                <span>.NET</span>
             </div>
         </div>
-
-        <!-- CTA -->
-        <div class="why-cta">
-            <a href="{{ route('quote') }}" class="why-cta-link">
-                Let's build something better
-                <span class="cta-arrow">→</span>
-            </a>
+        
+        <div class="tech-category">
+            <h3>Mobile</h3>
+            <div class="tech-grid">
+                <span>Flutter</span>
+                <span>React Native</span>
+                <span>Kotlin</span>
+                <span>Swift</span>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>E-commerce</h3>
+            <div class="tech-grid">
+                <span>WooCommerce</span>
+                <span>Shopify</span>
+                <span>Magento / Adobe Commerce</span>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>AI Technologies</h3>
+            <div class="tech-grid">
+                <span>OpenAI API</span>
+                <span>Claude API</span>
+                <span>Gemini API</span>
+                <span>LangChain</span>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Cloud & DevOps</h3>
+            <div class="tech-grid">
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>Cloudflare</span>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Why RS Orange Tech -->
+<section class="why-us-grid-section">
+    <div class="why-us-grid-container">
+        <div class="why-us-grid-head">
+            <p class="eyebrow">PARTNERSHIP BENEFITS</p>
+            <h2>Why Agencies and Businesses Partner With Us</h2>
+        </div>
+        <div class="why-us-cards">
+            <!-- Card 1 -->
+            <div class="why-us-card">
+                <div class="why-card-icon">⚡</div>
+                <h3>Flexible Development Capacity</h3>
+                <p>Add development resources when your internal team needs additional capacity.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="why-us-card">
+                <div class="why-card-icon">⚙️</div>
+                <h3>Multi-Stack Engineering</h3>
+                <p>Work with the technology stack your project actually requires.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="why-us-card">
+                <div class="why-card-icon">🛡️</div>
+                <h3>White-Label Delivery</h3>
+                <p>We can work behind your agency's brand when the engagement requires it.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="why-us-card">
+                <div class="why-card-icon">🧠</div>
+                <h3>AI-Assisted Development</h3>
+                <p>Experienced engineers use modern AI development tools to accelerate research, coding, testing and delivery while maintaining engineering oversight.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="why-us-card">
+                <div class="why-card-icon">💼</div>
+                <h3>Flexible Engagement</h3>
+                <p>Project-based development, dedicated developers, dedicated teams or ongoing retainers.</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="why-us-card">
+                <div class="why-card-icon">🤝</div>
+                <h3>Long-Term Support</h3>
+                <p>Continue working with the same technical partner after launch.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Selected Work (Portfolio) -->
+<section class="live-portfolio-section" id="portfolio" aria-labelledby="portfolio-heading">
+    <div class="live-portfolio-head">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2 id="portfolio-heading">Featured Engineering Projects</h2>
+        <p>A selection of websites, platforms, applications and digital products delivered by RS Orange Tech.</p>
+    </div>
+    <div class="live-portfolio-wrap">
+        <button class="live-portfolio-nav live-portfolio-prev" type="button" aria-label="Previous project" data-portfolio-prev>&lsaquo;</button>
+        <div class="live-portfolio-track" data-portfolio-track>
+        @foreach ($projects->take(6) as $project)
+            @php
+                $projectImage = is_object($project) ? ($project->image ?? 'design.png') : ($project['image'] ?? 'design.png');
+                $projectTitle = is_object($project) ? ($project->title ?? 'Project') : ($project['title'] ?? 'Project');
+                $projectCategory = is_object($project) ? ($project->category ?? 'Case Study') : ($project['category'] ?? 'Case Study');
+                $projectBody = is_object($project) ? ($project->excerpt ?? ($project->body ?? 'Project details coming soon.')) : ($project['excerpt'] ?? ($project['body'] ?? 'Project details coming soon.'));
+                $projectSlug = is_object($project) && isset($project->slug) ? $project->slug : \Illuminate\Support\Str::slug($projectTitle);
+                $projectUrl = route('portfolio.show', ['slug' => $projectSlug]);
+                $projectTech = is_object($project) ? (explode(',', $project->tech_stack ?? '') ?: []) : ($project['tech'] ?? []);
+                
+                // Determine a clean project type based on tech/title
+                $projectType = 'Custom Build';
+                $techStr = implode(' ', $projectTech);
+                if (stripos($techStr, 'Laravel') !== false || stripos($projectTitle, 'WaBizFlow') !== false || stripos($projectTitle, 'VidyaPilot') !== false) {
+                    $projectType = 'Laravel Application';
+                } elseif (stripos($techStr, 'WordPress') !== false) {
+                    $projectType = 'WordPress Site';
+                } elseif (stripos($techStr, 'Shopify') !== false) {
+                    $projectType = 'E-commerce Store';
+                }
+            @endphp
+            <article class="live-portfolio-card">
+                <div class="live-portfolio-image">
+                    <img src="{{ asset('site-assets/'.$projectImage) }}" alt="{{ $projectTitle }} screenshot by RS Orange Tech">
+                    <div class="corner-accents"></div>
+                    @if ($projectTech)
+                        <div class="tech-overlay">
+                            <h3>Technologies Used</h3>
+                            <div class="tech-tags">
+                                @foreach (array_slice($projectTech, 0, 4) as $tech)
+                                    <span>{{ trim($tech) }}</span>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
+                </div>
+                <div class="live-portfolio-content">
+                    <div class="project-meta-row">
+                        <span class="project-tag">{{ $projectCategory }}</span>
+                        <span class="project-type">{{ $projectType }}</span>
+                    </div>
+                    <h3>{{ $projectTitle }}</h3>
+                    <p>{{ \Illuminate\Support\Str::limit(strip_tags($projectBody), 140) }}</p>
+                    <a href="{{ $projectUrl }}">Explore Case Study <span aria-hidden="true">-&gt;</span></a>
+                </div>
+            </article>
+        @endforeach
+        </div>
+        <button class="live-portfolio-nav live-portfolio-next" type="button" aria-label="Next project" data-portfolio-next>&rsaquo;</button>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+        <a class="button premium-ghost" href="{{ route('portfolio') }}">View All Projects <span aria-hidden="true">→</span></a>
+    </div>
+</section>
+
+<!-- Development Engagement Models -->
+<section class="engagement-models-section">
+    <div class="engagement-models-container">
+        <div class="engagement-head">
+            <p class="eyebrow">ENGAGEMENT MODELS</p>
+            <h2>Choose How You Work With Us</h2>
+        </div>
+        <div class="engagement-grid">
+            <!-- Card 1 -->
+            <div class="engagement-card">
+                <h3>Project-Based</h3>
+                <p class="engagement-desc">Best for clearly defined projects and fixed scopes.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="engagement-card">
+                <h3>Dedicated Developer</h3>
+                <p class="engagement-desc">Add an experienced developer to your existing team.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="engagement-card">
+                <h3>Dedicated Team</h3>
+                <p class="engagement-desc">Use a complete development team for larger projects.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="engagement-card">
+                <h3>Monthly Partnership</h3>
+                <p class="engagement-desc">Ongoing development, maintenance and technical support.</p>
+            </div>
+        </div>
+        <div class="engagement-action">
+            <a class="button primary" href="{{ route('quote') }}">Discuss Your Requirements <span aria-hidden="true">→</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- Development Process -->
 <section class="premium-process modern-process-section">
     <div class="process-container">
         <div class="process-header">
             <p class="eyebrow">Our Process</p>
-            <h2>From idea to launch without guesswork.</h2>
-            <p class="process-subtitle">A streamlined, transparent approach to bringing your digital vision to life.</p>
+            <h2>From Idea to Launch Without Guesswork</h2>
+            <p class="process-subtitle">A structured, collaborative approach to delivering quality software engineering.</p>
         </div>
         
         <div class="process-steps-wrapper">
@@ -533,7 +621,7 @@
                             </div>
                         </div>
                         <h3 class="process-title">Discover</h3>
-                        <p class="process-desc">We dive deep into your audience, competitors, and goals to map out core workflows and technical requirements.</p>
+                        <p class="process-desc">Understand requirements, goals, users and technical constraints.</p>
                         <div class="process-card-bg-number">1</div>
                     </div>
                 </article>
@@ -544,11 +632,11 @@
                         <div class="process-icon-container">
                             <span class="process-step-number">02</span>
                             <div class="process-icon bg-blue-glow">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
                             </div>
                         </div>
-                        <h3 class="process-title">Design</h3>
-                        <p class="process-desc">We craft clean, conversion-focused wireframes and vibrant UI/UX layouts tailored for your target audience.</p>
+                        <h3 class="process-title">Plan</h3>
+                        <p class="process-desc">Define architecture, technology, scope and delivery milestones.</p>
                         <div class="process-card-bg-number">2</div>
                     </div>
                 </article>
@@ -559,11 +647,11 @@
                         <div class="process-icon-container">
                             <span class="process-step-number">03</span>
                             <div class="process-icon bg-green-glow">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8l4 2"></path></svg>
                             </div>
                         </div>
-                        <h3 class="process-title">Develop</h3>
-                        <p class="process-desc">We build robust, secure, and scalable features using the most effective technology stack for your project.</p>
+                        <h3 class="process-title">Design</h3>
+                        <p class="process-desc">Create the user experience and interface where required.</p>
                         <div class="process-card-bg-number">3</div>
                     </div>
                 </article>
@@ -574,12 +662,42 @@
                         <div class="process-icon-container">
                             <span class="process-step-number">04</span>
                             <div class="process-icon bg-purple-glow">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                             </div>
                         </div>
-                        <h3 class="process-title">Grow</h3>
-                        <p class="process-desc">We continuously optimize for SEO, load performance, and user experience to ensure sustained business growth.</p>
+                        <h3 class="process-title">Develop</h3>
+                        <p class="process-desc">Build frontend, backend, APIs and integrations.</p>
                         <div class="process-card-bg-number">4</div>
+                    </div>
+                </article>
+
+                <!-- Step 5 -->
+                <article class="process-card-premium group">
+                    <div class="process-card-inner">
+                        <div class="process-icon-container">
+                            <span class="process-step-number">05</span>
+                            <div class="process-icon bg-red-glow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                        </div>
+                        <h3 class="process-title">Test</h3>
+                        <p class="process-desc">QA, security checks, performance testing and cross-device testing.</p>
+                        <div class="process-card-bg-number">5</div>
+                    </div>
+                </article>
+
+                <!-- Step 6 -->
+                <article class="process-card-premium group">
+                    <div class="process-card-inner">
+                        <div class="process-icon-container">
+                            <span class="process-step-number">06</span>
+                            <div class="process-icon bg-gold-glow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="process-title">Launch</h3>
+                        <p class="process-desc">Deployment, monitoring and ongoing support.</p>
+                        <div class="process-card-bg-number">6</div>
                     </div>
                 </article>
             </div>
@@ -587,143 +705,24 @@
     </div>
 </section>
 
-<section class="tech-home premium-tech">
-    <div class="tech-section-head">
-        <p class="eyebrow">Technology Stack</p>
-        <h2>Built with proven tools, not short-term shortcuts.</h2>
-        <p>We choose technology around your business model, budget, timeline and future growth. Our team has expertise across modern frameworks, backend systems, databases, cloud platforms, AI/ML tools, mobile frameworks, CMS platforms, commerce systems, design tools and security solutions. Whether you need a simple website or a complex AI-powered application, we have the right stack for your project.</p>
-        <a class="button primary" href="{{ route('technologies') }}">Explore Full Technology Guide</a>
-    </div>
-    <div class="tech-categories">
-        <div class="tech-category">
-            <h3>CMS & E-Commerce</h3>
-            <div class="tech-grid">
-                <span>Adobe Commerce Magento</span>
-                <span>Shopify</span>
-                <span>WooCommerce</span>
-                <span>Joomla</span>
-                <span>Drupal</span>
-                <span>BigCommerce</span>
-                <span>OpenCart</span>
-                <span>Headless CMS</span>
-            </div>
+<!-- AI-Assisted Development Section -->
+<section class="ai-development-block">
+    <div class="ai-development-container">
+        <div class="ai-block-copy">
+            <p class="eyebrow">MODERN ENGINEERING</p>
+            <h2>Modern Engineering. Human Oversight.</h2>
+            <p>Our engineers use modern AI-assisted development tools to accelerate research, coding, debugging, testing and documentation — while architecture, security, quality and final decisions remain under experienced engineering oversight.</p>
         </div>
-        
-        <div class="tech-category">
-            <h3>Backend & Frameworks</h3>
-            <div class="tech-grid">
-                <span>Laravel</span>
-                <span>Node.js</span>
-                <span>PHP</span>
-                <span>Django</span>
-                <span>Flask</span>
-                <span>Go</span>
-                <span>Spring Boot</span>
-                <span>Java</span>
-            </div>
-        </div>
-        
-        <div class="tech-category">
-            <h3>Frontend & Frameworks</h3>
-            <div class="tech-grid">
-                <span>React.js</span>
-                <span>Angular.js</span>
-                <span>Next.js</span>
-                <span>Nest.js</span>
-                <span>JavaScript</span>
-                <span>Bootstrap</span>
-                <span>CSS</span>
-                <span>Tailwind CSS</span>
-            </div>
-        </div>
-        
-        <div class="tech-category">
-            <h3>Mobile Development</h3>
-            <div class="tech-grid">
-                <span>React Native</span>
-                <span>Flutter</span>
-                <span>Dart</span>
-                <span>Swift</span>
-                <span>Kotlin</span>
-                <span>Native Android</span>
-            </div>
-        </div>
-        
-        <div class="tech-category">
-            <h3>AI & Automation</h3>
-            <div class="tech-grid">
-                <span>Agentic AI</span>
-                <span>OpenAI/GPT-4</span>
-                <span>Claude API</span>
-                <span>Hugging Face</span>
-                <span>LangChain</span>
-            </div>
-        </div>
-        
-        <div class="tech-category">
-            <h3>Cloud & DevOps</h3>
-            <div class="tech-grid">
-                <span>Docker</span>
-                <span>Kubernetes</span>
-                <span>AWS</span>
-                <span>CI/CD Pipelines</span>
-                <span>GitHub Actions</span>             
-                <span>Cloudflare</span>
+        <div class="ai-block-badge" aria-hidden="true">
+            <div class="ai-badge-circle">
+                <span>AI</span>
+                <div class="ai-badge-orbit"></div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="live-portfolio-section" id="portfolio" aria-labelledby="portfolio-heading">
-    <div class="live-portfolio-head">
-        <p class="eyebrow">Portfolio</p>
-        <h2 id="portfolio-heading">Featured <span>Projects</span></h2>
-        <p>Real websites, SaaS platforms, education products and campaign pages crafted for better visibility, engagement and conversion.</p>
-    </div>
-    <div class="live-portfolio-wrap">
-        <button class="live-portfolio-nav live-portfolio-prev" type="button" aria-label="Previous project" data-portfolio-prev>&lsaquo;</button>
-        <div class="live-portfolio-track" data-portfolio-track>
-        @foreach ($projects as $project)
-            @php
-                $projectImage = is_object($project) ? ($project->image ?? 'design.png') : ($project['image'] ?? 'design.png');
-                $projectTitle = is_object($project) ? ($project->title ?? 'Project') : ($project['title'] ?? 'Project');
-                $projectCategory = is_object($project) ? ($project->category ?? 'Case Study') : ($project['category'] ?? 'Case Study');
-                $projectBody = is_object($project) ? ($project->excerpt ?? ($project->body ?? 'Project details coming soon.')) : ($project['excerpt'] ?? ($project['body'] ?? 'Project details coming soon.'));
-                $projectSlug = is_object($project) && isset($project->slug) ? $project->slug : \Illuminate\Support\Str::slug($projectTitle);
-                $projectUrl = route('portfolio.show', ['slug' => $projectSlug]);
-                $projectTech = is_object($project) ? (explode(',', $project->tech_stack ?? '') ?: []) : ($project['tech'] ?? []);
-            @endphp
-            <article class="live-portfolio-card">
-                <div class="live-portfolio-image">
-                    <img src="{{ asset('site-assets/'.$projectImage) }}" alt="{{ $projectTitle }} project screenshot by RS Orange Tech">
-                    <div class="corner-accents"></div>
-                    @if ($projectTech)
-                        <div class="tech-overlay">
-                            <h3>Technologies Used</h3>
-                            <div class="tech-tags">
-                                @foreach (array_slice($projectTech, 0, 4) as $tech)
-                                    <span>{{ trim($tech) }}</span>
-                                @endforeach
-                            </div>
-                        </div>
-                    @endif
-                </div>
-                <div class="live-portfolio-content">
-                    <span>{{ $projectCategory }}</span>
-                    <h3>{{ $projectTitle }}</h3>
-                    <p>{{ $projectBody }}</p>
-                    <a href="{{ $projectUrl }}">Explore Case Study <span aria-hidden="true">-&gt;</span></a>
-                </div>
-            </article>
-        @endforeach
-        </div>
-        <button class="live-portfolio-nav live-portfolio-next" type="button" aria-label="Next project" data-portfolio-next>&rsaquo;</button>
-    </div>
-    <div style="text-align: center; margin-top: 40px;">
-        <a class="button premium-ghost" href="{{ route('portfolio') }}">View All Portfolio <span aria-hidden="true">-&gt;</span></a>
-    </div>
-</section>
-
+<!-- FAQ Section -->
 <section class="premium-faq" aria-labelledby="faq-heading">
     <div>
         <p class="eyebrow">FAQ</p>
@@ -731,57 +730,30 @@
     </div>
     <div class="faq-list">
         <article>
-            <h3>Can you redesign an existing website?</h3>
-            <p>Yes. We can audit your current website, improve structure, design, speed, SEO basics and conversion flow while preserving important content and URLs.</p>
+            <h3>Can you act as a white-label partner?</h3>
+            <p>Yes. We regularly work behind agency partners under NDA. Your clients remain yours, and our team functions quietly as your backend technical team.</p>
         </article>
         <article>
             <h3>Do you build custom Laravel applications?</h3>
             <p>Yes. We build dashboards, portals, CRMs, booking tools, internal systems and customer-facing web applications with Laravel.</p>
         </article>
         <article>
-            <h3>Will the website be SEO friendly?</h3>
-            <p>Yes. We plan semantic content, meta tags, responsive layouts, performance improvements and crawl-friendly structure from the start.</p>
+            <h3>How do you handle project management?</h3>
+            <p>We adapt to your team's workflow. We can integrate with your Slack, Jira, Trello, or Basecamp workspace, or report directly to your project managers.</p>
         </article>
     </div>
 </section>
 
-<section class="trusted-section">
-    <div class="trusted-container">
-        <h3>Trusted by 200+ Businesses Worldwide</h3>
-        <div class="trusted-logos">
-            <div class="logo-placeholder">KANTAR</div>
-            <div class="logo-placeholder">UIBOX</div>
-            <div class="logo-placeholder">TASTY</div>
-            <div class="logo-placeholder">DigitalOcean</div>
-            <div class="logo-placeholder">microlink</div>
-        </div>
-        <div class="trusted-stats">
-            <div class="stat-item">
-                <div class="stat-number">200+</div>
-                <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Projects Delivered</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">9+</div>
-                <div class="stat-label">Years Industry Exp.</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Support</div>
-            </div>
-        </div>
-    </div>
-</section>
-
+<!-- Final conversion CTA -->
 <section class="premium-cta">
     <div>
         <p class="eyebrow">Ready to Build?</p>
-        <h2>Tell us what you want to launch next.</h2>
-        <p>Share your idea, website issue or software requirement. We will help you define the right solution and a practical build plan.</p>
+        <h2>Have a Project in Mind? Let's Build It.</h2>
+        <p>Whether you need a complete development team, additional engineering capacity, or a technical partner for your next project, RS Orange Tech can help.</p>
     </div>
-    <a class="button primary" href="{{ route('quote') }}">Request a Quote</a>
+    <div class="cta-actions">
+        <a class="button primary" href="{{ route('quote') }}">Start a Project</a>
+        <a class="button premium-ghost" href="/agency-partners">Partner With Us</a>
+    </div>
 </section>
 @endsection

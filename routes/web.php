@@ -85,8 +85,8 @@ Route::get('/', function () {
     }
 
     return view('site.home', [
-        'title' => 'RS Orange Tech | Premium Web Development, Apps, E-Commerce & AI Solutions',
-        'description' => 'RS Orange Tech builds premium websites, Laravel applications, e-commerce stores, mobile apps, WordPress plugins and AI automation for growing businesses.',
+        'title' => 'Web & Software Development Company | RS Orange Tech',
+        'description' => 'RS Orange Tech provides web, mobile, e-commerce, AI and custom software development for businesses and digital agencies. Partner with our experienced development team.',
         'services' => $services,
         'technologies' => config('site.technologies'),
         'projects' => $projects,
@@ -172,6 +172,101 @@ Route::get('/portfolio/', [PublicContentController::class, 'portfolio'])->name('
 Route::get('/portfolio/{slug}/', [PublicContentController::class, 'portfolioShow'])->name('portfolio.show');
 Route::redirect('/gallery-plugin/', '/plugins/', 301);
 Route::redirect('/ai-website-fixer/', '/plugins/', 301);
+Route::get('/agency-partners/', function () {
+    $projects = \App\Models\PortfolioProject::query()
+        ->where('status', 'published')
+        ->where('featured', true)
+        ->orderBy('sort_order')
+        ->orderBy('created_at', 'desc')
+        ->limit(6)
+        ->get();
+
+    if ($projects->isEmpty()) {
+        $projects = \App\Models\PortfolioProject::query()
+            ->where('status', 'published')
+            ->orderBy('sort_order')
+            ->orderBy('created_at', 'desc')
+            ->limit(6)
+            ->get();
+    }
+
+    if ($projects->isEmpty()) {
+        $projects = collect(config('site.projects'))->map(function (array $project) {
+            return (object) [
+                'title' => $project['title'],
+                'category' => $project['category'],
+                'image' => $project['image'],
+                'body' => $project['body'],
+                'tech' => $project['tech'] ?? [],
+                'url' => $project['url'] ?? route('portfolio'),
+            ];
+        });
+    }
+
+    return view('site.agency-partners', [
+        'title' => 'Agency Development Partner | White-Label Web Development | RS Orange Tech',
+        'description' => 'RS Orange Tech provides white-label web, software, e-commerce, mobile and AI development for digital agencies. Extend your team without hiring more developers.',
+        'projects' => $projects,
+    ]);
+})->name('agency-partners');
+
+
+Route::post('/agency-partners/', function (Illuminate\Http\Request $request) {
+    if ($request->filled('my_custom_country_verify')) {
+        return back()->with('status', 'Thanks. Your partnership inquiry has been received.');
+    }
+
+    $name = (string) $request->input('name');
+    $message = (string) $request->input('message');
+
+    if (
+        str_contains($name, 'MichaeleresY') || 
+        stripos($message, 'Jackpot') !== false
+    ) {
+        return back()->with('status', 'Thanks. Your partnership inquiry has been received.');
+    }
+
+    $validated = $request->validate([
+        'name' => ['required', 'string', 'max:120'],
+        'agency_name' => ['required', 'string', 'max:120'],
+        'email' => ['required', 'email', 'max:160'],
+        'phone' => ['nullable', 'string', 'max:40'],
+        'website' => ['nullable', 'string', 'max:200'],
+        'country' => ['nullable', 'string', 'max:100'],
+        'services' => ['required', 'array'],
+        'services.*' => ['string'],
+        'project_type' => ['nullable', 'string', 'max:120'],
+        'engagement' => ['nullable', 'string', 'max:120'],
+        'message' => ['required', 'string', 'max:2000'],
+    ]);
+
+    $fullMessage = "Agency Website: " . ($validated['website'] ?? 'N/A') . "\n";
+    $fullMessage .= "Country: " . ($validated['country'] ?? 'N/A') . "\n\n";
+    $fullMessage .= "Project Details:\n" . $validated['message'];
+
+    $servicesStr = implode(', ', $validated['services']);
+
+    $lead = \App\Models\Lead::create([
+        'type' => 'agency',
+        'name' => $validated['name'],
+        'email' => $validated['email'],
+        'phone' => $validated['phone'] ?? null,
+        'company' => $validated['agency_name'],
+        'subject_or_service' => $servicesStr,
+        'budget' => $validated['project_type'] ?? null,
+        'timeline' => $validated['engagement'] ?? null,
+        'message' => $fullMessage,
+        'reference_page' => $request->headers->get('referer') ?? url()->previous(),
+    ]);
+
+    defer(function () use ($lead) {
+        $adminEmail = env('MAIL_RECEIVER', \App\Models\SiteSetting::where('key', 'contact_email')->value('value') ?? 'info@rsorangetech.com');
+        \Illuminate\Support\Facades\Mail::to($adminEmail)->send(new \App\Mail\LeadNotification($lead));
+        \Illuminate\Support\Facades\Mail::to($lead->email)->send(new \App\Mail\LeadConfirmation($lead));
+    });
+
+    return back()->with('status', 'Thanks. Your partnership inquiry has been received. Our team will contact you shortly.');
+})->middleware('throttle:3,10')->name('agency-partners.submit');
 
 Route::post('/quote-requests/', function (Request $request) {
     if ($request->filled('my_custom_country_verify')) {

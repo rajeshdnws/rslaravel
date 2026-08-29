@@ -1,7 +1,7 @@
 <x-mail::message>
 # Hello {{ $lead->name }},
 
-Thank you for reaching out to us! This is an automated email to confirm that we have received your {{ $lead->type === 'quote' ? 'quote request' : 'message' }}.
+Thank you for reaching out to us! This is an automated email to confirm that we have received your {{ $lead->type === 'quote' ? 'quote request' : ($lead->type === 'agency' ? 'partnership inquiry' : 'message') }}.
 
 Our team will review your inquiry and get back to you as soon as possible. Below is a copy of what you submitted:
 
@@ -10,9 +10,9 @@ Our team will review your inquiry and get back to you as soon as possible. Below
 **Email:** [{{ $lead->email }}](mailto:{{ $lead->email }})<br>
 @if($lead->phone)**Phone:** {{ $lead->phone }}<br>@endif
 @if($lead->company)**Company:** {{ $lead->company }}<br>@endif
-@if($lead->subject_or_service)**{{ $lead->type === 'quote' ? 'Service Required' : 'Subject' }}:** {{ $lead->subject_or_service }}<br>@endif
-@if($lead->budget)**Budget:** {{ $lead->budget }}<br>@endif
-@if($lead->timeline)**Timeline:** {{ $lead->timeline }}<br>@endif
+@if($lead->subject_or_service)**{{ $lead->type === 'quote' ? 'Service Required' : ($lead->type === 'agency' ? 'Services Required' : 'Subject') }}:** {{ $lead->subject_or_service }}<br>@endif
+@if($lead->budget)**{{ $lead->type === 'agency' ? 'Estimated Project Type' : 'Budget' }}:** {{ $lead->budget }}<br>@endif
+@if($lead->timeline)**{{ $lead->type === 'agency' ? 'Preferred Engagement' : 'Timeline' }}:** {{ $lead->timeline }}<br>@endif
 @if($lead->contact_method)**Preferred Contact:** {{ ucfirst($lead->contact_method) }}<br>@endif
 </x-mail::panel>
 
