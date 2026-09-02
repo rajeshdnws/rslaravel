@@ -646,7 +646,29 @@
                         </div>
                     </div>
                 </article>
-
+ <article class="project-card">
+                    <div class="project-img-box">
+                        <img src="https://rsorangetech.com/site-assets/portfolio/1788335533-holiday.png" alt="WaBizFlow SaaS & CRM Platform by RS Orange Tech" loading="lazy">
+                        <div class="project-category-badge">Booking & Travel Platform</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-meta-row">Popular Holidays Enquiry Management System</div>
+                        <h3 class="project-title">Popular Holidays</h3>
+                        <div class="project-breakdown-list">
+                            <div><strong>Business Problem:</strong>Managing travel enquiries, bookings, and revenue manually was inefficient and difficult to track.</div>
+                            <div><strong>Solution:</strong>A centralized dashboard to manage bookings, track revenue, monitor fulfilment, and improve business operations.</div>
+                            <div><strong>Technology:</strong> NodeJS,Next.js, MySQL, RBAC Custom Roles & Permission.</div>
+                        </div>
+                        <div class="project-tech-pills">
+                            <span class="p-tech-pill">NodeJS</span>
+                            <span class="p-tech-pill">Next.js</span>
+                            <span class="p-tech-pill">RBAC Custom Roles & Permission</span>
+                        </div>
+                        <div class="project-action">
+                            <a href="#consultation-form" onclick="preselectService('SaaS')" data-track-event="case_study_click">Have a Similar Project? Let's Discuss It →</a>
+                        </div>
+                    </div>
+                </article>
                 <!-- Case Study 2: VidyaPilot -->
                 <article class="project-card">
                     <div class="project-img-box">
@@ -659,11 +681,11 @@
                         <div class="project-breakdown-list">
                             <div><strong>Business Problem:</strong> Needed an intuitive portal capable of hosting thousands of simultaneous Olympiad tests with automated evaluation.</div>
                             <div><strong>Solution:</strong> Engineered a timed student testing engine with automated scoring, question banks, and instant parent performance analytics.</div>
-                            <div><strong>Technology:</strong> Laravel, Livewire, MySQL, Redis Caching, Analytics Engine.</div>
+                            <div><strong>Technology:</strong> NodeJS, Next.js, MySQL, Redis Caching, Analytics Engine.</div>
                         </div>
                         <div class="project-tech-pills">
-                            <span class="p-tech-pill">Laravel</span>
-                            <span class="p-tech-pill">Livewire</span>
+                            <span class="p-tech-pill">NodeJS</span>
+                            <span class="p-tech-pill">Next.js</span>
                             <span class="p-tech-pill">Analytics</span>
                         </div>
                         <div class="project-action">
@@ -684,10 +706,10 @@
                         <div class="project-breakdown-list">
                             <div><strong>Business Problem:</strong> Frequent traffic spikes caused slow page response and sluggish content delivery on previous setup.</div>
                             <div><strong>Solution:</strong> Re-architected the web platform with structured Laravel caching, CDN integration, and optimized database queries.</div>
-                            <div><strong>Technology:</strong> Laravel, Tailwind CSS, Redis Caching, PostgreSQL.</div>
+                            <div><strong>Technology:</strong> NodeJS, Tailwind CSS, Redis Caching, PostgreSQL.</div>
                         </div>
                         <div class="project-tech-pills">
-                            <span class="p-tech-pill">Laravel</span>
+                            <span class="p-tech-pill">NodeJS</span>
                             <span class="p-tech-pill">Tailwind CSS</span>
                             <span class="p-tech-pill">Redis</span>
                         </div>
@@ -709,7 +731,7 @@
                         <div class="project-breakdown-list">
                             <div><strong>Business Problem:</strong> Complex holiday package discovery that suffered high abandonment on mobile browsers.</div>
                             <div><strong>Solution:</strong> Built a conversion-focused discovery portal with search filters, interactive itineraries, and instant inquiry routing.</div>
-                            <div><strong>Technology:</strong> Custom Web Architecture, Mobile-First UI, CRM Routing.</div>
+                            <div><strong>Technology:</strong> PHP,Custom Web Architecture, Mobile-First UI, CRM Routing.</div>
                         </div>
                         <div class="project-tech-pills">
                             <span class="p-tech-pill">Custom Web UI</span>
@@ -776,18 +798,18 @@
                 <article class="project-card">
                     <div class="project-img-box">
                         <img src="{{ asset('site-assets/little-steps.png') }}" alt="Little Steps Web Platform" loading="lazy">
-                        <div class="project-category-badge">Education & Portal</div>
+                        <div class="project-category-badge">E-commerce & Portal</div>
                     </div>
                     <div class="project-details">
-                        <div class="project-meta-row">Industry: Education & Institution</div>
+                        <div class="project-meta-row">Industry: E-commerce</div>
                         <h3 class="project-title">Little Steps</h3>
                         <div class="project-breakdown-list">
-                            <div><strong>Business Problem:</strong> Fragmented parent communication and manual paper-based student admission workflows.</div>
-                            <div><strong>Solution:</strong> Developed a responsive web portal featuring digital admission processing and centralized parent notices.</div>
-                            <div><strong>Technology:</strong> Custom CMS, Form Engine, Secure Database.</div>
+                            <div><strong>Business Problem:</strong> Private sale businesses need an efficient way to showcase exclusive products and manage online orders.</div>
+                            <div><strong>Solution:</strong> A modern e-commerce website that provides customers with a seamless private shopping experience and simplifies product and order management..</div>
+                            <div><strong>Technology:</strong> Laravel, Form Engine, Secure Database.</div>
                         </div>
                         <div class="project-tech-pills">
-                            <span class="p-tech-pill">Custom CMS</span>
+                            <span class="p-tech-pill">Laravel</span>
                             <span class="p-tech-pill">Parent Portal</span>
                             <span class="p-tech-pill">Responsive</span>
                         </div>
