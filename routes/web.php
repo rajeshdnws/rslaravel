@@ -12,7 +12,7 @@ Route::get('/sitemap.xml', function () {
     $staticSlugs = [
         '/', '/about-us/', '/our-approach/', '/services/', '/our-technologies/', 
         '/portfolio/', '/plugins/', '/blog/', '/contact-us/', '/quote-requests/', 
-        '/privacy-policy/', '/terms-conditions/'
+        '/privacy-policy/', '/terms-conditions/', '/web-software-development/'
     ];
     
     $pages = \App\Models\Page::where('status', 'published')
@@ -267,6 +267,61 @@ Route::post('/agency-partners/', function (Illuminate\Http\Request $request) {
 
     return back()->with('status', 'Thanks. Your partnership inquiry has been received. Our team will contact you shortly.');
 })->middleware('throttle:3,10')->name('agency-partners.submit');
+
+Route::get('/web-software-development/', function () {
+    return view('site.landing-page');
+})->name('lp.web-software');
+
+Route::redirect('/custom-web-development/', '/web-software-development/', 301);
+Route::redirect('/custom-software-development/', '/web-software-development/', 301);
+
+Route::post('/web-software-development/', function (Request $request) {
+    if ($request->filled('my_custom_country_verify')) {
+        return back()->with('status', 'Thank you! Your project consultation request has been received. Our senior engineering team will get in touch with you shortly.');
+    }
+
+    $name = (string) $request->input('name');
+    $message = (string) $request->input('message');
+
+    if (
+        str_contains($name, 'MichaeleresY') || 
+        stripos($message, 'Jackpot') !== false
+    ) {
+        return back()->with('status', 'Thank you! Your project consultation request has been received. Our senior engineering team will get in touch with you shortly.');
+    }
+
+    $validated = $request->validate([
+        'name' => ['required', 'string', 'max:120'],
+        'email' => ['required', 'email', 'max:160'],
+        'phone' => ['required', 'string', 'max:40'],
+        'company' => ['nullable', 'string', 'max:120'],
+        'service' => ['required', 'string', 'max:120'],
+        'budget' => ['nullable', 'string', 'max:120'],
+        'timeline' => ['nullable', 'string', 'max:120'],
+        'message' => ['required', 'string', 'max:3000'],
+    ]);
+
+    $lead = \App\Models\Lead::create([
+        'type' => 'google_ads_lp',
+        'name' => $validated['name'],
+        'email' => $validated['email'],
+        'phone' => $validated['phone'],
+        'company' => $validated['company'] ?? null,
+        'subject_or_service' => $validated['service'],
+        'budget' => $validated['budget'] ?? null,
+        'timeline' => $validated['timeline'] ?? null,
+        'message' => $validated['message'],
+        'reference_page' => $request->headers->get('referer') ?? url()->previous(),
+    ]);
+
+    defer(function () use ($lead) {
+        $adminEmail = env('MAIL_RECEIVER', \App\Models\SiteSetting::where('key', 'contact_email')->value('value') ?? 'info@rsorangetech.com');
+        \Illuminate\Support\Facades\Mail::to($adminEmail)->send(new \App\Mail\LeadNotification($lead));
+        \Illuminate\Support\Facades\Mail::to($lead->email)->send(new \App\Mail\LeadConfirmation($lead));
+    });
+
+    return redirect(url()->previous() . '#consultation-form')->with('status', 'Thank you! Your project consultation request has been received. Our senior engineering team will contact you within 24 hours with architecture advice and a tailored proposal.');
+})->middleware('throttle:5,10')->name('lp.web-software.submit');
 
 Route::post('/quote-requests/', function (Request $request) {
     if ($request->filled('my_custom_country_verify')) {
