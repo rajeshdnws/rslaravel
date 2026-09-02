@@ -272,6 +272,10 @@ Route::get('/web-software-development', function () {
     return view('site.landing-page');
 })->name('lp.web-software');
 
+Route::get('/thank-you', function () {
+    return view('site.thank-you');
+})->name('lp.thank-you');
+
 Route::redirect('/custom-web-development', '/web-software-development', 301);
 Route::redirect('/custom-software-development', '/web-software-development', 301);
 Route::redirect('/custom-web-development/', '/web-software-development', 301);
@@ -279,7 +283,7 @@ Route::redirect('/custom-software-development/', '/web-software-development', 30
 
 Route::post('/web-software-development', function (Request $request) {
     if ($request->filled('my_custom_country_verify')) {
-        return back()->with('status', 'Thank you! Your project consultation request has been received. Our senior engineering team will get in touch with you shortly.');
+        return redirect()->route('lp.thank-you');
     }
 
     $name = (string) $request->input('name');
@@ -289,7 +293,7 @@ Route::post('/web-software-development', function (Request $request) {
         str_contains($name, 'MichaeleresY') || 
         stripos($message, 'Jackpot') !== false
     ) {
-        return back()->with('status', 'Thank you! Your project consultation request has been received. Our senior engineering team will get in touch with you shortly.');
+        return redirect()->route('lp.thank-you');
     }
 
     $validated = $request->validate([
@@ -322,7 +326,7 @@ Route::post('/web-software-development', function (Request $request) {
         \Illuminate\Support\Facades\Mail::to($lead->email)->send(new \App\Mail\LeadConfirmation($lead));
     });
 
-    return redirect(url()->previous() . '#consultation-form')->with('status', 'Thank you! Your project consultation request has been received. Our senior engineering team will contact you within 24 hours with architecture advice and a tailored proposal.');
+    return redirect()->route('lp.thank-you');
 })->middleware('throttle:5,10')->name('lp.web-software.submit');
 
 Route::post('/quote-requests/', function (Request $request) {
