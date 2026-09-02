@@ -88,7 +88,7 @@ a {
 
 .section-header {
     text-align: center;
-    max-width: 760px;
+    max-width: 780px;
     margin: 0 auto 52px;
 }
 
@@ -182,7 +182,7 @@ a {
     border-radius: var(--radius-md);
 }
 
-/* 1. Minimal Header */
+/* 1. Header */
 .lp-header {
     position: sticky;
     top: 0;
@@ -191,19 +191,12 @@ a {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--gray-200);
     padding: 14px 0;
-    transition: all 0.2s ease;
 }
 
 .lp-header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.lp-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
 }
 
 .lp-brand img {
@@ -314,7 +307,7 @@ a {
 }
 
 .hero-reassurance-note {
-    font-size: 0.86rem;
+    font-size: 0.88rem;
     color: var(--gray-600);
     margin-bottom: 24px;
     display: flex;
@@ -416,9 +409,6 @@ a {
     font-size: 0.95rem;
     font-weight: 700;
     color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 6px;
 }
 
 .code-snippet-box {
@@ -458,49 +448,18 @@ a {
     gap: 5px;
 }
 
-/* 3. Above-the-Fold Conversion Strip */
-.lp-quick-convert-strip {
-    background: #fff7ed;
-    border-top: 1px solid #fed7aa;
-    border-bottom: 1px solid #fed7aa;
-    padding: 16px 0;
-}
-
-.quick-convert-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.quick-convert-text {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--gray-900);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.quick-convert-text span {
-    color: var(--gray-600);
-    font-weight: 400;
-}
-
-/* 4. Trust Bar & Key Stats */
+/* 3. Trust Bar & Key Stats */
 .lp-trust-bar {
     background: var(--dark);
     color: #ffffff;
     padding: 44px 0;
-    position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     text-align: center;
 }
@@ -520,111 +479,165 @@ a {
     color: #f97316;
     line-height: 1.1;
     margin-bottom: 4px;
-    font-feature-settings: "tnum";
 }
 
 .stat-title {
-    font-size: 1.02rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 2px;
 }
 
 .stat-desc {
-    font-size: 0.84rem;
+    font-size: 0.85rem;
     color: var(--gray-400);
 }
 
-/* 5. Problem → Solution Grid Section */
-.lp-problem-solution {
-    padding: 92px 0;
-    background: var(--gray-50);
+/* 4. Message-Match Section (Built for Businesses That Need More Than Just Code) */
+.lp-audience-match {
+    padding: 80px 0;
+    background: #ffffff;
+    border-bottom: 1px solid var(--gray-200);
 }
 
-.problem-solution-grid {
+.audience-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-top: 36px;
 }
 
-.ps-card {
-    background: #ffffff;
+.audience-card {
+    background: var(--gray-50);
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-lg);
-    padding: 28px 24px;
-    box-shadow: var(--shadow-subtle);
+    padding: 32px 26px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.25s ease;
 }
 
-.ps-card:hover {
+.audience-card:hover {
+    border-color: var(--primary);
+    background: #ffffff;
     transform: translateY(-4px);
     box-shadow: var(--shadow-card);
-    border-color: rgba(249, 115, 22, 0.4);
 }
 
-.ps-challenge-block {
-    background: #fef2f2;
-    border-left: 3px solid #ef4444;
-    padding: 12px 14px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-}
-
-.ps-challenge-tag {
-    font-size: 0.72rem;
+.audience-card-tag {
+    font-size: 0.78rem;
     font-weight: 800;
+    color: var(--primary);
     text-transform: uppercase;
-    color: #dc2626;
-    letter-spacing: 0.04em;
-    margin-bottom: 2px;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
 }
 
-.ps-challenge-title {
+.audience-card h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 10px;
+}
+
+.audience-card p {
     font-size: 0.95rem;
+    color: var(--gray-600);
+    line-height: 1.55;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.audience-card a {
+    font-size: 0.92rem;
     font-weight: 700;
+    color: var(--primary-hover);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 5. Problem → Solution Section (The RS Orange Tech Advantage) */
+.lp-problem-solution {
+    padding: 92px 0;
+    background: var(--gray-50);
+}
+
+.ps-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 36px;
+}
+
+.ps-pane {
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+}
+
+.ps-pane-problem {
+    background: #ffffff;
+    border: 1px solid #fee2e2;
+    box-shadow: var(--shadow-subtle);
+}
+
+.ps-pane-solution {
+    background: #ffffff;
+    border: 1.5px solid #fed7aa;
+    box-shadow: var(--shadow-card);
+}
+
+.ps-pane-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.ps-pane-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--gray-900);
+}
+
+.ps-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ps-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.96rem;
+    line-height: 1.5;
+}
+
+.ps-list-item.problem-item {
     color: #991b1b;
 }
 
-.ps-solution-block {
-    background: #f0fdf4;
-    border-left: 3px solid #22c55e;
-    padding: 12px 14px;
-    border-radius: 4px;
+.ps-list-item.solution-item {
+    color: var(--gray-800);
 }
 
-.ps-solution-tag {
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #16a34a;
-    letter-spacing: 0.04em;
-    margin-bottom: 2px;
+.ps-list-item svg {
+    flex-shrink: 0;
+    margin-top: 3px;
 }
 
-.ps-solution-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #14532d;
-    margin-bottom: 4px;
-}
-
-.ps-solution-desc {
-    font-size: 0.86rem;
-    color: var(--gray-600);
-    line-height: 1.45;
-}
-
-/* Subtle Micro-CTA Banner across major sections */
+/* Micro-CTA Banner across major sections */
 .section-micro-cta {
     margin-top: 48px;
     background: #ffffff;
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-md);
-    padding: 20px 28px;
+    padding: 22px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -678,7 +691,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
 }
 
 .service-card:hover {
@@ -736,63 +748,10 @@ a {
     gap: 9px;
 }
 
-/* 7. Why RS Orange Tech */
-.lp-why-us {
-    padding: 92px 0;
-    background: var(--dark-surface);
-    color: #ffffff;
-    position: relative;
-}
-
-.why-us-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
-
-.why-card {
-    background: var(--dark-card);
-    border: 1px solid var(--dark-border);
-    border-radius: var(--radius-lg);
-    padding: 32px 26px;
-    transition: all 0.3s ease;
-}
-
-.why-card:hover {
-    border-color: rgba(249, 115, 22, 0.4);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-.why-icon {
-    width: 46px;
-    height: 46px;
-    border-radius: 12px;
-    background: rgba(249, 115, 22, 0.12);
-    color: #fb923c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-}
-
-.why-card h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.why-card p {
-    font-size: 0.92rem;
-    color: var(--gray-300);
-    line-height: 1.6;
-}
-
-/* 8. Tech Stack Showcase */
+/* 7. Technology Section */
 .lp-tech-stack {
     padding: 88px 0;
-    background: #ffffff;
+    background: var(--gray-50);
     border-bottom: 1px solid var(--gray-200);
 }
 
@@ -808,10 +767,14 @@ a {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
 }
 
 .tech-cat-label {
-    width: 140px;
+    width: 220px;
     font-weight: 700;
     font-size: 0.94rem;
     color: var(--gray-900);
@@ -828,11 +791,11 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 18px;
+    padding: 6px 14px;
     background: var(--gray-50);
     border: 1px solid var(--gray-200);
     border-radius: 999px;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     font-weight: 600;
     color: var(--gray-700);
     transition: all 0.2s;
@@ -848,18 +811,20 @@ a {
 .tech-philosophy-note {
     margin-top: 32px;
     padding: 16px 20px;
-    background: var(--gray-50);
+    background: #ffffff;
     border-left: 3px solid var(--primary);
     border-radius: 4px;
     font-size: 0.92rem;
     color: var(--gray-700);
     line-height: 1.55;
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--primary);
 }
 
-/* 9. Case Studies / Portfolio (Structured Problem → Solution → Tech) */
+/* 8. Case Studies / Portfolio */
 .lp-portfolio {
     padding: 92px 0;
-    background: var(--gray-50);
+    background: #ffffff;
 }
 
 .portfolio-grid {
@@ -990,6 +955,58 @@ a {
     gap: 6px;
 }
 
+/* 9. Why RS Orange Tech */
+.lp-why-us {
+    padding: 92px 0;
+    background: var(--dark-surface);
+    color: #ffffff;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.why-card {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    padding: 32px 26px;
+    transition: all 0.3s ease;
+}
+
+.why-card:hover {
+    border-color: rgba(249, 115, 22, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.why-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba(249, 115, 22, 0.12);
+    color: #fb923c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.why-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    font-size: 0.92rem;
+    color: var(--gray-300);
+    line-height: 1.6;
+}
+
 /* 10. Development Process Timeline */
 .lp-process {
     padding: 92px 0;
@@ -1000,7 +1017,6 @@ a {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 18px;
-    position: relative;
 }
 
 .process-step-box {
@@ -1010,7 +1026,6 @@ a {
     padding: 22px 16px;
     display: flex;
     flex-direction: column;
-    position: relative;
     transition: all 0.3s;
 }
 
@@ -1454,7 +1469,7 @@ details[open] .faq-icon-arrow {
     color: #ffffff;
 }
 
-/* 16. Mobile Sticky CTA Bar (3 Action Buttons) */
+/* 16. Mobile Sticky CTA Bar */
 .mobile-sticky-bar {
     display: none;
     position: fixed;
@@ -1481,8 +1496,11 @@ details[open] .faq-icon-arrow {
         grid-template-columns: 1fr;
         gap: 36px;
     }
-    .problem-solution-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+    .ps-comparison-grid {
+        grid-template-columns: 1fr;
     }
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1506,20 +1524,17 @@ details[open] .faq-icon-arrow {
     .lp-header-actions .lp-wa-btn {
         display: none;
     }
-    .quick-convert-inner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 16px;
     }
     .stat-item {
         border-right: none;
-        padding: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 16px;
     }
-    .problem-solution-grid {
-        grid-template-columns: 1fr;
+    .stat-item:last-child {
+        border-bottom: none;
     }
     .services-grid {
         grid-template-columns: 1fr;

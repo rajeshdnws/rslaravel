@@ -8,7 +8,7 @@
     $waLink = "https://wa.me/" . preg_replace('/[^0-9]/', '', $phone) . "?text=" . urlencode("Hello RS Orange Tech! I'm interested in discussing a custom web/software development project.");
     
     $title = "Custom Web & Software Development Company | RS Orange Tech";
-    $description = "Build scalable web applications, custom software, SaaS, CRM, ERP and Laravel solutions with RS Orange Tech. Get a free project consultation.";
+    $description = "Build secure, scalable web and software solutions with RS Orange Tech. Custom web apps, Laravel, CRM, SaaS, eCommerce, AI and API development.";
     $canonicalUrl = route('lp.web-software');
 @endphp
 <!DOCTYPE html>
@@ -45,7 +45,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('css/landing-page.css') }}?v=1.20">
+    <link rel="stylesheet" href="{{ asset('css/landing-page.css') }}?v=1.30">
 
     <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -81,7 +81,7 @@
                         "name": "How much does custom software development cost?",
                         "acceptedAnswer": {
                             "@@type": "Answer",
-                            "text": "Project cost depends on the features, complexity, integrations, technology and development scope. After understanding your requirements, we provide a transparent proposal with clear milestones and pricing."
+                            "text": "Project cost depends on functionality, complexity, integrations, technology requirements and timeline. After understanding your requirements, we provide a transparent proposal with clearly defined scope, milestones and pricing."
                         }
                     },
                     {
@@ -116,7 +116,7 @@
 </head>
 <body>
 
-    <!-- 1. Minimal Header (Zero-distraction conversion header) -->
+    <!-- 1. Minimal Header -->
     <header class="lp-header" id="top">
         <div class="container lp-header-inner">
             <a href="{{ route('home') }}" class="lp-brand" title="RS Orange Tech Home">
@@ -146,7 +146,7 @@
         <div class="container lp-hero-grid">
             <div class="lp-hero-content">
                 <div class="badge-pill">
-                    ⚡ Experienced Technology Partner
+                    Experienced Technology Partner
                 </div>
 
                 <h1 class="lp-hero-h1">
@@ -154,7 +154,7 @@
                 </h1>
 
                 <p class="lp-hero-sub">
-                    Build scalable web applications, SaaS platforms, CRM, ERP and custom software with an experienced development team.
+                    Build secure, scalable and business-focused digital products with an experienced development team — from custom web applications and Laravel platforms to CRM, SaaS, eCommerce and AI-powered solutions.
                 </p>
 
                 <div class="lp-hero-ctas">
@@ -162,15 +162,14 @@
                         <span>Get Free Consultation</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
-                    <a href="{{ $waLink }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" data-track-event="whatsapp_click">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-5.705 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                        <span>WhatsApp Us</span>
+                    <a href="#consultation-form" class="btn btn-secondary btn-lg" data-track-event="consultation_click">
+                        <span>Discuss Your Project</span>
                     </a>
                 </div>
 
                 <div class="hero-reassurance-note">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                    <span>Free consultation • No obligation • Confidential discussion</span>
+                    <span>Senior technical consultation • Transparent proposal • No obligation</span>
                 </div>
 
                 <div class="lp-hero-trust-row">
@@ -184,11 +183,7 @@
                     </div>
                     <div class="trust-check-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>200+ Clients</span>
-                    </div>
-                    <div class="trust-check-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>Global Clients</span>
+                        <span>200+ Clients Worldwide</span>
                     </div>
                 </div>
             </div>
@@ -240,28 +235,15 @@
                 <div class="visual-badges-strip">
                     <span class="visual-tech-tag">⚡ Production Ready</span>
                     <span class="visual-tech-tag">🛡️ Secure & Tested</span>
-                    <span class="visual-tech-tag">🚀 Quality Focused</span>
+                    <span class="visual-tech-tag">🚀 Modern Architecture</span>
+                    <span class="visual-tech-tag">⚙️ Scalable & Maintainable</span>
                     <span class="visual-tech-tag">🔒 Strict NDA</span>
-                    <span class="visual-tech-tag">🤖 AI Automation</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. Above-the-Fold Conversion Strip -->
-    <section class="lp-quick-convert-strip">
-        <div class="container quick-convert-inner">
-            <div class="quick-convert-text">
-                <strong>Have a project idea?</strong>
-                <span>Talk directly with our development team about your requirements, technology options and estimated approach.</span>
-            </div>
-            <a href="#consultation-form" class="btn btn-primary btn-sm" data-track-event="consultation_click">
-                <span>Book Free Consultation →</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- 4. Trust Bar & Key Stats -->
+    <!-- 3. Trust Bar & Key Stats -->
     <section class="lp-trust-bar">
         <div class="container">
             <div class="stats-grid">
@@ -277,114 +259,144 @@
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">200+</div>
-                    <div class="stat-title">Clients</div>
-                    <div class="stat-desc">Startups, SMEs & enterprises</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">Global</div>
-                    <div class="stat-title">Client Reach</div>
+                    <div class="stat-title">Clients Worldwide</div>
                     <div class="stat-desc">India, USA, UK, Australia, UAE & Canada</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Problem → Solution Section -->
+    <!-- 4. Message-Match Section: Built for Businesses That Need More Than Just Code -->
+    <section class="lp-audience-match" id="audience">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-pill">Targeted Solutions</div>
+                <h2>Built for Businesses That Need More Than Just Code</h2>
+                <p>We align software architecture with commercial strategy to help organizations at every stage of growth.</p>
+            </div>
+
+            <div class="audience-grid">
+                <!-- Card 1: Startups -->
+                <div class="audience-card">
+                    <div>
+                        <div class="audience-card-tag">For Startups</div>
+                        <h3>Startups</h3>
+                        <p>Build MVPs and scalable products without overengineering. Validate product-market fit fast with clean, expandable foundations.</p>
+                    </div>
+                    <a href="#consultation-form" data-track-event="consultation_click">
+                        <span>Discuss Your Project →</span>
+                    </a>
+                </div>
+
+                <!-- Card 2: Growing Businesses -->
+                <div class="audience-card">
+                    <div>
+                        <div class="audience-card-tag">For Scaling Companies</div>
+                        <h3>Growing Businesses</h3>
+                        <p>Modernize legacy systems, automate operational workflows, eliminate spreadsheet chaos, and build custom platforms.</p>
+                    </div>
+                    <a href="#consultation-form" data-track-event="consultation_click">
+                        <span>Discuss Your Project →</span>
+                    </a>
+                </div>
+
+                <!-- Card 3: Established Companies -->
+                <div class="audience-card">
+                    <div>
+                        <div class="audience-card-tag">For Enterprises</div>
+                        <h3>Established Companies</h3>
+                        <p>Develop secure enterprise applications, complex system integrations, high-traffic portals, and purpose-built business software.</p>
+                    </div>
+                    <a href="#consultation-form" data-track-event="consultation_click">
+                        <span>Discuss Your Project →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Problem → Solution Section: The RS Orange Tech Advantage -->
     <section class="lp-problem-solution" id="solutions">
         <div class="container">
             <div class="section-header">
-                <div class="badge-pill">Technology Partnership</div>
-                <h2>More Than Just Development — A Technology Partner</h2>
-                <p>We help businesses overcome critical engineering roadblocks with reliable, scalable, and business-focused software solutions.</p>
+                <div class="badge-pill">Why Partnership Matters</div>
+                <h2>Need a Technology Partner, Not Just a Developer?</h2>
+                <p>Most software projects fail because of poor planning and misaligned goals. We solve the root causes of development friction.</p>
             </div>
 
-            <div class="problem-solution-grid">
-                <!-- Card 1 -->
-                <div class="ps-card">
-                    <div class="ps-challenge-block">
-                        <div class="ps-challenge-tag">Client Challenge</div>
-                        <div class="ps-challenge-title">Unclear Technical Requirements</div>
+            <div class="ps-comparison-grid">
+                <!-- Problems Pane -->
+                <div class="ps-pane ps-pane-problem">
+                    <div class="ps-pane-header">
+                        <span style="font-size: 1.4rem;">⚠️</span>
+                        <div class="ps-pane-title" style="color: #991b1b;">Common Development Roadblocks</div>
                     </div>
-                    <div class="ps-solution-block">
-                        <div class="ps-solution-tag">RS Orange Tech Solution</div>
-                        <div class="ps-solution-title">Technical Discovery & Architecture</div>
-                        <p class="ps-solution-desc">We translate your business ideas into clear functional wireframes, technical scope, and database schema before writing a line of code.</p>
-                    </div>
+                    <ul class="ps-list">
+                        <li class="ps-list-item problem-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span>Development without understanding your business goals</span>
+                        </li>
+                        <li class="ps-list-item problem-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span>Architecture that becomes difficult to scale under traffic</span>
+                        </li>
+                        <li class="ps-list-item problem-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span>Poor communication and unclear project milestones</span>
+                        </li>
+                        <li class="ps-list-item problem-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span>Security, testing and performance issues after launch</span>
+                        </li>
+                        <li class="ps-list-item problem-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span>Developers disappearing when maintenance is required</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="ps-card">
-                    <div class="ps-challenge-block">
-                        <div class="ps-challenge-tag">Client Challenge</div>
-                        <div class="ps-challenge-title">Outdated Legacy Systems</div>
+                <!-- Solution Pane -->
+                <div class="ps-pane ps-pane-solution">
+                    <div class="ps-pane-header">
+                        <span style="font-size: 1.4rem;">🛡️</span>
+                        <div class="ps-pane-title" style="color: #9a3412;">The RS Orange Tech Advantage</div>
                     </div>
-                    <div class="ps-solution-block">
-                        <div class="ps-solution-tag">RS Orange Tech Solution</div>
-                        <div class="ps-solution-title">Modernization & Re-Architecture</div>
-                        <p class="ps-solution-desc">Migrate monolithic, slow applications to modern Laravel, Node.js, and React architecture with zero data loss or business downtime.</p>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="ps-card">
-                    <div class="ps-challenge-block">
-                        <div class="ps-challenge-tag">Client Challenge</div>
-                        <div class="ps-challenge-title">Manual Business Processes</div>
-                    </div>
-                    <div class="ps-solution-block">
-                        <div class="ps-solution-tag">RS Orange Tech Solution</div>
-                        <div class="ps-solution-title">Custom Software & CRM/ERP</div>
-                        <p class="ps-solution-desc">Eliminate spreadsheet chaos with centralized portals, automated workflows, and role-based operational dashboards.</p>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="ps-card">
-                    <div class="ps-challenge-block">
-                        <div class="ps-challenge-tag">Client Challenge</div>
-                        <div class="ps-challenge-title">Disconnected Tools & Systems</div>
-                    </div>
-                    <div class="ps-solution-block">
-                        <div class="ps-solution-tag">RS Orange Tech Solution</div>
-                        <div class="ps-solution-title">API & System Integration</div>
-                        <p class="ps-solution-desc">Connect payment gateways, CRMs, ERPs, accounting software, and AI models into a unified, synchronized ecosystem.</p>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="ps-card">
-                    <div class="ps-challenge-block">
-                        <div class="ps-challenge-tag">Client Challenge</div>
-                        <div class="ps-challenge-title">Fast-Growing Product Scaling</div>
-                    </div>
-                    <div class="ps-solution-block">
-                        <div class="ps-solution-tag">RS Orange Tech Solution</div>
-                        <div class="ps-solution-title">Scalable Architecture</div>
-                        <p class="ps-solution-desc">Database indexing, Redis caching, microservices, and cloud deployment on AWS/Docker to handle increasing user concurrency.</p>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="ps-card">
-                    <div class="ps-challenge-block">
-                        <div class="ps-challenge-tag">Client Challenge</div>
-                        <div class="ps-challenge-title">Post-Launch Uncertainty</div>
-                    </div>
-                    <div class="ps-solution-block">
-                        <div class="ps-solution-tag">RS Orange Tech Solution</div>
-                        <div class="ps-solution-title">Long-Term Tech Partnership</div>
-                        <p class="ps-solution-desc">Proactive maintenance, continuous feature rollouts, security monitoring, and dedicated developer support as your business scales.</p>
-                    </div>
+                    <ul class="ps-list">
+                        <li class="ps-list-item solution-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>Business-first technical planning:</strong> We map tech to your commercial model.</span>
+                        </li>
+                        <li class="ps-list-item solution-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>Scalable application architecture:</strong> Engineered for high user concurrency.</span>
+                        </li>
+                        <li class="ps-list-item solution-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>Modern and maintainable code:</strong> Clean MVC, RESTful APIs, and documentation.</span>
+                        </li>
+                        <li class="ps-list-item solution-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>Secure development practices:</strong> OWASP principles, encryption and audits.</span>
+                        </li>
+                        <li class="ps-list-item solution-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>API and third-party integrations:</strong> Seamless ERP, CRM & payment synchronization.</span>
+                        </li>
+                        <li class="ps-list-item solution-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>QA, deployment and post-launch support:</strong> Long-term dedicated partnership.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
             <!-- Micro CTA Prompt -->
             <div class="section-micro-cta">
                 <div>
-                    <h4>Have an existing application that needs improvement?</h4>
-                    <p>Our senior architects can audit your current codebase and suggest a roadmap.</p>
+                    <h4>Get Technical Advice for Your Project</h4>
+                    <p>Discuss your architecture, database design, and milestone schedule with our senior engineers.</p>
                 </div>
-                <a href="#consultation-form" class="btn btn-secondary btn-sm" data-track-event="consultation_click">
+                <a href="#consultation-form" class="btn btn-primary btn-sm" data-track-event="consultation_click">
                     <span>Discuss Your Project →</span>
                 </a>
             </div>
@@ -408,10 +420,10 @@
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                         </div>
                         <h3>Custom Web Development</h3>
-                        <p>Business websites and powerful web applications built around your exact commercial requirements and user personas.</p>
+                        <p>High-performance business portals and custom web applications engineered for user experience, search visibility, and conversion.</p>
                     </div>
                     <a href="#consultation-form" class="card-cta-link" onclick="preselectService('Web Application')" data-track-event="service_select">
-                        <span>Get Consultation</span>
+                        <span>Discuss Web Development</span>
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
@@ -423,10 +435,10 @@
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                         </div>
                         <h3>Laravel Development</h3>
-                        <p>Scalable Laravel applications, RESTful APIs, enterprise web backends, and robust MVC platforms built with clean code standards.</p>
+                        <p>Enterprise Laravel architecture, RESTful API backends, MVC platforms, and high-concurrency database systems.</p>
                     </div>
                     <a href="#consultation-form" class="card-cta-link" onclick="preselectService('Laravel Application')" data-track-event="service_select">
-                        <span>Get Consultation</span>
+                        <span>Discuss Laravel Development</span>
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
@@ -437,11 +449,11 @@
                         <div class="service-icon-wrap">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                         </div>
-                        <h3>Custom Software</h3>
-                        <p>Purpose-built internal software, operations portals, and automation systems engineered around your unique company workflows.</p>
+                        <h3>Custom Software Development</h3>
+                        <p>Build software around your exact business processes instead of forcing your company to adapt to rigid, generic tools.</p>
                     </div>
                     <a href="#consultation-form" class="card-cta-link" onclick="preselectService('Custom Software')" data-track-event="service_select">
-                        <span>Get Consultation</span>
+                        <span>Discuss Custom Software</span>
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
@@ -452,11 +464,11 @@
                         <div class="service-icon-wrap">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         </div>
-                        <h3>CRM / ERP</h3>
-                        <p>Centralize customer data, sales pipelines, inventory, billing, and organizational processes into one secure, intuitive portal.</p>
+                        <h3>CRM & ERP Development</h3>
+                        <p>Centralize customer data, pipeline tracking, inventory, invoicing, and cross-departmental operations into one secure dashboard.</p>
                     </div>
                     <a href="#consultation-form" class="card-cta-link" onclick="preselectService('CRM / ERP')" data-track-event="service_select">
-                        <span>Get Consultation</span>
+                        <span>Discuss CRM / ERP</span>
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
@@ -468,10 +480,10 @@
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                         </div>
                         <h3>SaaS Development</h3>
-                        <p>Build and scale multi-tenant SaaS products from initial MVP roadmap to enterprise-ready production platforms with subscription billing.</p>
+                        <p>Engineer multi-tenant subscription products with automated onboarding, role permissions, recurring billing, and scalable tenant isolation.</p>
                     </div>
                     <a href="#consultation-form" class="card-cta-link" onclick="preselectService('SaaS')" data-track-event="service_select">
-                        <span>Get Consultation</span>
+                        <span>Discuss SaaS Development</span>
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
@@ -482,11 +494,11 @@
                         <div class="service-icon-wrap">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                         </div>
-                        <h3>E-commerce</h3>
-                        <p>Custom, scalable e-commerce platforms with fast checkout, payment gateway integrations, catalog sync, and ERP connectivity.</p>
+                        <h3>E-commerce Development</h3>
+                        <p>Custom stores, headless commerce, Magento/Shopify integrations, and automated catalog syncing built for high checkout conversion.</p>
                     </div>
                     <a href="#consultation-form" class="card-cta-link" onclick="preselectService('E-commerce')" data-track-event="service_select">
-                        <span>Get Consultation</span>
+                        <span>Discuss E-commerce</span>
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
@@ -497,11 +509,11 @@
                         <div class="service-icon-wrap">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                         </div>
-                        <h3>AI Development</h3>
-                        <p>Incorporate OpenAI & Claude LLMs, intelligent automated assistants, document parsing, and predictive business features into your platform.</p>
+                        <h3>AI Development & Automation</h3>
+                        <p>Integrate OpenAI, Claude LLMs, intelligent agents, automated document extraction, and predictive business features directly into your software.</p>
                     </div>
                     <a href="#consultation-form" class="card-cta-link" onclick="preselectService('AI Application')" data-track-event="service_select">
-                        <span>Get Consultation</span>
+                        <span>Discuss AI Development</span>
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
@@ -512,11 +524,11 @@
                         <div class="service-icon-wrap">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                         </div>
-                        <h3>API / System Integration</h3>
-                        <p>Connect applications, payment gateways, accounting systems, marketing software, and legacy databases into one frictionless pipeline.</p>
+                        <h3>API & System Integration</h3>
+                        <p>Connect payment gateways, CRMs, marketing platforms, and third-party accounting APIs into one synchronized workflow.</p>
                     </div>
                     <a href="#consultation-form" class="card-cta-link" onclick="preselectService('Custom Software')" data-track-event="service_select">
-                        <span>Get Consultation</span>
+                        <span>Discuss API Integration</span>
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
@@ -525,8 +537,8 @@
             <!-- Micro CTA Prompt -->
             <div class="section-micro-cta">
                 <div>
-                    <h4>Not sure which technology or architecture you need?</h4>
-                    <p>Talk directly with our development team to explore options suited to your budget and timeline.</p>
+                    <h4>Not sure which architecture best matches your goals?</h4>
+                    <p>Talk directly with our development team to explore tailored options suited to your budget and roadmap.</p>
                 </div>
                 <a href="#consultation-form" class="btn btn-primary btn-sm" data-track-event="consultation_click">
                     <span>Talk to Our Team →</span>
@@ -535,18 +547,18 @@
         </div>
     </section>
 
-    <!-- 7. Technology Authority -->
+    <!-- 7. Technology Section -->
     <section class="lp-tech-stack">
         <div class="container">
             <div class="section-header">
-                <div class="badge-pill">Enterprise Stack</div>
+                <div class="badge-pill">Technology Standards</div>
                 <h2>Modern Technology. Built for Scale.</h2>
                 <p>We build on stable, open, enterprise-grade frameworks designed for performance, high security, and long-term maintainability.</p>
             </div>
 
             <div class="tech-categories-strip">
                 <div class="tech-row-wrap">
-                    <div class="tech-cat-label">Backend & APIs:</div>
+                    <div class="tech-cat-label">Backend:</div>
                     <div class="tech-tags-group">
                         <span class="tech-pill">⚡ Laravel (PHP)</span>
                         <span class="tech-pill">🟢 Node.js / Express</span>
@@ -556,18 +568,24 @@
                 </div>
 
                 <div class="tech-row-wrap">
-                    <div class="tech-cat-label">Frontend & Web:</div>
+                    <div class="tech-cat-label">Frontend:</div>
                     <div class="tech-tags-group">
                         <span class="tech-pill">⚛️ React.js</span>
                         <span class="tech-pill">▲ Next.js</span>
                         <span class="tech-pill">💚 Vue.js</span>
                         <span class="tech-pill">🎨 Tailwind CSS</span>
-                        <span class="tech-pill">📱 Flutter</span>
                     </div>
                 </div>
 
                 <div class="tech-row-wrap">
-                    <div class="tech-cat-label">Database & Cloud:</div>
+                    <div class="tech-cat-label">Mobile:</div>
+                    <div class="tech-tags-group">
+                        <span class="tech-pill">📱 Flutter (iOS & Android)</span>
+                    </div>
+                </div>
+
+                <div class="tech-row-wrap">
+                    <div class="tech-cat-label">Database & Infrastructure:</div>
                     <div class="tech-tags-group">
                         <span class="tech-pill">🐬 MySQL</span>
                         <span class="tech-pill">🐘 PostgreSQL</span>
@@ -578,23 +596,23 @@
                 </div>
 
                 <div class="tech-row-wrap">
-                    <div class="tech-cat-label">AI & Commerce:</div>
+                    <div class="tech-cat-label">AI & Integrations:</div>
                     <div class="tech-tags-group">
                         <span class="tech-pill">🤖 OpenAI & Claude API</span>
-                        <span class="tech-pill">🛍️ Magento 2 / Adobe Commerce</span>
-                        <span class="tech-pill">🛒 Shopify</span>
                         <span class="tech-pill">💳 Stripe / Razorpay</span>
+                        <span class="tech-pill">💬 Twilio / WhatsApp API</span>
+                        <span class="tech-pill">💼 Salesforce / HubSpot</span>
                     </div>
                 </div>
             </div>
 
             <div class="tech-philosophy-note">
-                <strong>Our Technology Philosophy:</strong> We select technology based on your product requirements, scalability, security and long-term maintainability.
+                <strong>Our Technology Philosophy:</strong> We select technology based on your product requirements, scalability, security and long-term maintainability — not simply because it is popular.
             </div>
         </div>
     </section>
 
-    <!-- 8. Case Studies (Conversion-Oriented: Problem → Solution → Tech) -->
+    <!-- 8. Case Studies (Conversion-Oriented: Real Projects) -->
     <section class="lp-portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
@@ -614,17 +632,17 @@
                         <div class="project-meta-row">Industry: B2B CRM & Marketing Automation</div>
                         <h3 class="project-title">WaBizFlow</h3>
                         <div class="project-breakdown-list">
-                            <div><strong>Challenge:</strong> Multi-channel customer communication was fragmented, manual, and unscalable for sales teams.</div>
-                            <div><strong>Solution:</strong> Engineered a full-featured B2B SaaS platform with WhatsApp messaging automation, contact sync, and recurring billing.</div>
+                            <div><strong>Business Problem:</strong> Customer messaging and broadcast campaigns across distributed sales teams were manual and unscalable.</div>
+                            <div><strong>Solution:</strong> Developed a multi-tenant SaaS CRM with WhatsApp Business API automation, contact synchronization, and subscription billing.</div>
+                            <div><strong>Technology:</strong> Laravel, MySQL, Redis, Multi-Tenant Architecture, WhatsApp Cloud API.</div>
                         </div>
                         <div class="project-tech-pills">
                             <span class="p-tech-pill">Laravel</span>
                             <span class="p-tech-pill">SaaS Multi-Tenant</span>
                             <span class="p-tech-pill">WhatsApp API</span>
-                            <span class="p-tech-pill">MySQL</span>
                         </div>
                         <div class="project-action">
-                            <a href="#consultation-form" onclick="preselectService('SaaS')" data-track-event="case_study_click">Request Similar Project →</a>
+                            <a href="#consultation-form" onclick="preselectService('SaaS')" data-track-event="case_study_click">Have a Similar Project? Let's Discuss It →</a>
                         </div>
                     </div>
                 </article>
@@ -639,17 +657,17 @@
                         <div class="project-meta-row">Industry: EdTech & Online Learning</div>
                         <h3 class="project-title">VidyaPilot</h3>
                         <div class="project-breakdown-list">
-                            <div><strong>Challenge:</strong> Needed an intuitive portal capable of delivering timed Olympiad tests with automated AI evaluation.</div>
-                            <div><strong>Solution:</strong> Developed an interactive student testing platform with real-time analytics, mock exams, and parent scorecards.</div>
+                            <div><strong>Business Problem:</strong> Needed an intuitive portal capable of hosting thousands of simultaneous Olympiad tests with automated evaluation.</div>
+                            <div><strong>Solution:</strong> Engineered a timed student testing engine with automated scoring, question banks, and instant parent performance analytics.</div>
+                            <div><strong>Technology:</strong> Laravel, Livewire, MySQL, Redis Caching, Analytics Engine.</div>
                         </div>
                         <div class="project-tech-pills">
                             <span class="p-tech-pill">Laravel</span>
-                            <span class="p-tech-pill">AI Automation</span>
-                            <span class="p-tech-pill">Analytics</span>
                             <span class="p-tech-pill">Livewire</span>
+                            <span class="p-tech-pill">Analytics</span>
                         </div>
                         <div class="project-action">
-                            <a href="#consultation-form" onclick="preselectService('AI Application')" data-track-event="case_study_click">Request Similar Project →</a>
+                            <a href="#consultation-form" onclick="preselectService('AI Application')" data-track-event="case_study_click">Have a Similar Project? Let's Discuss It →</a>
                         </div>
                     </div>
                 </article>
@@ -664,17 +682,17 @@
                         <div class="project-meta-row">Industry: Media & High-Traffic Web</div>
                         <h3 class="project-title">Jyoti Pilot Portal</h3>
                         <div class="project-breakdown-list">
-                            <div><strong>Challenge:</strong> Heavy spike traffic caused slow load times and content delivery lag on existing setup.</div>
-                            <div><strong>Solution:</strong> Re-architected with custom Laravel backend, optimized database caching, and responsive frontend UI.</div>
+                            <div><strong>Business Problem:</strong> Frequent traffic spikes caused slow page response and sluggish content delivery on previous setup.</div>
+                            <div><strong>Solution:</strong> Re-architected the web platform with structured Laravel caching, CDN integration, and optimized database queries.</div>
+                            <div><strong>Technology:</strong> Laravel, Tailwind CSS, Redis Caching, PostgreSQL.</div>
                         </div>
                         <div class="project-tech-pills">
                             <span class="p-tech-pill">Laravel</span>
                             <span class="p-tech-pill">Tailwind CSS</span>
                             <span class="p-tech-pill">Redis</span>
-                            <span class="p-tech-pill">Speed Optimized</span>
                         </div>
                         <div class="project-action">
-                            <a href="#consultation-form" onclick="preselectService('Laravel Application')" data-track-event="case_study_click">Request Similar Project →</a>
+                            <a href="#consultation-form" onclick="preselectService('Laravel Application')" data-track-event="case_study_click">Have a Similar Project? Let's Discuss It →</a>
                         </div>
                     </div>
                 </article>
@@ -689,16 +707,17 @@
                         <div class="project-meta-row">Industry: Travel & Hospitality</div>
                         <h3 class="project-title">Prime Breaks</h3>
                         <div class="project-breakdown-list">
-                            <div><strong>Challenge:</strong> Complex holiday package discovery that struggled with lead drop-offs on mobile devices.</div>
-                            <div><strong>Solution:</strong> Built a conversion-focused discovery portal with search-first package discovery and automated inquiry dispatch.</div>
+                            <div><strong>Business Problem:</strong> Complex holiday package discovery that suffered high abandonment on mobile browsers.</div>
+                            <div><strong>Solution:</strong> Built a conversion-focused discovery portal with search filters, interactive itineraries, and instant inquiry routing.</div>
+                            <div><strong>Technology:</strong> Custom Web Architecture, Mobile-First UI, CRM Routing.</div>
                         </div>
                         <div class="project-tech-pills">
-                            <span class="p-tech-pill">Custom Web UX</span>
-                            <span class="p-tech-pill">Inquiry Engine</span>
+                            <span class="p-tech-pill">Custom Web UI</span>
+                            <span class="p-tech-pill">Lead Engine</span>
                             <span class="p-tech-pill">Mobile-First</span>
                         </div>
                         <div class="project-action">
-                            <a href="#consultation-form" onclick="preselectService('Web Application')" data-track-event="case_study_click">Request Similar Project →</a>
+                            <a href="#consultation-form" onclick="preselectService('Web Application')" data-track-event="case_study_click">Have a Similar Project? Let's Discuss It →</a>
                         </div>
                     </div>
                 </article>
@@ -713,16 +732,17 @@
                         <div class="project-meta-row">Industry: Gaming & Mobile Product</div>
                         <h3 class="project-title">Desi Run Rush</h3>
                         <div class="project-breakdown-list">
-                            <div><strong>Challenge:</strong> Needed an ultra-fast, visually bold promotional landing experience for mobile app store downloads.</div>
-                            <div><strong>Solution:</strong> Engineered an optimized responsive product page achieving sub-1.2 second load times and direct app store routing.</div>
+                            <div><strong>Business Problem:</strong> Required a fast promotional landing page designed to drive app store installs across mobile channels.</div>
+                            <div><strong>Solution:</strong> Engineered an optimized responsive landing experience with fast asset loading and direct platform links.</div>
+                            <div><strong>Technology:</strong> Lightweight HTML5/CSS3, JavaScript, CDN Delivery.</div>
                         </div>
                         <div class="project-tech-pills">
-                            <span class="p-tech-pill">Speed Architecture</span>
-                            <span class="p-tech-pill">Landing UX</span>
+                            <span class="p-tech-pill">Speed Optimized</span>
+                            <span class="p-tech-pill">Mobile UX</span>
                             <span class="p-tech-pill">High Conversion</span>
                         </div>
                         <div class="project-action">
-                            <a href="#consultation-form" onclick="preselectService('Website')" data-track-event="case_study_click">Request Similar Project →</a>
+                            <a href="#consultation-form" onclick="preselectService('Website')" data-track-event="case_study_click">Have a Similar Project? Let's Discuss It →</a>
                         </div>
                     </div>
                 </article>
@@ -737,8 +757,9 @@
                         <div class="project-meta-row">Industry: Education & Institution</div>
                         <h3 class="project-title">Little Steps</h3>
                         <div class="project-breakdown-list">
-                            <div><strong>Challenge:</strong> Outdated administrative communication and manual student admission processing.</div>
-                            <div><strong>Solution:</strong> Developed a responsive web platform with integrated parent portal communication and digital admission forms.</div>
+                            <div><strong>Business Problem:</strong> Fragmented parent communication and manual paper-based student admission workflows.</div>
+                            <div><strong>Solution:</strong> Developed a responsive web portal featuring digital admission processing and centralized parent notices.</div>
+                            <div><strong>Technology:</strong> Custom CMS, Form Engine, Secure Database.</div>
                         </div>
                         <div class="project-tech-pills">
                             <span class="p-tech-pill">Custom CMS</span>
@@ -746,7 +767,7 @@
                             <span class="p-tech-pill">Responsive</span>
                         </div>
                         <div class="project-action">
-                            <a href="#consultation-form" onclick="preselectService('Website')" data-track-event="case_study_click">Request Similar Project →</a>
+                            <a href="#consultation-form" onclick="preselectService('Website')" data-track-event="case_study_click">Have a Similar Project? Let's Discuss It →</a>
                         </div>
                     </div>
                 </article>
@@ -755,8 +776,8 @@
             <!-- Micro CTA Prompt -->
             <div class="section-micro-cta">
                 <div>
-                    <h4>Have a similar project in mind?</h4>
-                    <p>Discuss your scope, tech stack, and deliverable milestones with our development team.</p>
+                    <h4>Have a similar project in mind? Let's discuss it.</h4>
+                    <p>Tell us about your requirements and our team will recommend the right development roadmap.</p>
                 </div>
                 <a href="#consultation-form" class="btn btn-primary btn-sm" data-track-event="consultation_click">
                     <span>Discuss Your Project →</span>
@@ -769,9 +790,9 @@
     <section class="lp-why-us">
         <div class="container">
             <div class="section-header dark">
-                <div class="badge-pill badge-pill-dark">Why Choose Us</div>
-                <h2>Why Businesses Work With RS Orange Tech</h2>
-                <p>We combine commercial understanding with senior engineering rigor to deliver lasting business value.</p>
+                <div class="badge-pill badge-pill-dark">Why RS Orange Tech</div>
+                <h2>Why Businesses Choose Us as Their Technology Partner</h2>
+                <p>We combine commercial understanding with senior engineering rigor to deliver lasting software value.</p>
             </div>
 
             <div class="why-us-grid">
@@ -780,15 +801,31 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                     </div>
                     <h3>Experienced Team</h3>
-                    <p>9+ years of development experience building web applications, SaaS, and custom software systems.</p>
+                    <p>9+ years of development experience across different business domains, from custom web applications to SaaS.</p>
                 </div>
 
                 <div class="why-card">
                     <div class="why-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     </div>
-                    <h3>Business-Focused Development</h3>
-                    <p>We understand your business model, customer workflows, and requirements before selecting the technical solution.</p>
+                    <h3>Scalable Architecture</h3>
+                    <p>Applications designed with future growth, high user concurrency, third-party integrations and performance in mind.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    </div>
+                    <h3>Transparent Communication</h3>
+                    <p>Clear milestone roadmaps, sprint demos, direct technical discussions and complete project visibility.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3>Security-Focused Development</h3>
+                    <p>Secure coding standards, OWASP principles, rigorous testing, and protected cloud deployment processes.</p>
                 </div>
 
                 <div class="why-card">
@@ -796,43 +833,27 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                     </div>
                     <h3>Modern Technology</h3>
-                    <p>Modern frameworks, cloud infrastructure, Docker, PostgreSQL, and proven development practices.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    </div>
-                    <h3>Scalable Architecture</h3>
-                    <p>Built with future growth, high concurrency, and long-term maintainability in mind.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                    </div>
-                    <h3>Transparent Process</h3>
-                    <p>Clear milestone roadmaps, sprint demos, direct developer communication, and complete project visibility.</p>
+                    <p>We use current, maintainable technologies (Laravel, React, Node.js, PostgreSQL, Docker) appropriate for the project.</p>
                 </div>
 
                 <div class="why-card">
                     <div class="why-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                     </div>
-                    <h3>Long-Term Support</h3>
-                    <p>Maintenance, improvements, security patches, and continued technical support after launch.</p>
+                    <h3>Long-Term Partnership</h3>
+                    <p>Support doesn't end when the application launches. We provide maintenance, updates, and feature expansions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 10. Development Process Timeline -->
+    <!-- 10. 6-Step Development Process -->
     <section class="lp-process">
         <div class="container">
             <div class="section-header">
                 <div class="badge-pill">Structured Delivery</div>
                 <h2>From Idea to Production Launch</h2>
-                <p>A structured, milestone-driven development process designed for transparency and reliable execution.</p>
+                <p>A predictable, milestone-driven development process designed for quality, transparency and reliable delivery.</p>
             </div>
 
             <div class="process-steps-grid">
@@ -887,7 +908,7 @@
             <div class="section-header dark">
                 <div class="badge-pill badge-pill-dark">Client Feedback</div>
                 <h2>What Founders & Businesses Say</h2>
-                <p>Hear from clients who partnered with our development team to build their digital products.</p>
+                <p>Real projects. Real clients. Long-term partnerships.</p>
             </div>
 
             <div class="testimonials-grid">
@@ -941,9 +962,9 @@
         <div class="container">
             <div class="form-card-container">
                 <div class="form-header">
-                    <div class="badge-pill">Free Consultation & Quote</div>
+                    <div class="badge-pill">Free Project Consultation</div>
                     <h2>Tell Us About Your Project</h2>
-                    <p>Share a few details and our team will contact you to discuss the right solution.</p>
+                    <p>Share a few details about your project. Our senior technical team will review your requirements and get back to you with the right approach.</p>
                 </div>
 
                 @if (isset($errors) && $errors->any())
@@ -966,7 +987,7 @@
                     <input type="text" name="my_custom_country_verify" style="display:none !important;" tabindex="-1" autocomplete="off">
 
                     <div class="lead-form-grid">
-                        <!-- Step 1: Basic Info (Required Fields) -->
+                        <!-- Step 1: Basic Info -->
                         <div class="form-group">
                             <label for="form_name" class="form-label">Full Name <span class="req">*</span></label>
                             <input type="text" id="form_name" name="name" class="form-input" placeholder="e.g. John Doe" value="{{ old('name') }}" required data-track-field="name">
@@ -983,13 +1004,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="form_company" class="form-label">Company Name</label>
+                            <label for="form_company" class="form-label">Company / Organization</label>
                             <input type="text" id="form_company" name="company" class="form-input" placeholder="e.g. Acme Innovations" value="{{ old('company') }}">
                         </div>
 
                         <!-- Step 2: Project Info -->
                         <div class="form-group full-width">
-                            <label for="form_service" class="form-label">What do you want to build? <span class="req">*</span></label>
+                            <label for="form_service" class="form-label">What Do You Want to Build? <span class="req">*</span></label>
                             <select id="form_service" name="service" class="form-select" required>
                                 <option value="" disabled {{ old('service') ? '' : 'selected' }}>-- Select Solution Type --</option>
                                 <option value="Website" {{ old('service') == 'Website' ? 'selected' : '' }}>Website (Business / Brand Website)</option>
@@ -1006,7 +1027,7 @@
                             </select>
                         </div>
 
-                        <!-- Estimated Budget (Optional) -->
+                        <!-- Estimated Budget -->
                         <div class="form-group full-width">
                             <label class="form-label">Estimated Budget</label>
                             <div class="pill-selection-grid">
@@ -1029,7 +1050,7 @@
                             </div>
                         </div>
 
-                        <!-- Project Timeline (Optional) -->
+                        <!-- Project Timeline -->
                         <div class="form-group full-width">
                             <label class="form-label">Project Timeline</label>
                             <div class="pill-selection-grid">
@@ -1051,10 +1072,10 @@
                             </div>
                         </div>
 
-                        <!-- Project Requirements (Optional) -->
+                        <!-- Project Requirements -->
                         <div class="form-group full-width">
-                            <label for="form_message" class="form-label">Project Requirements</label>
-                            <textarea id="form_message" name="message" rows="4" class="form-textarea" placeholder="Briefly describe your goals, required features, or any systems you need to connect...">{{ old('message') }}</textarea>
+                            <label for="form_message" class="form-label">Project Requirements <span class="req">*</span></label>
+                            <textarea id="form_message" name="message" rows="4" class="form-textarea" placeholder="Briefly describe your goals, required features, or any systems you need to connect..." required>{{ old('message') }}</textarea>
                         </div>
 
                         <!-- Submit CTA -->
@@ -1068,7 +1089,7 @@
 
                     <div class="privacy-reassurance">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                        <span>🔒 Your information is confidential. We never share your project details with third parties.</span>
+                        <span>Senior technical consultation • Confidential discussion • No obligation</span>
                     </div>
                 </form>
             </div>
@@ -1092,7 +1113,7 @@
                         <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <div class="faq-content">
-                        Project cost depends on the features, complexity, integrations, technology and development scope. After understanding your requirements, we provide a transparent proposal with clear milestones and pricing.
+                        Project cost depends on functionality, complexity, integrations, technology requirements and timeline. After understanding your requirements, we provide a transparent proposal with clearly defined scope, milestones and pricing.
                     </div>
                 </details>
 
@@ -1176,7 +1197,7 @@
                 <!-- FAQ 9: Existing Development Team -->
                 <details class="faq-item">
                     <summary class="faq-summary">
-                        <span>Can you work with an existing development team?</span>
+                        <span>Can you work with our existing development team?</span>
                         <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <div class="faq-content">
@@ -1187,28 +1208,27 @@
         </div>
     </section>
 
-    <!-- 14. Final Conversion CTA -->
+    <!-- 14. Final Conversion Section -->
     <section class="lp-final-cta">
         <div class="container final-cta-content">
-            <div class="badge-pill badge-pill-dark">Ready to Build?</div>
-            <h2>Ready to Build Your Next Digital Product?</h2>
-            <p>Tell us what you're building. Our team will help you understand the technical approach and next steps.</p>
+            <div class="badge-pill badge-pill-dark">Get Started</div>
+            <h2>Have a Project in Mind? Let's Build It.</h2>
+            <p>Talk to our senior technical team and discover the right technology architecture and execution strategy for your business.</p>
 
             <div class="final-cta-actions">
                 <a href="#consultation-form" class="btn btn-primary btn-lg" data-track-event="consultation_click">
                     <span>Get Free Consultation</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
-                <a href="{{ $waLink }}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-dark btn-lg" data-track-event="whatsapp_click">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-5.705 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    <span>WhatsApp Us</span>
+                <a href="tel:{{ $phoneClean }}" class="btn btn-ghost-dark btn-lg" data-track-event="phone_click">
+                    <span>Call {{ $phone }}</span>
                 </a>
             </div>
 
             <div class="cta-guarantee-row">
                 <span>✓ No obligation</span>
                 <span>✓ Confidential discussion</span>
-                <span>✓ Experienced development team</span>
+                <span>✓ Direct technical consultation</span>
             </div>
         </div>
     </section>
@@ -1243,7 +1263,7 @@
         </div>
     </footer>
 
-    <!-- 16. Mobile Sticky CTA Bar (3 Action Buttons) -->
+    <!-- 16. Mobile Sticky CTA Bar -->
     <div class="mobile-sticky-bar">
         <div class="mobile-sticky-inner">
             <a href="{{ $waLink }}" target="_blank" rel="noopener noreferrer" class="lp-wa-btn" style="justify-content: center; padding: 10px 8px; font-size: 0.82rem;" data-track-event="whatsapp_click">
