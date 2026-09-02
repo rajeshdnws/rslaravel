@@ -722,7 +722,32 @@
                     </div>
                 </article>
 
-                <!-- Case Study 5: Desi Run Rush -->
+                <!-- Case Study 5: Popular Holidays Enquiry -->
+                <article class="project-card">
+                    <div class="project-img-box">
+                        <img src="{{ asset('site-assets/popular-holidays.png') }}" alt="Popular Holidays Enquiry Portal by RS Orange Tech" loading="lazy">
+                        <div class="project-category-badge">Travel Booking & Enquiry</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-meta-row">Industry: Travel & Tourism</div>
+                        <h3 class="project-title">Popular Holidays Enquiry</h3>
+                        <div class="project-breakdown-list">
+                            <div><strong>Business Problem:</strong> High drop-off on multi-destination package discovery and unorganized manual customer inquiry workflows.</div>
+                            <div><strong>Solution:</strong> Built an interactive travel package portal with destination search filters, dynamic lead inquiry forms, and automated CRM routing.</div>
+                            <div><strong>Technology:</strong> Custom Web Architecture, Lead Routing Engine, Responsive UX, SEO.</div>
+                        </div>
+                        <div class="project-tech-pills">
+                            <span class="p-tech-pill">Travel Engine</span>
+                            <span class="p-tech-pill">Lead Capture</span>
+                            <span class="p-tech-pill">Mobile-First</span>
+                        </div>
+                        <div class="project-action">
+                            <a href="#consultation-form" onclick="preselectService('Web Application')" data-track-event="case_study_click">Have a Similar Project? Let's Discuss It →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case Study 6: Desi Run Rush -->
                 <article class="project-card">
                     <div class="project-img-box">
                         <img src="{{ asset('site-assets/desi-run-rush.png') }}" alt="Desi Run Rush Showcase" loading="lazy">
@@ -747,7 +772,7 @@
                     </div>
                 </article>
 
-                <!-- Case Study 6: Little Steps -->
+                <!-- Case Study 7: Little Steps -->
                 <article class="project-card">
                     <div class="project-img-box">
                         <img src="{{ asset('site-assets/little-steps.png') }}" alt="Little Steps Web Platform" loading="lazy">
