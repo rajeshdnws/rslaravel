@@ -268,14 +268,16 @@ Route::post('/agency-partners/', function (Illuminate\Http\Request $request) {
     return back()->with('status', 'Thanks. Your partnership inquiry has been received. Our team will contact you shortly.');
 })->middleware('throttle:3,10')->name('agency-partners.submit');
 
-Route::get('/web-software-development/', function () {
+Route::get('/web-software-development', function () {
     return view('site.landing-page');
 })->name('lp.web-software');
 
-Route::redirect('/custom-web-development/', '/web-software-development/', 301);
-Route::redirect('/custom-software-development/', '/web-software-development/', 301);
+Route::redirect('/custom-web-development', '/web-software-development', 301);
+Route::redirect('/custom-software-development', '/web-software-development', 301);
+Route::redirect('/custom-web-development/', '/web-software-development', 301);
+Route::redirect('/custom-software-development/', '/web-software-development', 301);
 
-Route::post('/web-software-development/', function (Request $request) {
+Route::post('/web-software-development', function (Request $request) {
     if ($request->filled('my_custom_country_verify')) {
         return back()->with('status', 'Thank you! Your project consultation request has been received. Our senior engineering team will get in touch with you shortly.');
     }
