@@ -12,8 +12,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thank You — Project Consultation Request Received | RS Orange Tech</title>
-    <meta name="description" content="Thank you for contacting RS Orange Tech. Our engineering team has received your project details and will be in touch shortly.">
+    <title>Thank You — We've Received Your Project Details | RS Orange Tech</title>
+    <meta name="description" content="Thank you for contacting RS Orange Tech. Our team will review your requirements and contact you shortly.">
     <meta name="robots" content="noindex, follow">
 
     <!-- Favicon -->
@@ -27,9 +27,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('css/landing-page.css') }}?v=1.10">
+    <link rel="stylesheet" href="{{ asset('css/landing-page.css') }}?v=1.20">
 
-    <!-- Google Tag Manager / Conversion Event Script -->
+    <!-- Google Tag Manager / Conversion Event DataLayer -->
     <script>
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
@@ -48,7 +48,7 @@
                 <img src="{{ asset('rslogo.png') }}" alt="RS Orange Tech Logo">
             </a>
             <div class="lp-header-actions">
-                <a href="tel:{{ $phoneClean }}" class="lp-call-link" data-track-event="click_to_call">
+                <a href="tel:{{ $phoneClean }}" class="lp-call-link" data-track-event="phone_click">
                     <span class="status-dot"></span>
                     <span>Call Us: {{ $phone }}</span>
                 </a>
@@ -60,12 +60,12 @@
         </div>
     </header>
 
-    <!-- Thank You Content Container -->
+    <!-- Thank You Content -->
     <main style="padding: 60px 0 80px; flex-grow: 1;">
         <div class="container" style="max-width: 820px;">
             <div style="background: #ffffff; border-radius: var(--radius-xl); padding: 48px 40px; border: 1px solid var(--gray-200); box-shadow: var(--shadow-card); text-align: center;">
                 
-                <!-- Success Icon -->
+                <!-- Success Check -->
                 <div style="width: 80px; height: 80px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 24px;">
                     <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
@@ -74,59 +74,55 @@
                     Inquiry Received Successfully
                 </div>
 
-                <h1 style="font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-weight: 800; color: var(--gray-900); margin-bottom: 14px; letter-spacing: -0.02em;">
+                <h1 style="font-size: clamp(1.85rem, 3.2vw, 2.5rem); font-weight: 800; color: var(--gray-900); margin-bottom: 14px; letter-spacing: -0.02em;">
                     Thank You — We've Received Your Project Details
                 </h1>
 
-                <p style="font-size: 1.12rem; color: var(--gray-600); line-height: 1.6; max-width: 640px; margin: 0 auto 36px;">
-                    Our technical engineering team is reviewing your requirements. We will reach out within <strong style="color: var(--gray-900);">24 hours</strong> with tailored architecture recommendations and next steps.
+                <p style="font-size: 1.12rem; color: var(--gray-600); line-height: 1.6; max-width: 620px; margin: 0 auto 36px;">
+                    Our team will review your requirements and contact you shortly.
                 </p>
 
-                <!-- What Happens Next 4-Step Roadmap -->
+                <!-- What Happens Next? 4-Step Roadmap -->
                 <div style="text-align: left; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 32px 28px; margin-bottom: 36px;">
                     <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--gray-900); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
                         <span>📋</span> What Happens Next?
                     </h3>
 
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
                         <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
-                            <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">STEP 01</div>
-                            <h4 style="font-size: 0.98rem; font-weight: 700; color: var(--gray-900); margin-bottom: 4px;">Requirements Review</h4>
-                            <p style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.45;">A senior developer reviews your feature list, tech preferences, and scope.</p>
+                            <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">1. Requirements Review</div>
+                            <p style="font-size: 0.88rem; color: var(--gray-600); line-height: 1.45;">We review your project information.</p>
                         </div>
 
                         <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
-                            <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">STEP 02</div>
-                            <h4 style="font-size: 0.98rem; font-weight: 700; color: var(--gray-900); margin-bottom: 4px;">Direct Consultation</h4>
-                            <p style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.45;">We connect via email, WhatsApp, or phone to clarify any technical questions.</p>
+                            <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">2. Initial Discussion</div>
+                            <p style="font-size: 0.88rem; color: var(--gray-600); line-height: 1.45;">Our team contacts you.</p>
                         </div>
 
                         <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
-                            <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">STEP 03</div>
-                            <h4 style="font-size: 0.98rem; font-weight: 700; color: var(--gray-900); margin-bottom: 4px;">Architecture & Estimate</h4>
-                            <p style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.45;">You receive a structured roadmap, stack recommendation, and fixed quote.</p>
+                            <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">3. Technical Discussion</div>
+                            <p style="font-size: 0.88rem; color: var(--gray-600); line-height: 1.45;">We understand your requirements and goals.</p>
                         </div>
 
                         <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
-                            <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">STEP 04</div>
-                            <h4 style="font-size: 0.98rem; font-weight: 700; color: var(--gray-900); margin-bottom: 4px;">Milestone Kickoff</h4>
-                            <p style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.45;">We sign an NDA, set milestones, and begin sprint development.</p>
+                            <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">4. Next Steps</div>
+                            <p style="font-size: 0.88rem; color: var(--gray-600); line-height: 1.45;">We recommend the appropriate development approach.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Urgent Project Inquiries CTA Strip -->
+                <!-- Immediate Connect Actions -->
                 <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius-md); padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; text-align: left;">
                     <div>
-                        <h4 style="font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 2px;">Need an Immediate Answer?</h4>
-                        <p style="font-size: 0.88rem; color: var(--gray-600);">Message us directly on WhatsApp or call our team now.</p>
+                        <h4 style="font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 2px;">Need a Fast Response?</h4>
+                        <p style="font-size: 0.88rem; color: var(--gray-600);">Connect directly with our development team.</p>
                     </div>
                     <div style="display: flex; gap: 12px; flex-wrap: wrap;">
                         <a href="{{ $waLink }}" target="_blank" rel="noopener noreferrer" class="lp-wa-btn" style="padding: 10px 18px; font-size: 0.92rem;" data-track-event="whatsapp_click">
-                            <span>Chat on WhatsApp</span>
+                            <span>WhatsApp Us</span>
                         </a>
-                        <a href="tel:{{ $phoneClean }}" class="btn btn-secondary btn-sm" style="padding: 10px 18px;" data-track-event="click_to_call">
-                            <span>Call: {{ $phone }}</span>
+                        <a href="tel:{{ $phoneClean }}" class="btn btn-secondary btn-sm" style="padding: 10px 18px;" data-track-event="phone_click">
+                            <span>Call Us: {{ $phone }}</span>
                         </a>
                     </div>
                 </div>
@@ -141,7 +137,7 @@
         </div>
     </main>
 
-    <!-- Minimal Footer -->
+    <!-- Footer -->
     <footer class="lp-footer" style="padding: 24px 0;">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.85rem;">
             <div>&copy; {{ date('Y') }} RS Orange Tech. B-125, Sector 63, Noida, Uttar Pradesh 201301.</div>

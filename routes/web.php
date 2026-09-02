@@ -304,7 +304,7 @@ Route::post('/web-software-development', function (Request $request) {
         'service' => ['required', 'string', 'max:120'],
         'budget' => ['nullable', 'string', 'max:120'],
         'timeline' => ['nullable', 'string', 'max:120'],
-        'message' => ['required', 'string', 'max:3000'],
+        'message' => ['nullable', 'string', 'max:3000'],
     ]);
 
     $lead = \App\Models\Lead::create([
@@ -316,7 +316,7 @@ Route::post('/web-software-development', function (Request $request) {
         'subject_or_service' => $validated['service'],
         'budget' => $validated['budget'] ?? null,
         'timeline' => $validated['timeline'] ?? null,
-        'message' => $validated['message'],
+        'message' => !empty($validated['message']) ? $validated['message'] : 'Project consultation request submitted via Google Ads landing page.',
         'reference_page' => $request->headers->get('referer') ?? url()->previous(),
     ]);
 
