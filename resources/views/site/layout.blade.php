@@ -78,6 +78,14 @@
         <div class="navlinks" id="site-navlinks">
             <a href="{{ route('home') }}">Home</a>
             <a href="{{ route('services') }}">Services</a>
+            <div class="nav-dropdown">
+                <a class="dropdown-toggle" href="{{ route('products.rs-inventory-solo') }}" aria-haspopup="true" aria-expanded="false">Products</a>
+                <div class="dropdown-menu">
+                    <a href="{{ route('products.rs-inventory-solo') }}">RS Inventory – Solo</a>
+                    <a href="{{ route('products.rs-inventory-lan') }}">RS Inventory – LAN</a>
+                    <a href="{{ route('products.rs-inventory-business') }}">RS Inventory – Business</a>
+                </div>
+            </div>
             <a href="/agency-partners">For Agencies</a>
             <a href="{{ route('portfolio') }}">Portfolio</a>
             <a href="{{ route('technologies') }}">Technologies</a>
@@ -123,6 +131,9 @@
         </div>
         <div class="footer-links">
             <h3>Quick Links</h3>
+            <a href="{{ route('products.rs-inventory-solo') }}">RS Inventory – Solo</a>
+            <a href="{{ route('products.rs-inventory-lan') }}">RS Inventory – LAN</a>
+            <a href="{{ route('products.rs-inventory-business') }}">RS Inventory – Business</a>
             <a href="{{ route('about') }}">About Us</a>
             <a href="{{ route('our-approach') }}">Our Approach</a>
             <a href="{{ route('services') }}">Services</a>
@@ -152,7 +163,7 @@
                 navLinks.classList.toggle('is-open', !isOpen);
             });
 
-            navLinks.querySelectorAll('a').forEach((link) => {
+            navLinks.querySelectorAll('a:not(.dropdown-toggle)').forEach((link) => {
                 link.addEventListener('click', () => {
                     navToggle.setAttribute('aria-expanded', 'false');
                     navToggle.setAttribute('aria-label', 'Open navigation');

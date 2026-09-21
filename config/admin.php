@@ -153,7 +153,7 @@ return [
             'search' => ['name', 'email', 'company', 'type', 'status'],
             'columns' => ['name' => 'Name', 'email' => 'Email', 'type' => 'Type', 'status' => 'Status', 'created_at' => 'Date'],
             'fields' => [
-                ['name' => 'type', 'label' => 'Type', 'type' => 'select', 'options' => ['contact', 'quote']],
+                ['name' => 'type', 'label' => 'Type', 'type' => 'select', 'options' => ['contact', 'quote', 'agency', 'google_ads_lp', 'demo_request', 'lan_demo_request', 'business_demo_request']],
                 ['name' => 'name', 'label' => 'Name', 'type' => 'text', 'required' => true],
                 ['name' => 'email', 'label' => 'Email', 'type' => 'text', 'required' => true],
                 ['name' => 'phone', 'label' => 'Phone', 'type' => 'text'],

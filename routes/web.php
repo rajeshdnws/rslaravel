@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminResourceController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublicContentController;
 use App\Http\Controllers\WordPressContentController;
 use App\Http\Middleware\EnsureAdminUser;
@@ -12,7 +13,8 @@ Route::get('/sitemap.xml', function () {
     $staticSlugs = [
         '/', '/about-us/', '/our-approach/', '/services/', '/our-technologies/', 
         '/portfolio/', '/plugins/', '/blog/', '/contact-us/', '/quote-requests/', 
-        '/privacy-policy/', '/terms-conditions/', '/web-software-development/'
+        '/privacy-policy/', '/terms-conditions/', '/web-software-development/',
+        '/products/rs-inventory-solo', '/products/rs-inventory-lan', '/products/rs-inventory-business'
     ];
     
     $pages = \App\Models\Page::where('status', 'published')
@@ -168,6 +170,12 @@ Route::get('/privacy-policy/', [PublicContentController::class, 'page'])->defaul
 Route::get('/terms-conditions/', [PublicContentController::class, 'page'])->defaults('slug', 'terms-conditions')->name('terms');
 
 Route::get('/plugins/', [PublicContentController::class, 'page'])->defaults('slug', 'plugins')->name('plugins');
+Route::get('/products/rs-inventory-solo', [ProductController::class, 'inventorySolo'])->name('products.rs-inventory-solo');
+Route::post('/products/rs-inventory-solo', [ProductController::class, 'inventorySoloSubmit'])->middleware('throttle:5,10')->name('products.rs-inventory-solo.submit');
+Route::get('/products/rs-inventory-lan', [ProductController::class, 'inventoryLan'])->name('products.rs-inventory-lan');
+Route::post('/products/rs-inventory-lan', [ProductController::class, 'inventoryLanSubmit'])->middleware('throttle:5,10')->name('products.rs-inventory-lan.submit');
+Route::get('/products/rs-inventory-business', [ProductController::class, 'inventoryBusiness'])->name('products.rs-inventory-business');
+Route::post('/products/rs-inventory-business', [ProductController::class, 'inventoryBusinessSubmit'])->middleware('throttle:5,10')->name('products.rs-inventory-business.submit');
 Route::get('/portfolio', [PublicContentController::class, 'portfolio']);
 Route::get('/portfolio/', [PublicContentController::class, 'portfolio'])->name('portfolio');
 Route::get('/portfolio/{slug}', [PublicContentController::class, 'portfolioShow']);
