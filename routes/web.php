@@ -14,7 +14,8 @@ Route::get('/sitemap.xml', function () {
         '/', '/about-us/', '/our-approach/', '/services/', '/our-technologies/', 
         '/portfolio/', '/plugins/', '/blog/', '/contact-us/', '/quote-requests/', 
         '/privacy-policy/', '/terms-conditions/', '/web-software-development/',
-        '/products/rs-inventory-solo', '/products/rs-inventory-lan', '/products/rs-inventory-business'
+        '/products/rs-inventory-solo', '/products/rs-inventory-lan', '/products/rs-inventory-business',
+        '/agency-partners/'
     ];
     
     $pages = \App\Models\Page::where('status', 'published')
