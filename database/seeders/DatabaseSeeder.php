@@ -425,5 +425,7 @@ class DatabaseSeeder extends Seeder
                 ['value' => $value, 'area' => $area, 'status' => 'active'],
             );
         }
+
+        $this->call(InventoryControlSeeder::class);
     }
 }

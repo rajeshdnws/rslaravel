@@ -459,6 +459,9 @@
                     <button type="button" class="biz-tab-btn" data-tab="tab-transfers">
                         🚚 Inter-Branch Stock Transfers
                     </button>
+                    <button type="button" class="biz-tab-btn" data-tab="tab-license">
+                        🔑 License & Registration
+                    </button>
                 </div>
 
                 <!-- ==================== TAB 1: EXECUTIVE DASHBOARD ==================== -->
@@ -852,9 +855,319 @@
                     </div>
                 </div>
 
+                <!-- ==================== TAB 6: LICENSE & STORE REGISTRATION ==================== -->
+                <div class="biz-panel" id="tab-license">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                        <div>
+                            <h4 style="margin:0 0 4px; font-size:17px; color:var(--biz-navy); font-weight:800;">Installation, Store Registration & Licensing</h4>
+                            <p style="margin:0; font-size:13px; color:var(--biz-muted);">Manage your Installation ID, Store Profile, and software license key.</p>
+                        </div>
+                        <span class="status-tag in-stock" id="bizSyncStatusBadge">Connected (Live API)</span>
+                    </div>
+
+                    <!-- Status Cards Grid -->
+                    <div class="biz-kpi-grid" style="margin-bottom:24px;">
+                        <div class="biz-kpi-card">
+                            <div class="biz-kpi-header">
+                                <span class="biz-kpi-title">Installation ID</span>
+                                <span class="biz-badge blue" style="padding:2px 8px; font-size:10px;">Local Identifier</span>
+                            </div>
+                            <div class="biz-kpi-value" id="bizDisplayInstallationId" style="font-size:16px; font-family:monospace;">Generating...</div>
+                            <div class="biz-kpi-sub" id="bizDisplayDeviceId">Device: DEV-XXXXXXXX</div>
+                        </div>
+
+                        <div class="biz-kpi-card">
+                            <div class="biz-kpi-header">
+                                <span class="biz-kpi-title">License Status</span>
+                                <span class="biz-badge amber" id="bizLicenseBadge" style="padding:2px 8px; font-size:10px;">Not Activated</span>
+                            </div>
+                            <div class="biz-kpi-value" id="bizDisplayLicenseStatus" style="font-size:18px;">Not Activated</div>
+                            <div class="biz-kpi-sub" id="bizDisplayLicenseExpiry">Expiry: N/A</div>
+                        </div>
+
+                        <div class="biz-kpi-card">
+                            <div class="biz-kpi-header">
+                                <span class="biz-kpi-title">Store Profile</span>
+                                <span class="biz-badge emerald" id="bizStoreProfileBadge" style="padding:2px 8px; font-size:10px;">Profile Complete</span>
+                            </div>
+                            <div class="biz-kpi-value" id="bizDisplayStoreName" style="font-size:16px;">Main Retail Store</div>
+                            <div class="biz-kpi-sub" id="bizDisplayStoreMobile">+91 Registered</div>
+                        </div>
+
+                        <div class="biz-kpi-card">
+                            <div class="biz-kpi-header">
+                                <span class="biz-kpi-title">System Telemetry</span>
+                                <span class="biz-badge purple" style="padding:2px 8px; font-size:10px;">Version 1.0.0</span>
+                            </div>
+                            <div class="biz-kpi-value" id="bizDisplayLastSeen" style="font-size:14px;">Just now</div>
+                            <div class="biz-kpi-sub" id="bizDisplayQueueStatus">Offline Queue: 0 Pending</div>
+                        </div>
+                    </div>
+
+                    <!-- Live Backend API Endpoint Tester Widget -->
+                    <div class="biz-widget-box" style="padding:24px; margin-bottom:24px; border:1px solid #bfdbfe; background:#f8fafc;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <div style="width:34px; height:34px; border-radius:8px; background:var(--biz-blue-soft); color:var(--biz-blue); display:grid; place-items:center; font-weight:800; font-size:16px;">⚡</div>
+                                <div>
+                                    <h4 style="margin:0; font-size:16px; color:var(--biz-navy); font-weight:800;">Interactive Live Backend API Endpoint Tester</h4>
+                                    <span style="font-size:12px; color:var(--biz-muted);">Execute test requests directly against the live Laravel backend API with seeded dummy payload presets.</span>
+                                </div>
+                            </div>
+                            <span class="biz-badge blue" style="font-size:10px;">Laravel API v1</span>
+                        </div>
+
+                        <!-- Endpoint Trigger Buttons -->
+                        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;">
+                            <button type="button" class="api-test-btn active" data-endpoint="register" style="padding:8px 14px; border-radius:6px; border:1px solid var(--biz-blue); background:var(--biz-blue-soft); color:var(--biz-blue); font-size:12px; font-weight:700; cursor:pointer;">
+                                ▶ POST /installations/register
+                            </button>
+                            <button type="button" class="api-test-btn" data-endpoint="store-profile" style="padding:8px 14px; border-radius:6px; border:1px solid var(--biz-emerald); background:#ffffff; color:var(--biz-emerald); font-size:12px; font-weight:700; cursor:pointer;">
+                                ▶ POST /installations/store-profile
+                            </button>
+                            <button type="button" class="api-test-btn" data-endpoint="activate" style="padding:8px 14px; border-radius:6px; border:1px solid var(--biz-purple); background:#ffffff; color:var(--biz-purple); font-size:12px; font-weight:700; cursor:pointer;">
+                                ▶ POST /licenses/activate
+                            </button>
+                            <button type="button" class="api-test-btn" data-endpoint="validate" style="padding:8px 14px; border-radius:6px; border:1px solid var(--biz-amber); background:#ffffff; color:var(--biz-amber); font-size:12px; font-weight:700; cursor:pointer;">
+                                ▶ POST /licenses/validate
+                            </button>
+                            <button type="button" class="api-test-btn" data-endpoint="heartbeat" style="padding:8px 14px; border-radius:6px; border:1px solid var(--biz-navy); background:#ffffff; color:var(--biz-navy); font-size:12px; font-weight:700; cursor:pointer;">
+                                ▶ POST /installations/heartbeat
+                            </button>
+                        </div>
+
+                        <!-- Inspector Split View -->
+                        <div class="biz-split-metrics" style="align-items:start;">
+                            <!-- Left: Payload Editor -->
+                            <div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                                    <label style="font-size:12px; font-weight:700; color:var(--biz-navy);">Request Body (JSON Payload):</label>
+                                    <span id="apiTestEndpointUrl" style="font-family:monospace; font-size:11px; color:var(--biz-blue); font-weight:700;">/api/inventory/v1/installations/register</span>
+                                </div>
+                                <textarea id="apiTestPayloadInput" rows="7" style="width:100%; padding:10px; border:1px solid var(--biz-line); border-radius:8px; font-family:monospace; font-size:12px; background:#0b1329; color:#38bdf8; resize:vertical; box-sizing:border-box;"></textarea>
+                                <button type="button" id="apiTestSendBtn" class="biz-btn biz-btn-blue" style="width:100%; margin-top:8px; padding:10px; font-size:13px;">
+                                    ⚡ Send API Request Now
+                                </button>
+                            </div>
+
+                            <!-- Right: Server Response Output -->
+                            <div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                                    <label style="font-size:12px; font-weight:700; color:var(--biz-navy);">Backend Response Inspector:</label>
+                                    <div style="display:flex; gap:8px; align-items:center;">
+                                        <span id="apiTestStatusCode" class="status-tag in-stock" style="font-size:10px;">HTTP 200 OK</span>
+                                        <span id="apiTestResponseTime" style="font-size:11px; color:var(--biz-muted);">0 ms</span>
+                                    </div>
+                                </div>
+                                <pre id="apiTestResponseOutput" style="width:100%; height:205px; padding:10px; border:1px solid var(--biz-line); border-radius:8px; font-family:monospace; font-size:12px; background:#0b1329; color:#4ade80; overflow:auto; margin:0; box-sizing:border-box;">Ready. Click any API endpoint button above to test live request/response data.</pre>
+                            </div>
+                        </div>
+
+                        <!-- Generated cURL Command Snippet -->
+                        <div style="margin-top:16px; border-top:1px dashed var(--biz-line); padding-top:14px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                                <label style="font-size:12px; font-weight:700; color:var(--biz-navy);">Generated cURL Terminal Command:</label>
+                                <button type="button" id="apiCopyCurlBtn" class="biz-btn biz-btn-outline" style="padding:4px 10px; font-size:11px;">📋 Copy cURL</button>
+                            </div>
+                            <pre id="apiTestCurlOutput" style="width:100%; height:90px; padding:10px; border:1px solid var(--biz-line); border-radius:8px; font-family:monospace; font-size:11px; background:#1e293b; color:#f8fafc; overflow:auto; margin:0; box-sizing:border-box; white-space:pre-wrap; word-break:break-all;"></pre>
+                        </div>
+                    </div>
+
+                    <!-- 2 Column Section: License Activation + Store Profile Form -->
+                    <div class="biz-split-metrics" style="align-items:start;">
+                        
+                        <!-- Left: License Key Activation Form -->
+                        <div class="biz-widget-box" style="padding:24px;">
+                            <div class="biz-widget-header" style="margin-bottom:16px;">
+                                <h4>🔑 Product License Activation</h4>
+                                <span style="font-size:12px; color:var(--biz-muted);">RS Inventory – Business</span>
+                            </div>
+                            <p style="font-size:13px; color:var(--biz-muted); line-height:1.5; margin-bottom:16px;">
+                                Enter your business license key provided by RS ORANGE TECH to activate enterprise capabilities and server synchronization.
+                            </p>
+
+                            <form id="bizLicenseActivateForm" onsubmit="return false;">
+                                <div style="margin-bottom:14px;">
+                                    <label for="bizLicenseKeyInput" style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:6px;">License Key *</label>
+                                    <input type="text" id="bizLicenseKeyInput" placeholder="e.g. RS-BIZ-ENTERPRISE-2026" 
+                                           style="width:100%; padding:10px 14px; border:1px solid var(--biz-line); border-radius:8px; font-family:monospace; font-size:14px; text-transform:uppercase;">
+                                </div>
+                                <div style="display:flex; gap:10px;">
+                                    <button type="button" id="bizBtnActivateLicense" class="biz-btn biz-btn-primary" style="padding:10px 20px; font-size:13px; flex:1;">
+                                        Activate License
+                                    </button>
+                                    <button type="button" id="bizBtnRefreshLicense" class="biz-btn biz-btn-outline" style="padding:10px 16px; font-size:13px;">
+                                        Refresh Status
+                                    </button>
+                                </div>
+                                <div id="bizLicenseNotice" style="margin-top:12px; font-size:13px; font-weight:600; display:none;"></div>
+                            </form>
+
+                            <!-- Test Keys Box for Demonstration -->
+                            <div style="margin-top:20px; padding:12px; background:var(--biz-soft); border-radius:8px; border:1px dashed var(--biz-line); font-size:12px;">
+                                <strong style="color:var(--biz-navy);">Sample Demo License Keys:</strong>
+                                <div style="margin-top:6px; display:flex; flex-direction:column; gap:4px; font-family:monospace;">
+                                    <span style="cursor:pointer; color:var(--biz-blue);" onclick="document.getElementById('bizLicenseKeyInput').value='RS-BIZ-ENTERPRISE-2026';"><code>RS-BIZ-ENTERPRISE-2026</code> (Click to autofill)</span>
+                                    <span style="cursor:pointer; color:var(--biz-blue);" onclick="document.getElementById('bizLicenseKeyInput').value='RS-BIZ-9988-7766-5544';"><code>RS-BIZ-9988-7766-5544</code> (Click to autofill)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Store Profile Settings -->
+                        <div class="biz-widget-box" style="padding:24px;">
+                            <div class="biz-widget-header" style="margin-bottom:16px;">
+                                <h4>🏬 Store Profile & Registration Information</h4>
+                                <button type="button" id="bizToggleEditStoreBtn" class="biz-btn biz-btn-outline" style="padding:6px 12px; font-size:12px;">Edit Profile</button>
+                            </div>
+                            
+                            <form id="bizStoreProfileForm" onsubmit="return false;">
+                                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                                    <div>
+                                        <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Store Name *</label>
+                                        <input type="text" id="bizStoreName" class="biz-form-field" placeholder="e.g. Apex Retail Store" required>
+                                    </div>
+                                    <div>
+                                        <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Owner Name</label>
+                                        <input type="text" id="bizOwnerName" class="biz-form-field" placeholder="e.g. Rajesh Kumar">
+                                    </div>
+                                </div>
+
+                                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                                    <div>
+                                        <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Mobile Number *</label>
+                                        <input type="text" id="bizStoreMobile" class="biz-form-field" placeholder="+91 9876543210" required>
+                                    </div>
+                                    <div>
+                                        <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Email Address</label>
+                                        <input type="email" id="bizStoreEmail" class="biz-form-field" placeholder="store@example.com">
+                                    </div>
+                                </div>
+
+                                <div style="margin-bottom:12px;">
+                                    <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Store Address *</label>
+                                    <textarea id="bizStoreAddress" class="biz-form-field" rows="2" placeholder="Full store location address" required></textarea>
+                                </div>
+
+                                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:12px;">
+                                    <div>
+                                        <label style="display:block; font-size:11px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">City</label>
+                                        <input type="text" id="bizStoreCity" class="biz-form-field" placeholder="Mumbai">
+                                    </div>
+                                    <div>
+                                        <label style="display:block; font-size:11px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">State</label>
+                                        <input type="text" id="bizStoreState" class="biz-form-field" placeholder="Maharashtra">
+                                    </div>
+                                    <div>
+                                        <label style="display:block; font-size:11px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">PIN Code</label>
+                                        <input type="text" id="bizStorePincode" class="biz-form-field" placeholder="400001">
+                                    </div>
+                                </div>
+
+                                <div style="margin-bottom:16px;">
+                                    <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">GSTIN (Optional)</label>
+                                    <input type="text" id="bizStoreGstin" class="biz-form-field" placeholder="27AAAAA0000A1Z5">
+                                </div>
+
+                                <div style="display:flex; justify-content:space-between; align-items:center;">
+                                    <button type="button" id="bizSaveStoreProfileBtn" class="biz-btn biz-btn-primary" style="padding:10px 24px; font-size:13px;">
+                                        Save & Sync Store Profile
+                                    </button>
+                                    <span id="bizStoreProfileStatusMsg" style="font-size:12px; font-weight:600; color:var(--biz-emerald);"></span>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!-- Privacy Information Notice -->
+                    <div style="margin-top:24px; padding:16px 20px; background:#f8fafc; border-radius:10px; border:1px solid #e2e8f0; font-size:12px; line-height:1.6; color:#475569;">
+                        <div style="display:flex; align-items:center; gap:8px; font-weight:800; color:var(--biz-navy); margin-bottom:6px;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            <span>RS ORANGE TECH Privacy & Data Transmitted Notice</span>
+                        </div>
+                        <p style="margin:0 0 6px;">
+                            <strong>Data Transmitted:</strong> Store details (Store Name, Owner Name, Mobile, Email, Address, City, State, PIN Code, GSTIN), Installation ID, Device ID, Application Version, and License Key information are transmitted to RS ORANGE TECH servers for software registration, licensing, support, and version update management.
+                        </p>
+                        <p style="margin:0; color:#dc2626;">
+                            <strong>Data Excluded:</strong> Your local inventory database, sales history, purchase orders, customer transaction ledgers, supplier balances, and passwords are NEVER transmitted to the registration server.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </section>
+
+    <!-- First Launch Store Setup Modal -->
+    <div class="biz-modal" id="bizFirstLaunchModal">
+        <div class="biz-modal-content" style="max-width:560px;">
+            <div style="text-align:center; margin-bottom:20px;">
+                <div class="biz-brand-icon" style="margin:0 auto 12px; width:44px; height:44px; background:var(--biz-orange-soft); color:var(--biz-orange); display:grid; place-items:center; border-radius:12px;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                </div>
+                <h3 style="margin:0 0 6px; font-size:20px; font-weight:800; color:var(--biz-navy);">Welcome to RS Inventory – Business</h3>
+                <p style="margin:0; font-size:13px; color:var(--biz-muted);">Please set up your store profile to complete installation registration.</p>
+            </div>
+
+            <form id="bizFirstLaunchForm" onsubmit="return false;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Store Name *</label>
+                        <input type="text" id="flStoreName" class="biz-form-field" placeholder="e.g. Metro Fashion Hub" required>
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Owner Name</label>
+                        <input type="text" id="flOwnerName" class="biz-form-field" placeholder="e.g. Vikram Singh">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Mobile Number *</label>
+                        <input type="text" id="flMobile" class="biz-form-field" placeholder="+91 9876543210" required>
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Email</label>
+                        <input type="email" id="flEmail" class="biz-form-field" placeholder="store@example.com">
+                    </div>
+                </div>
+
+                <div style="margin-bottom:12px;">
+                    <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">Store Address *</label>
+                    <textarea id="flAddress" class="biz-form-field" rows="2" placeholder="Full shop address" required></textarea>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label style="display:block; font-size:11px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">City</label>
+                        <input type="text" id="flCity" class="biz-form-field" placeholder="Bengaluru">
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:11px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">State</label>
+                        <input type="text" id="flState" class="biz-form-field" placeholder="Karnataka">
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:11px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">PIN Code</label>
+                        <input type="text" id="flPincode" class="biz-form-field" placeholder="560001">
+                    </div>
+                </div>
+
+                <div style="margin-bottom:16px;">
+                    <label style="display:block; font-size:12px; font-weight:700; color:var(--biz-navy); margin-bottom:4px;">GSTIN (Optional)</label>
+                    <input type="text" id="flGstin" class="biz-form-field" placeholder="29AAAAA0000A1Z5">
+                </div>
+
+                <div style="margin-bottom:16px; padding:10px 12px; background:var(--biz-soft); border-radius:6px; font-size:11px; color:var(--biz-muted); line-height:1.4;">
+                    ℹ️ Store information is submitted to RS ORANGE TECH central registration servers. Your local stock database and transaction logs remain completely offline and private.
+                </div>
+
+                <button type="button" id="flSaveBtn" class="biz-btn biz-btn-primary" style="width:100%; padding:12px; font-size:14px;">
+                    Save Store Profile & Continue
+                </button>
+            </form>
+        </div>
+    </div>
 
     <!-- Simulated Enterprise Receipt Modal -->
     <div class="demo-receipt-modal" id="bizReceiptModal">
